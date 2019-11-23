@@ -7,7 +7,7 @@
 /////////////////////////////////////////////////////////////////////////
 Author: Sam Luyk
 Title: 
-Date: November 2019
+Date: Q4 2019
 
 Comments:
 
@@ -23,17 +23,25 @@ https://css-tricks.com/prefilling-date-input/
 /////////////////////////////////////////////////////////////////////////
 -->
 <style>
-        body {
-            background-color: grey;
-            font-family: Ubuntu, "times new roman", times, roman, serif;
-            font-family: Ubuntu, sans-serif;
-        }
-        h1   {color: orange;}
-        h2   {color: white;}  
-        h3   {color: white;} 
-        h4   {color: white;}              
-        p    {color: green;}
-        fieldset {width: 900px;}
+h1 {
+  color: orange;
+  background-color: #222227;
+  margin: auto;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  margin: auto;
+  text-align: center;
+  background-color: #222227;
+  color: #3b61f1;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+hr.new1 {
+  border-top: 3px solid white;
+}
         
 </style>
 
