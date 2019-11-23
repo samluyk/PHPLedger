@@ -1,56 +1,45 @@
 <!doctype html>
-<html>
-    <head><link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-
-    </head>
 <!--
 /////////////////////////////////////////////////////////////////////////
 Author: Sam Luyk
-Title: 
 Date: Q4 2019
-
-Comments:
-
-Database Structure: https://docs.google.com/spreadsheets/d/11O2Av2tqxhU2a7UjzWdV23_ghOZOWMwhxmih87SZh8A/edit#gid=0
-
-Useful Links:
-https://www.php.net/manual/en/function.htmlentities.php
-https://stackoverflow.com/questions/1053424/how-do-i-get-php-errors-to-display?rq=1
-https://stackoverflow.com/questions/49106290/php-html-why-cant-i-echo-a-variable-date-in-a-date-input-field
-https://stackoverflow.com/questions/42275768/html-php-form-input-type-date
-https://css-tricks.com/prefilling-date-input/
-
 /////////////////////////////////////////////////////////////////////////
 -->
-<style>
-h1 {
-  color: orange;
-  background-color: #222227;
-  margin: auto;
-  text-align: center;
-  font-family: 'Ubuntu', sans-serif;
-}
+<html>
+    <head>
 
-body {
-  margin: auto;
-  text-align: center;
-  background-color: #222227;
-  color: #3b61f1;
-  font-family: 'Ubuntu', sans-serif;
-}
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+    <style>
+    h1 {
+      color: orange;
+      background-color: #222227;
+      margin: auto;
+      text-align: center;
+      font-family: 'Ubuntu', sans-serif;
+    }
 
-hr.new1 {
-  border-top: 3px solid white;
-}
-        
-</style>
+    body {
+      margin: auto;
+      text-align: center;
+      background-color: #222227;
+      color: #3b61f1;
+      font-family: 'Ubuntu', sans-serif;
+    }
+
+    hr.new1 {
+     border-top: 3px solid white;
+    }   
+    </style>
+    </head>
+
+
 
 <title>Financial Logger</title>
 <body>
 
 <center>
 <h1>Financial Logger</h1>
-<hr>
+<hr class="new1">
 <br>
 <?php
 date_default_timezone_set("America/New_York");
@@ -74,9 +63,8 @@ echo "<br>";
 
 
 <center>
-<form method = "post" action = "expenseinput.php">
-    <fieldset><table>
-            <legend><b><i>Expense Input Form</b></i></legend>
+  <form method = "post" action = "expenseinput.php">
+    <table>
             <h2>Expense Input Form</h2><br>
             <label for="expenseName"> Item Name: </label>
             <input type = "text" id="itemName" name="itemName" required value=""/><br><br>
@@ -103,16 +91,17 @@ echo "<br>";
             <br>
             <br/>
             <input type="submit" value = "Submit">
-            <br><br><br>
+            <br><br>
+            <hr class="new1">
     </table>
-    </fieldset>
-</form>
-</center>
 
-<center>
-<form method = "post" action = "incomeinput.php">
-    <fieldset><table>
-            <legend><b><i>Income Input Form</b></i></legend>
+  </form>
+  </center>
+
+  <center>
+  <form method = "post" action = "incomeinput.php">
+    <table>
+
             <h2>Income Input Form</h2><br>
             <label for="incomeDescription"> Description: </label>
             <input type = "text" id="incomeDescription" name="incomeDescription" required value=""/><br><br>
@@ -136,13 +125,14 @@ echo "<br>";
             <br>
             <br/>
             <input type="submit" value = "Submit">
-            <br><br><br>  
+            <br><br>
+            <hr class="new1"> 
     </table>
-    </fieldset>
-</form>
-</center>
-<center>
-<fieldset>
+    
+  </form>
+  </center>
+  <center>
+
     <legend><b><i>Database Functions</b></i></legend>
     <br>
     <td>View Database</td><br><br>
@@ -157,8 +147,8 @@ echo "<br>";
     </form></td>
     <br>
 
-<br>
-</fieldset>
+  <br>
+
 </center>
 </body>
 </html>
