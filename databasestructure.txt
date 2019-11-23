@@ -1,0 +1,17 @@
+Expenses Table
+
+Item:Varchar500
+Amount:Decimal13,2
+Category:String
+Comment:String
+Date:Date
+
+-------------------------
+Income Table
+
+Description:Varchar500
+Type:String
+Gross Amount:Decimal13,2
+Net Amount:Decimal13,2
+Date:Date
+Comment:Varchar500

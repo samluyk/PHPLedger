@@ -88,10 +88,44 @@ Expense Input Work:
             <label for="expenseCategory"> Category: </label>
 
             <select name="expenseCategory2"  id="expenseCategory" required>
-            <option value="rent">Rent</option>
-            <option value="rentExpense">Rent Expense</option>
-            <option value="groceries">Groceries</option>
-            <option value="clothing">Clothing</option>
+
+          <option selected="selected">CATEGORY</option>
+
+          <?php
+
+          $variableexpenses = array(
+            "Business", 
+            "Car Accessories", 
+            "Car Repair/Maintenance", 
+            "Clothing", 
+            "Dining out", 
+            "Entertainment", 
+            "Fast Food", 
+            "Fees", 
+            "Groceries", 
+            "Gas", 
+            "Gifts", 
+            "Household", 
+            "Investments/Stocks", 
+            "Material Items", 
+            "Personal/Medical", 
+            "Photography", 
+            "Social", 
+            "Taxes", 
+            "Technology", 
+            "Transportation", 
+            "Travel", 
+            "Uncategorized"
+          );
+
+
+          foreach($variableexpenses as $item){
+          ?>
+          <option value="<?php echo strtolower($item); ?>"><?php echo $item; ?></option>
+          <?php
+          }
+          ?>
+
             </select>
             <br><br>
 
@@ -132,11 +166,29 @@ Begin Income Input Work:
 
             <label for="incomeType"> Income Type: </label>
             <select name="incomeType"  id="incomeType" required>
-            <option value="paycheck">Paycheck</option>
-            <option value="freelance">Freelance Work</option>
-            <option value="selling">Selling Something</option>
-            <option value="other">Other</option>
-            </select><br><br>
+            <option selected="selected">CATEGORY</option>
+
+            <?php
+
+            $fixedexpenses = array(
+              "Paycheck", 
+              "Freelance Tech", 
+              "Freelance Photo", 
+              "Selling",
+              "Other"
+            );
+
+            foreach($fixedexpenses as $item){
+
+            ?>
+            <option value="<?php echo strtolower($item); ?>"><?php echo $item; ?></option>
+            <?php
+            }
+            ?>
+
+            </select>
+            
+            <br><br>
 
             <label for="incomeGrossAmount"> Gross Amount: </label>
             <input type = "text" id="incomeGrossAmount" name="incomeGrossAmount" value=""/><br><br>
@@ -158,10 +210,16 @@ Begin Income Input Work:
 
 <!--
 /////////////////////////////////////////////////////////////////////////
-End Income Input Work:
+End Income Input Work
 /////////////////////////////////////////////////////////////////////////
 -->
 
+
+<!--
+/////////////////////////////////////////////////////////////////////////
+Start Query:
+/////////////////////////////////////////////////////////////////////////
+-->
   <center>
 
     <legend><b><i>Database Functions</b></i></legend>
@@ -181,5 +239,10 @@ End Income Input Work:
   <br>
 
 </center>
+<!--
+/////////////////////////////////////////////////////////////////////////
+End Query
+/////////////////////////////////////////////////////////////////////////
+-->
 </body>
 </html>
