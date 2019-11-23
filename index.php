@@ -2,6 +2,7 @@
 <!--
 /////////////////////////////////////////////////////////////////////////
 Author: Sam Luyk
+Project: PHPLedger
 Date: Q4 2019
 /////////////////////////////////////////////////////////////////////////
 -->
@@ -17,7 +18,6 @@ Date: Q4 2019
       text-align: center;
       font-family: 'Ubuntu', sans-serif;
     }
-
     body {
       margin: auto;
       text-align: center;
@@ -25,7 +25,6 @@ Date: Q4 2019
       color: #3b61f1;
       font-family: 'Ubuntu', sans-serif;
     }
-
     hr.new1 {
      border-top: 3px solid white;
     }   
@@ -41,27 +40,41 @@ Date: Q4 2019
 <h1>Financial Logger</h1>
 <hr class="new1">
 <br>
+
+
+
+<!--
+/////////////////////////////////////////////////////////////////////////
+Get current date:
+/////////////////////////////////////////////////////////////////////////
+-->
 <?php
 date_default_timezone_set("America/New_York");
-?>
-
-<?php
 $dateVariable = date('m/d/Y');
-echo "php date: <br>";
+echo "Date in php: <br>";
 echo $dateVariable;
 echo "<br>";
 echo "<br>";
-echo "js date: <br>";
+echo "Date in JS: <br>";
 echo '<script type="text/javascript"><!--
 var now = new Date();
 document.write((now.getMonth()+1)+"/"+now.getDate()+"/"+now.getFullYear());
 //--></script>
 ';
-
 echo "<br>";
 ?>
+<!--
+/////////////////////////////////////////////////////////////////////////
+End get current date
+/////////////////////////////////////////////////////////////////////////
+-->
 
 
+<!--
+/////////////////////////////////////////////////////////////////////////
+Expense Input Work:
+/////////////////////////////////////////////////////////////////////////
+-->
 <center>
   <form method = "post" action = "expenseinput.php">
     <table>
@@ -80,7 +93,7 @@ echo "<br>";
             <option value="groceries">Groceries</option>
             <option value="clothing">Clothing</option>
             </select>
-  <br><br>
+            <br><br>
 
 
             <label for="expenseComment"> Comments: </label>
@@ -97,7 +110,18 @@ echo "<br>";
 
   </form>
   </center>
+<!--
+/////////////////////////////////////////////////////////////////////////
+End Expense Input Work:
+/////////////////////////////////////////////////////////////////////////
+-->
 
+
+<!--
+/////////////////////////////////////////////////////////////////////////
+Begin Income Input Work:
+/////////////////////////////////////////////////////////////////////////
+-->
   <center>
   <form method = "post" action = "incomeinput.php">
     <table>
@@ -131,6 +155,13 @@ echo "<br>";
     
   </form>
   </center>
+
+<!--
+/////////////////////////////////////////////////////////////////////////
+End Income Input Work:
+/////////////////////////////////////////////////////////////////////////
+-->
+
   <center>
 
     <legend><b><i>Database Functions</b></i></legend>
