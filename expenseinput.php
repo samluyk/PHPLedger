@@ -30,17 +30,21 @@ print $expenseDate;
 print "<br>";
 //////////////////////////////////////////////////////////////////////
 //Here we're taking in the data from the HTML form, and assigning them to PHP variables to use later on.
-/*
-$firstName1  = $_POST["firstName"];
-$lastName2  = $_POST["lastName"];
-$trimmedFirstName = trim($firstName1);
-$trimmedLastName = trim($lastName2);
 
-$strFirstName = ucfirst($trimmedFirstName);
-$strLastName = ucfirst($trimmedLastName);
-$strEmailAddress  = $_POST["emailAddress"];
-$strSelectedEvent = $_POST['chosenEvent1'];
-*/
+$trimmedItemName = trim($itemName);
+$trimmedExpenseAmount = trim($expenseAmount);
+$trimmedexpenseCategory = trim($expenseAmount2);
+$trimmedexpenseCategory2 = trim($lastName2);
+$trimmedExpenseComment = trim($expenseComment);
+$trimmedExpenseDate = trim($expenseDate);
+
+$strItemName = strtolower($trimmedItemName);
+$decExpenseAmount = strtolower($trimmedExpenseAmount);
+$strExpenseCategory = strtolower($trimmedexpenseCategory);
+$strExpenseCategory2 = strtolower($trimmedexpenseCategory2);
+$strExpenseComment = strtolower($trimmedExpenseComment);
+$strExpenseDate = strtolower($trimmedExpenseDate);
+
 //////////////////////////////////////////////////////////////////////
 //This drops the table and all data in it. !Very destructive!
 //$sql = "DROP TABLE expenses";

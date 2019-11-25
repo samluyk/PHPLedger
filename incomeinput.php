@@ -26,16 +26,19 @@ print $incomeDate;
 print "<br>";
 //////////////////////////////////////////////////////////////////////
 //Here we're taking in the data from the HTML form, and assigning them to PHP variables to use later on.
-/*$firstName1  = $_POST["firstName"];
-$lastName2  = $_POST["lastName"];
-$trimmedFirstName = trim($firstName1);
-$trimmedLastName = trim($lastName2);
+$trimmedIncomeDescription = trim($incomeDescription);
+$trimmedIncomeType = trim($incomeType);
+$trimmedIncomeGrossAmount = trim($incomeGrossAmount);
+$trimmedIncomeNetAmount = trim($incomeNetAmount);
+$trimmedIncomeDate = trim($incomeDate);
 
-$strFirstName = ucfirst($trimmedFirstName);
-$strLastName = ucfirst($trimmedLastName);
-$strEmailAddress  = $_POST["emailAddress"];
-$strSelectedEvent = $_POST['chosenEvent1'];
-*/
+$strIncomeDescription = strtolower($trimmedIncomeDescription);
+$strIncomeType = strtolower($trimmedIncomeType);
+$decIncomeGrossAmount = strtolower($trimmedIncomeGrossAmount);
+$decIncomeNetAmount = strtolower($trimmedIncomeNetAmount);
+$strIncomeDate = strtolower($trimmedIncomeDate);
+
+
 //////////////////////////////////////////////////////////////////////
 //This drops the table and all data in it. Very destructive.
 //$sql = "DROP TABLE income";
