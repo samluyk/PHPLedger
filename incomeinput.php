@@ -25,7 +25,7 @@ print "<br>";
 print $incomeDate;
 print "<br>";
 //////////////////////////////////////////////////////////////////////
-//Here we're taking in the data from the HTML form, and assigning them to PHP variables to use later on.
+//Here we're trimming whitespace and setting all inputs to lowercase
 $trimmedIncomeDescription = trim($incomeDescription);
 $trimmedIncomeType = trim($incomeType);
 $trimmedIncomeGrossAmount = trim($incomeGrossAmount);
@@ -37,8 +37,6 @@ $strIncomeType = strtolower($trimmedIncomeType);
 $decIncomeGrossAmount = strtolower($trimmedIncomeGrossAmount);
 $decIncomeNetAmount = strtolower($trimmedIncomeNetAmount);
 $strIncomeDate = strtolower($trimmedIncomeDate);
-
-
 //////////////////////////////////////////////////////////////////////
 //This drops the table and all data in it. Very destructive.
 //$sql = "DROP TABLE income";

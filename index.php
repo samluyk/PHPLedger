@@ -31,8 +31,6 @@ Date: Q4 2019
     </style>
     </head>
 
-
-
 <title>Financial Logger</title>
 <body>
 
@@ -40,8 +38,6 @@ Date: Q4 2019
 <h1>Financial Logger</h1>
 <hr class="new1">
 <br>
-
-
 
 <!--
 /////////////////////////////////////////////////////////////////////////
@@ -68,7 +64,6 @@ echo "<br>";
 End get current date
 /////////////////////////////////////////////////////////////////////////
 -->
-
 
 <!--
 /////////////////////////////////////////////////////////////////////////
@@ -174,8 +169,8 @@ Begin Income Input Work:
               "Paycheck", 
               "Freelance Tech", 
               "Freelance Photo", 
-              "Selling",
-              "Other"
+              "Selling Something",
+              "Other Income"
             );
 
             foreach($fixedexpenses as $item){
@@ -217,7 +212,7 @@ End Income Input Work
 
 <!--
 /////////////////////////////////////////////////////////////////////////
-Start Query:
+Start Queries:
 /////////////////////////////////////////////////////////////////////////
 -->
   <center>

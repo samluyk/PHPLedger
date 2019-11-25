@@ -6,8 +6,8 @@ It is unique to my own personal situation but can be adapted to fit other use ca
 
 
 ### Requirements:
-- wampserver3.1.9 or the following
-- php 7.2.18
+- wampserver3.1.9 (windows) or the following
+- php 7.2
 - mysqli 5.7.26
 - apache2
 - phpmyadmin
@@ -23,3 +23,19 @@ It is unique to my own personal situation but can be adapted to fit other use ca
 - GUI to query the database
 - documentation
 - encryption
+
+### Database Tables:
+- Expenses:
+- Item:Varchar200
+- Amount:Decimal13,2
+- Category:String
+- Comment:String
+- Date:Date?
+
+- Income:
+- Description:Varchar500
+- Type:String
+- Gross Amount:Decimal13,2
+- Net Amount:Decimal13,2
+- Date:Date?
+- Comment:Varchar500

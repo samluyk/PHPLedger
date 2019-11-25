@@ -29,9 +29,7 @@ print "<br>";
 print $expenseDate;
 print "<br>";
 //////////////////////////////////////////////////////////////////////
-//Here we're taking in the data from the HTML form, and assigning them to PHP variables to use later on.
-
-$trimmedItemName = trim($itemName);
+////Here we're trimming whitespace and setting all inputs to lowercase$trimmedItemName = trim($itemName);
 $trimmedExpenseAmount = trim($expenseAmount);
 $trimmedexpenseCategory = trim($expenseAmount2);
 $trimmedexpenseCategory2 = trim($lastName2);
@@ -44,7 +42,6 @@ $strExpenseCategory = strtolower($trimmedexpenseCategory);
 $strExpenseCategory2 = strtolower($trimmedexpenseCategory2);
 $strExpenseComment = strtolower($trimmedExpenseComment);
 $strExpenseDate = strtolower($trimmedExpenseDate);
-
 //////////////////////////////////////////////////////////////////////
 //This drops the table and all data in it. !Very destructive!
 //$sql = "DROP TABLE expenses";
