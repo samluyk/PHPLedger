@@ -14,28 +14,14 @@ It is unique to my own personal situation but can be adapted to fit other use ca
 
 ### To do:
 - ~~finalize categories~~
-- break up fixed/variable expenses in code
-- define array as ints not strings
-- less ugly front end/use external css
-- separate file for database credentials
-- success/failure messages
-- database backend to store the data
+- break up fixed/variable expenses
+- ~~less ugly front end~~
+- external css use
+- ~~separate file for database connection~~
+- success/failure messages on insert/delete
+- postgresql backend to store the data
+- import data to the database
 - GUI to query the database
 - documentation
 - encryption
-
-### Database Tables:
-- Expenses:
-- Item:Varchar200
-- Amount:Decimal13,2
-- Category:String
-- Comment:String
-- Date:Date?
-
-- Income:
-- Description:Varchar500
-- Type:String
-- Gross Amount:Decimal13,2
-- Net Amount:Decimal13,2
-- Date:Date?
-- Comment:Varchar500
+- dockerization
