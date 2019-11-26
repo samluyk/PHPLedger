@@ -211,7 +211,7 @@ Start Queries:
 -->
   <center>
 
-    <legend><b><i>Database Functions</b></i></legend>
+    <h2><legend>Database Functions</legend></h2>
     <br>
     <td>View Database</td><br><br>
     <td><form>

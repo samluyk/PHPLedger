@@ -38,6 +38,18 @@ $decIncomeGrossAmount = strtolower($trimmedIncomeGrossAmount);
 $decIncomeNetAmount = strtolower($trimmedIncomeNetAmount);
 $strIncomeDate = strtolower($trimmedIncomeDate);
 //////////////////////////////////////////////////////////////////////
+//Prints for debugging
+print $strIncomeDescription;
+print "<br>";
+print $strIncomeType;
+print "<br>";
+print $decIncomeGrossAmount;
+print "<br>";
+print $decIncomeNetAmount;
+print "<br>";
+print $strIncomeDate;
+print "<br>";
+//////////////////////////////////////////////////////////////////////
 //This drops the table and all data in it. Very destructive.
 //$sql = "DROP TABLE income";
 //mysqli_query($connection, $sql);

@@ -29,7 +29,7 @@ print "<br>";
 //Here we're trimming whitespace and setting all inputs to lowercase
 $trimmedItemName = trim($itemName);
 $trimmedExpenseAmount = trim($expenseAmount);
-$trimmedExpenseCategory = trim($expenseAmount);
+$trimmedExpenseCategory = trim($expenseCategory);
 $trimmedExpenseComment = trim($expenseComment);
 $trimmedExpenseDate = trim($expenseDate);
 
@@ -38,6 +38,18 @@ $decExpenseAmount = strtolower($trimmedExpenseAmount);
 $strExpenseCategory = strtolower($trimmedExpenseCategory);
 $strExpenseComment = strtolower($trimmedExpenseComment);
 $strExpenseDate = strtolower($trimmedExpenseDate);
+//////////////////////////////////////////////////////////////////////
+//Prints for debugging
+print $strItemName;
+print "<br>";
+print $decExpenseAmount;
+print "<br>";
+print $strExpenseCategory;
+print "<br>";
+print $strExpenseComment;
+print "<br>";
+print $strExpenseDate;
+print "<br>";
 //////////////////////////////////////////////////////////////////////
 //This drops the table and all data in it. !Very destructive!
 //$sql = "DROP TABLE expenses";
