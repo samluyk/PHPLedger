@@ -76,13 +76,10 @@ Expense Input Work:
             <h2>Expense Input Form</h2><br>
             <label for="expenseName"> Item Name: </label>
             <input type = "text" id="itemName" name="itemName" required value=""/><br><br>
-
             <label for="expenseAmount"> Amount: </label>
             <input type = "text" id="expenseAmount" name="expenseAmount" required value=""/><br><br>
-
             <label for="expenseCategory"> Category: </label>
-
-            <select name="expenseCategory2"  id="expenseCategory" required>
+            <select name="expenseCategory"  id="expenseCategory" required>
 
           <option selected="selected">CATEGORY</option>
 
@@ -113,7 +110,6 @@ Expense Input Work:
             "Uncategorized"
           );
 
-
           foreach($variableexpenses as $item){
           ?>
           <option value="<?php echo strtolower($item); ?>"><?php echo $item; ?></option>
@@ -122,9 +118,9 @@ Expense Input Work:
           ?>
 
             </select>
-            <br><br>
-
-
+            <br>
+            <br>
+          
             <label for="expenseComment"> Comments: </label>
             <input type = "text" id="expenseComment" name="expenseComment" value=""/><br><br>
             
@@ -180,17 +176,15 @@ Begin Income Input Work:
             <?php
             }
             ?>
-
             </select>
             
-            <br><br>
+            <br>
+            <br>
 
             <label for="incomeGrossAmount"> Gross Amount: </label>
             <input type = "text" id="incomeGrossAmount" name="incomeGrossAmount" value=""/><br><br>
-
             <label for="incomeNetAmount"> Net Amount: </label>
             <input type = "text" id="incomeNetAmount" name="incomeNetAmount" required value=""/><br><br>
-
             <label for="incomeDate"> Date: </label>
             <input type="text" value="<?php echo date('m/d/Y');?>"/>
             <br>

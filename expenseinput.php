@@ -11,7 +11,6 @@ if($connection === false){
 $itemName  = $_POST["itemName"];
 $expenseAmount  = $_POST["expenseAmount"];
 $expenseCategory = $_POST["expenseCategory"];
-$expenseCategory2  = $_POST["expenseCategory2"];
 $expenseComment  = $_POST["expenseComment"];
 $expenseDate  = $_POST["expenseDate"];
 ////////////////////////////////////////////////////////////////////
@@ -22,24 +21,21 @@ print $expenseAmount;
 print "<br>";
 print $expenseCategory;
 print "<br>";
-print $expenseCategory2;
-print "<br>";
 print $expenseComment;
 print "<br>";
 print $expenseDate;
 print "<br>";
 //////////////////////////////////////////////////////////////////////
-////Here we're trimming whitespace and setting all inputs to lowercase$trimmedItemName = trim($itemName);
+//Here we're trimming whitespace and setting all inputs to lowercase
+$trimmedItemName = trim($itemName);
 $trimmedExpenseAmount = trim($expenseAmount);
-$trimmedexpenseCategory = trim($expenseAmount2);
-$trimmedexpenseCategory2 = trim($lastName2);
+$trimmedExpenseCategory = trim($expenseAmount);
 $trimmedExpenseComment = trim($expenseComment);
 $trimmedExpenseDate = trim($expenseDate);
 
 $strItemName = strtolower($trimmedItemName);
 $decExpenseAmount = strtolower($trimmedExpenseAmount);
-$strExpenseCategory = strtolower($trimmedexpenseCategory);
-$strExpenseCategory2 = strtolower($trimmedexpenseCategory2);
+$strExpenseCategory = strtolower($trimmedExpenseCategory);
 $strExpenseComment = strtolower($trimmedExpenseComment);
 $strExpenseDate = strtolower($trimmedExpenseDate);
 //////////////////////////////////////////////////////////////////////
