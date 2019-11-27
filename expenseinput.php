@@ -58,7 +58,7 @@ mysqli_query($connection, $sql);
 
 /////////////////////////////////////////////////////////////////////////
 //Creates the Table. It's name is people, and it has 5 columns.
-$sql = "CREATE TABLE expenses (userid INT AUTO_INCREMENT PRIMARY KEY,
+$sql = "CREATE TABLE expenses (expenseid INT AUTO_INCREMENT PRIMARY KEY,
     expenseItemName varchar(200),
     expenseAmount decimal(13,2),
     expenseDate date,
@@ -69,7 +69,7 @@ $result = mysqli_query($connection, $sql);
 //This is hard coded in information to test
 	
 $sql = "INSERT INTO expenses (expenseItemName, expenseAmount, expenseDate, expenseCategory, expenseComment) 
-VALUES('test tem name', '222', '2019-11-27', 'test category', 'test comment')";
+VALUES('$strItemName', '$decExpenseAmount', '2019-1-1', '$strExpenseCategory', '$strExpenseComment')";
 $res = mysqli_query($connection,$sql)
 or die("Didn't successfully insert".mysqli_connect_error());
 /////////////////////////////////////////////////////////////////////////

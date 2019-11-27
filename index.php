@@ -8,27 +8,8 @@ Date: Q4 2019
 -->
 <html>
     <head>
-
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
-    <style>
-    h1 {
-      color: orange;
-      background-color: #222227;
-      margin: auto;
-      text-align: center;
-      font-family: 'Ubuntu', sans-serif;
-    }
-    body {
-      margin: auto;
-      text-align: center;
-      background-color: #222227;
-      color: #3b61f1;
-      font-family: 'Ubuntu', sans-serif;
-    }
-    hr.new1 {
-     border-top: 3px solid white;
-    }   
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
     </head>
 
 <title>Financial Logger</title>

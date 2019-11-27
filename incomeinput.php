@@ -57,7 +57,7 @@ mysqli_query($connection, $sql);
 
 /////////////////////////////////////////////////////////////////////////
 //Creates the table
-$sql = "CREATE TABLE income (userid INT AUTO_INCREMENT PRIMARY KEY,
+$sql = "CREATE TABLE income (incomeid INT AUTO_INCREMENT PRIMARY KEY,
     incomeDescription varchar(200),
     incomeType varchar(60),
     incomeDate date,
@@ -68,7 +68,7 @@ $result = mysqli_query($connection, $sql);
 //This is hard coded in information.
 	
 $sql = "INSERT INTO income (incomeDescription, incomeType, incomeDate, incomeGrossAmount, incomeNetAmount) 
-VALUES('test description', 'test income type', '2019-11-27', '111', '100')";
+VALUES('$strIncomeDescription', '$strIncomeType', '2019-1-1', '$decIncomeGrossAmount', '$decIncomeNetAmount')";
 $res = mysqli_query($connection,$sql)
 or die("Didn't successfully insert".mysqli_connect_error());
 /////////////////////////////////////////////////////////////////////////

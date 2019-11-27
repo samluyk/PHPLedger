@@ -8,18 +8,21 @@ It is unique to my own personal situation but can be adapted to fit other use ca
 ### Requirements:
 - wampserver3.1.9 (windows) or the following on linux
 - php 7.2.18
+- php extensions: mysqli curl mbstring
 - mysqli 5.7.26
 - apache 2.4.39
-- phpmyadmin
+- phpmyadmin 4.8.5
 
 ### To do:
 - ~~finalize categories~~
-- break up fixed/variable expenses
+- finalize database scheme
+- break up fixed/variable expenses in code
 - ~~less ugly front end~~
-- external css use
-- ~~separate file for database connection~~
+- fix external css font issue
+- separate file for database connection information
+- fix date input issue
 - success/failure messages on insert/delete
-- postgresql backend to store the data
+- mysql backend to store the data
 - import data to the database
 - GUI to query the database
 - documentation
