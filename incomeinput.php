@@ -92,6 +92,27 @@ while($row = mysqli_fetch_array($res))
 print "</table></center>";
 }
 ////////////////////////////////////////////////////////////////////
+//This successfully prints the latest insertion
+$sql = "SELECT * FROM income ORDER BY incomeid DESC LIMIT 1";
+$res = mysqli_query($connection,$sql);
+
+if(mysqli_num_rows($res)<1)
+{
+print "BEEP BOOP Error!";
+echo "<br>";
+}
+else
+{
+echo "<br>";
+print "<center><table border=3pt><tr> <td>Income Description</td> <td>Income Type</td> <td>Income Date</td> <td>Income Gross</td><td>Income Net</td> </tr>";
+while($row = mysqli_fetch_array($res))
+{
+    print "<tr> <td>".$row['incomeDescription']."</td> <td>".$row['incomeType']."</td> <td>".$row['incomeDate']."</td>
+    <td>".$row['incomeGrossAmount']."</td> <td>".$row['incomeNetAmount']."</td> </tr>";
+}
+print "</table></center>";
+}
+////////////////////////////////////////////////////////////////////
 //This drops the table and all data in it. Very destructive.
 //$sql = "DROP TABLE income";
 //mysqli_query($connection, $sql);
