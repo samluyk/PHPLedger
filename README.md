@@ -22,20 +22,21 @@ It's also my first "real" attempt at a project, git, and good documentation.
 - separate file for database connection information
 - fix date input issue
 - success/failure messages on insert/delete
-- import data to the database
 - GUI to query the database
 - documentation
 - encryption
 
 ### Windows Install Instructions:
-- Download and install wampserver version 3.1.9
-- Install Git for windows
+- Download and install wampserver version 3.1.9 http://www.wampserver.com/en/
+- Install Git for windows https://git-scm.com/download/win
 - 
+-
 -
 
 
 ### Ubuntu Install Instructions:
 - Open the terminal and run "sudo apt update"
--
+- Run the command "sudo apt install git apache2 php7.2 php7.2-curl php7.2-mysqli php7.2-mbstring phpmyadmin"
+- cd to
 -
 -
