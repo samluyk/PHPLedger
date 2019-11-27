@@ -8,7 +8,6 @@ Date: Q4 2019
 -->
 <html>
     <head>
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
     <link rel="stylesheet" type="text/css" href="style.css">
     </head>
 

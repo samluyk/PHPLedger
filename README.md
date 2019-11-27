@@ -2,7 +2,7 @@
 
 This program was created to be a ledger that allows me to store and categorize all the money I make and spend, and save it in a database for logging purposes and visualization. 
 It's meant only to run locally.
-It's also my first "real" attempt at a project, git, and good documentation so please go easy on me.
+It's also my first "real" attempt at a project, git, and good documentation.
 
 ### Requirements:
 - wampserver3.1.9 (on windows) or the following on linux
@@ -15,10 +15,10 @@ It's also my first "real" attempt at a project, git, and good documentation so p
 ### To do:
 - ~~finalize categories~~
 - ~~less ugly front end~~
+- ~~use Ubuntu font locally~~
 - ~~mysql backend to store the data~~
-- finalize database scheme
-- use Ubuntu font locally
 - break up fixed/variable expenses in code
+- finalize database scheme
 - separate file for database connection information
 - fix date input issue
 - success/failure messages on insert/delete
@@ -29,13 +29,13 @@ It's also my first "real" attempt at a project, git, and good documentation so p
 
 ### Windows Install Instructions:
 - Download and install wampserver version 3.1.9
--
--
+- Install Git for windows
+- 
 -
 
 
 ### Ubuntu Install Instructions:
-- Open the terminal and run
+- Open the terminal and run "sudo apt update"
 -
 -
 -

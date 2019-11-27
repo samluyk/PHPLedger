@@ -15,3 +15,9 @@ body {
 hr.new1 {
  border-top: 3px solid white;
 } 
+
+@font-face {
+  font-family: 'UBUNTU';
+  src: url('./Ubuntu-Regular.ttf');
+  src: local('UBUNTU'), url('./Ubuntu-Regular.ttf') format('truetype'), url('./Ubuntu-Regular.ttf') format('truetype');
+}

@@ -1,5 +1,8 @@
 <?php
+/////////////////////////////////////////////////////////////////////////
+//Sets timezone to EST and links to the external css
 date_default_timezone_set("America/New_York");
+echo "<link rel='stylesheet' type='text/css' href='style.css' />";
 /////////////////////////////////////////////////////////////////////////
 //Here we're connecting to the database
 $connection = mysqli_connect("localhost", "root", "", "test_database");
@@ -52,10 +55,10 @@ print $strIncomeDate;
 print "<br>";
 /////////////////////////////////////////////////////////////////////////
 //This drops the table and all data in it. Very destructive.
-
+/*
 $sql = "DROP TABLE income";
 mysqli_query($connection, $sql);
-
+*/
 /////////////////////////////////////////////////////////////////////////
 //Creates the table
 $sql = "CREATE TABLE income (incomeid INT AUTO_INCREMENT PRIMARY KEY,
@@ -104,6 +107,8 @@ echo "<br>";
 }
 else
 {
+echo "<br>";
+echo "You inserted the following information:";
 echo "<br>";
 print "<center><table border=3pt><tr> <td>Income Description</td> <td>Income Type</td> <td>Income Date</td> <td>Income Gross</td><td>Income Net</td> </tr>";
 while($row = mysqli_fetch_array($res))

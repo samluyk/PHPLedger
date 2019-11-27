@@ -1,5 +1,8 @@
 <?php
+/////////////////////////////////////////////////////////////////////////
+//Sets timezone to EST and links to the external css
 date_default_timezone_set("America/New_York");
+echo "<link rel='stylesheet' type='text/css' href='style.css' />";
 /////////////////////////////////////////////////////////////////////////
 //Here we're connecting to the database
 $connection = mysqli_connect("localhost", "root", "", "test_database");
@@ -52,18 +55,18 @@ print $strExpenseDate;
 print "<br>";
 /////////////////////////////////////////////////////////////////////////
 //This drops the table and all data in it. Very destructive.
-
+/*
 $sql = "DROP TABLE expenses";
 mysqli_query($connection, $sql);
-
+*/
 /////////////////////////////////////////////////////////////////////////
 //Creates the Table. It's name is people, and it has 5 columns.
 $sql = "CREATE TABLE expenses (expenseid INT AUTO_INCREMENT PRIMARY KEY,
-    expenseItemName varchar(200),
+    expenseItemName varchar(100),
     expenseAmount decimal(13,2),
     expenseDate date,
     expenseCategory varchar(60),
-    expenseComment varchar(200));";
+    expenseComment varchar(300));";
 $result = mysqli_query($connection, $sql);
 /////////////////////////////////////////////////////////////////////////
 //This is hard coded in information to test
@@ -106,6 +109,8 @@ echo "<br>";
 }
 else
 {
+echo "<br>";
+echo "You inserted the following information:";
 echo "<br>";
 print "<center><table border=3pt><tr> <td>Expense Item Name</td> <td>Expense Amount</td> <td>Expense Date</td> <td>Expense Category</td><td>Expense Comment</td> </tr>";
 while($row = mysqli_fetch_array($res))
