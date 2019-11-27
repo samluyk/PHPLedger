@@ -14,7 +14,7 @@ $expenseCategory = $_POST["expenseCategory"];
 $expenseComment  = $_POST["expenseComment"];
 $expenseDate  = $_POST["expenseDate"];
 /////////////////////////////////////////////////////////////////////////
-//Prints for debugging
+//Prints the user input for debugging
 print $itemName;
 print "<br>";
 print $expenseAmount;
@@ -39,7 +39,7 @@ $strExpenseCategory = strtolower($trimmedExpenseCategory);
 $strExpenseComment = strtolower($trimmedExpenseComment);
 $strExpenseDate = strtolower($trimmedExpenseDate);
 /////////////////////////////////////////////////////////////////////////
-//Prints for debugging
+//Prints the trimmed and lowercased user input for debugging
 print $strItemName;
 print "<br>";
 print $decExpenseAmount;
@@ -95,13 +95,13 @@ while($row = mysqli_fetch_array($res))
 print "</table></center>";
 }
 /////////////////////////////////////////////////////////////////////////
-//This successfully prints the latest insertion
+//This successfully prints the most recent insertion
 $sql = "SELECT * FROM expenses ORDER BY expenseid DESC LIMIT 1";
 $res = mysqli_query($connection,$sql);
 
 if(mysqli_num_rows($res)<1)
 {
-print "BEEP BOOP ERROR";
+print "No Rows, Error!";
 echo "<br>";
 }
 else
@@ -117,9 +117,11 @@ print "</table></center>";
 }
 ////////////////////////////////////////////////////////////////////
 //This drops the table and all data in it. Very destructive.
-//$sql = "DROP TABLE expenses";
-//mysqli_query($connection, $sql);
-
+/*
+$sql = "DROP TABLE expenses";
+mysqli_query($connection, $sql);
+*/
+////////////////////////////////////////////////////////////////////
+//Close the database connection
 mysqli_close($connection);
 ?>
-

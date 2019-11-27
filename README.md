@@ -1,12 +1,11 @@
 # PHPLedger
 
-This program is meant to categorize and log every penny made and spent, and store it in a database for logging purposes and future visualization. 
-
-It is unique to my own personal situation but can be adapted to fit other use cases.
-
+This program was created to be a ledger that allows me to store and categorize all the money I make and spend, and save it in a database for logging purposes and visualization. 
+It's meant only to run locally.
+It's also my first "real" attempt at a project, git, and good documentation so please go easy on me.
 
 ### Requirements:
-- wampserver3.1.9 (windows) or the following on linux
+- wampserver3.1.9 (on windows) or the following on linux
 - php 7.2.18
 - php extensions: mysqli curl mbstring
 - mysqli 5.7.26
@@ -15,16 +14,28 @@ It is unique to my own personal situation but can be adapted to fit other use ca
 
 ### To do:
 - ~~finalize categories~~
-- finalize database scheme
-- break up fixed/variable expenses in code
 - ~~less ugly front end~~
-- fix external css font issue
+- ~~mysql backend to store the data~~
+- finalize database scheme
+- use Ubuntu font locally
+- break up fixed/variable expenses in code
 - separate file for database connection information
 - fix date input issue
 - success/failure messages on insert/delete
-- mysql backend to store the data
 - import data to the database
 - GUI to query the database
 - documentation
 - encryption
-- dockerization
+
+### Windows Install Instructions:
+- Download and install wampserver version 3.1.9
+-
+-
+-
+
+
+### Ubuntu Install Instructions:
+- Open the terminal and run
+-
+-
+-

@@ -19,7 +19,6 @@ Date: Q4 2019
 <h1>Financial Logger</h1>
 <hr class="new1">
 <br>
-
 <!--
 /////////////////////////////////////////////////////////////////////////
 Get current date:
@@ -183,7 +182,6 @@ End Income Input Work
 /////////////////////////////////////////////////////////////////////////
 -->
 
-
 <!--
 /////////////////////////////////////////////////////////////////////////
 Start Query Stuffs
@@ -193,19 +191,13 @@ Start Query Stuffs
 
     <h2><legend>Database Functions</legend></h2>
     <br>
-    <td>View Database</td><br><br>
-    <td><form>
-    <input type="button" value="View Database" onclick="window.location.href='http://google.com'" />
-    </form></td>
-    <br><br>
 
     <td>Delete Latest Entry (Display & confirm this!)</td><br><br>
     <td><form>
     <input type="button" value="Delete Latest Entry" onclick="window.location.href='http://google.com'" />
     </form></td>
     <br>
-
-  <br>
+    <br>
 
 </center>
 <!--

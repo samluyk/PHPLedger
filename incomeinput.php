@@ -13,7 +13,8 @@ $incomeType  = $_POST["incomeType"];
 $incomeGrossAmount  = $_POST["incomeGrossAmount"];
 $incomeNetAmount  = $_POST["incomeNetAmount"];
 $incomeDate  = $_POST["incomeDate"];
-
+/////////////////////////////////////////////////////////////////////////
+//Prints the user input for debugging
 print $incomeDescription;
 print "<br>";
 print $incomeType;
@@ -38,7 +39,7 @@ $decIncomeGrossAmount = strtolower($trimmedIncomeGrossAmount);
 $decIncomeNetAmount = strtolower($trimmedIncomeNetAmount);
 $strIncomeDate = strtolower($trimmedIncomeDate);
 /////////////////////////////////////////////////////////////////////////
-//Prints for debugging
+//Prints the trimmed and lowercased user input for debugging
 print $strIncomeDescription;
 print "<br>";
 print $strIncomeType;
@@ -92,13 +93,13 @@ while($row = mysqli_fetch_array($res))
 print "</table></center>";
 }
 ////////////////////////////////////////////////////////////////////
-//This successfully prints the latest insertion
+//This successfully prints the most recent insertion
 $sql = "SELECT * FROM income ORDER BY incomeid DESC LIMIT 1";
 $res = mysqli_query($connection,$sql);
 
 if(mysqli_num_rows($res)<1)
 {
-print "BEEP BOOP Error!";
+print "No Rows, Error!";
 echo "<br>";
 }
 else
@@ -114,9 +115,11 @@ print "</table></center>";
 }
 ////////////////////////////////////////////////////////////////////
 //This drops the table and all data in it. Very destructive.
-//$sql = "DROP TABLE income";
-//mysqli_query($connection, $sql);
-//
+/*
+$sql = "DROP TABLE income";
+mysqli_query($connection, $sql);
+*/
 ////////////////////////////////////////////////////////////////////
+//Close the database connection
 mysqli_close($connection);
 ?>
