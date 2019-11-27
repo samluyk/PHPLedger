@@ -6,10 +6,10 @@ It is unique to my own personal situation but can be adapted to fit other use ca
 
 
 ### Requirements:
-- wampserver3.1.9 (windows) or the following
-- php 7.2
+- wampserver3.1.9 (windows) or the following on linux
+- php 7.2.18
 - mysqli 5.7.26
-- apache2
+- apache 2.4.39
 - phpmyadmin
 
 ### To do:

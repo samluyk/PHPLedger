@@ -12,7 +12,6 @@ h1 {
   text-align: center;
   font-family: 'Ubuntu', sans-serif;
 }
-
 body {
   margin: auto;
   text-align: center;
@@ -20,7 +19,6 @@ body {
   color: #3b61f1;
   font-family: 'Ubuntu', sans-serif;
 }
-
 hr.new1 {
-  border-top: 3px solid white;
-}
+ border-top: 3px solid white;
+} 
