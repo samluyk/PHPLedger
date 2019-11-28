@@ -17,10 +17,10 @@ It's also my first "real" attempt at a project, git, and good documentation.
 - ~~less ugly front end~~
 - ~~use Ubuntu font locally~~
 - ~~mysql backend to store the data~~
+- ~~fix date input issue~~
 - break up fixed/variable expenses in code
 - finalize database scheme
 - separate file for database connection information
-- fix date input issue
 - success/failure messages on insert/delete
 - GUI to query the database
 - documentation
@@ -30,13 +30,13 @@ It's also my first "real" attempt at a project, git, and good documentation.
 - Download and install wampserver version 3.1.9 http://www.wampserver.com/en/
 - Install Git for windows https://git-scm.com/download/win
 - 
--
--
-
 
 ### Ubuntu Install Instructions:
 - Open the terminal and run "sudo apt update"
 - Run the command "sudo apt install git apache2 php7.2 php7.2-curl php7.2-mysqli php7.2-mbstring phpmyadmin"
 - cd to
 -
--
+
+### Links I couldn't have done this without:
+- http://web.archive.org/web/20191128183219/https://stackoverflow.com/questions/30243775/get-date-from-input-form-within-php
+- 

@@ -20,30 +20,12 @@ Date: Q4 2019
 <br>
 <!--
 /////////////////////////////////////////////////////////////////////////
-Get current date:
+Set time zone globally
 /////////////////////////////////////////////////////////////////////////
 -->
 <?php
 date_default_timezone_set("America/New_York");
-$dateVariable = date('m/d/Y');
-echo "Date in php: <br>";
-echo $dateVariable;
-echo "<br>";
-echo "<br>";
-echo "Date in JS: <br>";
-echo '<script type="text/javascript"><!--
-var now = new Date();
-document.write((now.getMonth()+1)+"/"+now.getDate()+"/"+now.getFullYear());
-//--></script>
-';
-echo "<br>";
 ?>
-<!--
-/////////////////////////////////////////////////////////////////////////
-End get current date
-/////////////////////////////////////////////////////////////////////////
--->
-
 <!--
 /////////////////////////////////////////////////////////////////////////
 Expense Input Work:
@@ -104,7 +86,7 @@ Expense Input Work:
             <input type = "text" id="expenseComment" name="expenseComment" value=""/><br><br>
             
             <label for="expenseDate"> Date: </label>
-            <input type="text" id="expenseDate" value="<?php echo date('m/d/Y');?>"/>
+            <input type="date" name="expenseDate" id="expenseDate" value="<?php echo date('Y-m-d'); ?>"/>
             <br>
             <br/>
             <input type="submit" value = "Submit">
@@ -164,7 +146,7 @@ Begin Income Input Work:
             <label for="incomeNetAmount"> Net Amount: </label>
             <input type = "text" id="incomeNetAmount" name="incomeNetAmount" required value=""/><br><br>
             <label for="incomeDate"> Date: </label>
-            <input type="text" value="<?php echo date('m/d/Y');?>"/>
+            <input type="date" name="incomeDate" value="<?php echo date('Y-m-d'); ?>"/>
             <br>
             <br/>
             <input type="submit" value = "Submit">

@@ -15,9 +15,10 @@ $itemName  = $_POST["itemName"];
 $expenseAmount  = $_POST["expenseAmount"];
 $expenseCategory = $_POST["expenseCategory"];
 $expenseComment  = $_POST["expenseComment"];
-$expenseDate  = $_POST["expenseDate"];
+$expenseDate = date('Y-m-d', strtotime($_POST['expenseDate']));
 /////////////////////////////////////////////////////////////////////////
 //Prints the user input for debugging
+print "<br>";
 print $itemName;
 print "<br>";
 print $expenseAmount;
@@ -72,7 +73,7 @@ $result = mysqli_query($connection, $sql);
 //This is hard coded in information to test
 	
 $sql = "INSERT INTO expenses (expenseItemName, expenseAmount, expenseDate, expenseCategory, expenseComment) 
-VALUES('$strItemName', '$decExpenseAmount', '2019-1-1', '$strExpenseCategory', '$strExpenseComment')";
+VALUES('$strItemName', '$decExpenseAmount', '$strExpenseDate', '$strExpenseCategory', '$strExpenseComment')";
 $res = mysqli_query($connection,$sql)
 or die("Didn't successfully insert".mysqli_connect_error());
 /////////////////////////////////////////////////////////////////////////

@@ -15,9 +15,11 @@ $incomeDescription  = $_POST["incomeDescription"];
 $incomeType  = $_POST["incomeType"];
 $incomeGrossAmount  = $_POST["incomeGrossAmount"];
 $incomeNetAmount  = $_POST["incomeNetAmount"];
-$incomeDate  = $_POST["incomeDate"];
+$incomeDate = date('Y-m-d', strtotime($_POST['incomeDate']));
 /////////////////////////////////////////////////////////////////////////
 //Prints the user input for debugging
+print "Prints the user input for debugging";
+print "<br>";
 print $incomeDescription;
 print "<br>";
 print $incomeType;
@@ -43,6 +45,7 @@ $decIncomeNetAmount = strtolower($trimmedIncomeNetAmount);
 $strIncomeDate = strtolower($trimmedIncomeDate);
 /////////////////////////////////////////////////////////////////////////
 //Prints the trimmed and lowercased user input for debugging
+print "Prints the trimmed and lowercased user input for debugging";
 print $strIncomeDescription;
 print "<br>";
 print $strIncomeType;
@@ -72,7 +75,7 @@ $result = mysqli_query($connection, $sql);
 //This is hard coded in information.
 	
 $sql = "INSERT INTO income (incomeDescription, incomeType, incomeDate, incomeGrossAmount, incomeNetAmount) 
-VALUES('$strIncomeDescription', '$strIncomeType', '2019-1-1', '$decIncomeGrossAmount', '$decIncomeNetAmount')";
+VALUES('$strIncomeDescription', '$strIncomeType', '$strIncomeDate', '$decIncomeGrossAmount', '$decIncomeNetAmount')";
 $res = mysqli_query($connection,$sql)
 or die("Didn't successfully insert".mysqli_connect_error());
 /////////////////////////////////////////////////////////////////////////
