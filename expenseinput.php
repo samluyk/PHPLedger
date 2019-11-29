@@ -1,16 +1,17 @@
 <?php
 /////////////////////////////////////////////////////////////////////////
-//Sets timezone to EST and links to the external css
+//Sets timezone to EST
 date_default_timezone_set("America/New_York");
+//Links to the external css
 echo "<link rel='stylesheet' type='text/css' href='style.css' />";
 /////////////////////////////////////////////////////////////////////////
-//Here we're connecting to the database
+//Were connecting to the database (server/user/password/database)
 $connection = mysqli_connect("localhost", "root", "", "test_database");
 if($connection === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 /////////////////////////////////////////////////////////////////////////
-//Taking in the data from the HTML form
+//Recieving the data from the HTML form
 $itemName  = $_POST["itemName"];
 $expenseAmount  = $_POST["expenseAmount"];
 $expenseCategory = $_POST["expenseCategory"];
@@ -37,13 +38,13 @@ print $expenseDate;
 print "<br>";
 */
 /////////////////////////////////////////////////////////////////////////
-//Here we're trimming whitespace and setting all inputs to lowercase
+//Here we're trimming whitespace on inputs and setting all inputs to lowercase
 $trimmedItemName = trim($itemName);
 $trimmedExpenseAmount = trim($expenseAmount);
 $trimmedExpenseCategory = trim($expenseCategory);
 $trimmedExpenseComment = trim($expenseComment);
 $trimmedExpenseDate = trim($expenseDate);
-
+//
 $strItemName = strtolower($trimmedItemName);
 $decExpenseAmount = strtolower($trimmedExpenseAmount);
 $strExpenseCategory = strtolower($trimmedExpenseCategory);
@@ -75,7 +76,7 @@ $sql = "DROP TABLE expenses";
 mysqli_query($connection, $sql);
 */
 /////////////////////////////////////////////////////////////////////////
-//Creates the Table. It's name is people, and it has 5 columns.
+//Creates the table and the columns.
 $sql = "CREATE TABLE expenses (expenseid INT AUTO_INCREMENT PRIMARY KEY,
     expenseItemName varchar(80),
     expenseAmount decimal(8,2),
@@ -85,16 +86,13 @@ $sql = "CREATE TABLE expenses (expenseid INT AUTO_INCREMENT PRIMARY KEY,
     expenseComment varchar(300));";
 $result = mysqli_query($connection, $sql);
 /////////////////////////////////////////////////////////////////////////
-//This is hard coded in information to test
-	
+//This inserts the data from the form into the database
 $sql = "INSERT INTO expenses (expenseItemName, expenseAmount, expenseDate, expenseCategory, paymentMethod, expenseComment) 
 VALUES('$strItemName', '$decExpenseAmount', '$strExpenseDate', '$strExpenseCategory', '$expensePaymentMethod', '$strExpenseComment')";
 $res = mysqli_query($connection,$sql)
 or die("Didn't successfully insert".mysqli_connect_error());
 /////////////////////////////////////////////////////////////////////////
-
-/////////////////////////////////////////////////////////////////////////
-//The following block of code prints the information in the expenses table
+//The following block of code prints the information in the expenses table, for testing at the moment.
 $sql = "SELECT * FROM expenses";
 $res = mysqli_query($connection,$sql);
 if(mysqli_num_rows($res)<1)
@@ -116,13 +114,13 @@ while($row = mysqli_fetch_array($res))
 print "</table></center>";
 }
 /////////////////////////////////////////////////////////////////////////
-//This successfully prints the most recent insertion
+//This successfully prints the most recent insertion into the table
 $sql = "SELECT * FROM expenses ORDER BY expenseid DESC LIMIT 1";
 $res = mysqli_query($connection,$sql);
 
 if(mysqli_num_rows($res)<1)
 {
-print "No Rows, Error!";
+print "Error";
 echo "<br>";
 }
 else
