@@ -18,6 +18,7 @@ It's also my first "real" attempt at a project, git, and good documentation.
 - ~~use Ubuntu font locally~~
 - ~~mysql backend to store the data~~
 - ~~fix date input issue~~
+- ~~add payment method~~
 - break up fixed/variable expenses in code
 - finalize database scheme
 - separate file for database connection information

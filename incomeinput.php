@@ -58,18 +58,18 @@ print $strIncomeDate;
 print "<br>";
 /////////////////////////////////////////////////////////////////////////
 //This drops the table and all data in it. Very destructive.
-/*
+
 $sql = "DROP TABLE income";
 mysqli_query($connection, $sql);
-*/
+
 /////////////////////////////////////////////////////////////////////////
 //Creates the table
 $sql = "CREATE TABLE income (incomeid INT AUTO_INCREMENT PRIMARY KEY,
     incomeDescription varchar(200),
-    incomeType varchar(60),
+    incomeType varchar(30),
     incomeDate date,
-    incomeGrossAmount decimal(13,2),
-    incomeNetAmount decimal(13,2));";
+    incomeGrossAmount decimal(8,2),
+    incomeNetAmount decimal(8,2));";
 $result = mysqli_query($connection, $sql);
 /////////////////////////////////////////////////////////////////////////
 //This is hard coded in information.

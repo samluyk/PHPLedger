@@ -36,7 +36,7 @@ Expense Input Work:
     <table>
             <h2>Expense Input Form</h2><br>
             <label for="expenseName"> Item Name: </label>
-            <input type = "text" id="itemName" name="itemName" required value=""/><br><br>
+            <input type = "text" id="itemName" name="itemName" required autofocus value=""/><br><br>
             <label for="expenseAmount"> Amount: </label>
             <input type = "text" id="expenseAmount" name="expenseAmount" required value=""/><br><br>
             <label for="expenseCategory"> Category: </label>
@@ -81,7 +81,15 @@ Expense Input Work:
             </select>
             <br>
             <br>
-          
+            <label for="paymentMethod"> Payment method: </label>
+            <select name="paymentMethod"> 
+                        <option value="credit card">Credit Card</option>
+                        <option value="cash">Cash</option>
+                        <option value="debit card">Debit Card</option>
+                        <option value="other">Other</option>
+            </select>
+            <br>
+            <br>
             <label for="expenseComment"> Comments: </label>
             <input type = "text" id="expenseComment" name="expenseComment" value=""/><br><br>
             
@@ -113,7 +121,7 @@ Begin Income Input Work:
 
             <h2>Income Input Form</h2><br>
             <label for="incomeDescription"> Description: </label>
-            <input type = "text" id="incomeDescription" name="incomeDescription" required value=""/><br><br>
+            <input type = "text" id="incomeDescription" name="incomeDescription" required autofocus value=""/><br><br>
 
             <label for="incomeType"> Income Type: </label>
             <select name="incomeType"  id="incomeType" required>
