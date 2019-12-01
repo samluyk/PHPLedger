@@ -17,7 +17,6 @@ Date: Q4 2019
 <center>
 <h1>Financial Logger</h1>
 <hr class="new1">
-<br>
 <!--
 /////////////////////////////////////////////////////////////////////////
 Set time zone globally
@@ -168,11 +167,7 @@ Start Query Stuffs
 /////////////////////////////////////////////////////////////////////////
 -->
   <center>
-
-    <h2><legend>Database Functions</legend></h2>
     <br>
-
-    <td>Visit Query Page</td><br>
     <td><form>
     <input type="button" value="Visit Query Page" onclick="window.location.href='./query.php'" />
     </form></td>
@@ -189,4 +184,9 @@ End Query Stuffs
 /////////////////////////////////////////////////////////////////////////
 -->
 </body>
+<hr class="new1">
+<footer>
+<p>Hand written by Sam Luyk. Code at 
+<a href="https://github.com/samluyk/PHPLedger">https://github.com/samluyk/PHPLedger</a></p>
+</footer> 
 </html>
