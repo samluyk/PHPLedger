@@ -63,10 +63,10 @@ print "<br>";
 */
 /////////////////////////////////////////////////////////////////////////
 //This drops the table and all data in it. Very destructive.
-/*
+
 $sql = "DROP TABLE income";
 mysqli_query($connection, $sql);
-*/
+
 /////////////////////////////////////////////////////////////////////////
 //Creates the table for income data
 $sql = "CREATE TABLE income (incomeid INT AUTO_INCREMENT PRIMARY KEY,

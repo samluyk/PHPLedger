@@ -8,13 +8,13 @@ It's also my first "real" attempt at a progrma I'll use, git, and good documenta
 
 ### To do:
 - ~~finalize categories~~
-- ~~less ugly front end~~
 - ~~use Ubuntu font locally~~
 - ~~mysql backend to store the data~~
 - ~~fix date input issue~~
 - ~~add payment method feature~~
 - ~~finalize database scheme/datatypes~~
 - ~~database & table variables~~
+- less bad css
 - mysql skip-networking for local only use
 - more input sanatization
 - define expenses as fixed or variable in code
@@ -22,7 +22,7 @@ It's also my first "real" attempt at a progrma I'll use, git, and good documenta
 - success/failure messages on insert/delete
 - something to display database info graphically on separate page
 - documentation
-- table width size in css
+- Do not just blindly use SELECT * in the code, explicitly type out the column names which are actually needed
 
 
 ### Windows Install Instructions:
@@ -53,4 +53,4 @@ It's also my first "real" attempt at a progrma I'll use, git, and good documenta
 - 
 
 ### Data import instructions:
--
+- Can take CSV's from excel/google sheets. Instructions coming soon.

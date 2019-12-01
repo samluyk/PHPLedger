@@ -5,8 +5,12 @@ date_default_timezone_set("America/New_York");
 //Links to the external css
 echo "<link rel='stylesheet' type='text/css' href='style.css' />";
 /////////////////////////////////////////////////////////////////////////
+//Insert the name of your database and expenses table here
+$databaseName = "test_database";
+$expenseTableName = "expenses";
+/////////////////////////////////////////////////////////////////////////
 //Were connecting to the database (server/user/password/database)
-$connection = mysqli_connect("localhost", "root", "", "test_database");
+$connection = mysqli_connect("localhost", "root", "", "$databaseName");
 if($connection === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
@@ -18,10 +22,6 @@ $expenseCategory = $_POST["expenseCategory"];
 $expenseComment  = $_POST["expenseComment"];
 $expensePaymentMethod  = $_POST["paymentMethod"];
 $expenseDate = date('Y-m-d', strtotime($_POST['expenseDate']));
-/////////////////////////////////////////////////////////////////////////
-//Insert the name of your database and expenses table here
-$databaseName = "testDatabase";
-$expenseTableName = "expenses2";
 /////////////////////////////////////////////////////////////////////////
 //Prints the user input for debugging
 /*
@@ -75,11 +75,11 @@ print "<br>";
 */
 /////////////////////////////////////////////////////////////////////////
 //This drops the table and all data in it. Very destructive.
-$sql = "DROP TABLE $tableName";
+$sql = "DROP TABLE $expenseTableName";
 mysqli_query($connection, $sql);
 /////////////////////////////////////////////////////////////////////////
 //Creates the table and the columns.
-$sql = "CREATE TABLE `$databaseName`.`$tableName` 
+$sql = "CREATE TABLE `test_database`.`$expenseTableName` 
 ( `expense_id` SMALLINT NOT NULL AUTO_INCREMENT ,
     `expense_date` DATE NOT NULL ,
     `the_expense` VARCHAR(80) NOT NULL ,
@@ -91,13 +91,13 @@ $sql = "CREATE TABLE `$databaseName`.`$tableName`
 $result = mysqli_query($connection, $sql);
 /////////////////////////////////////////////////////////////////////////
 //This inserts the data from the form into the database
-$sql = "INSERT INTO $tableName (expense_date, the_expense, expense_category, expense_amount, expense_comment, expense_payment_method) 
+$sql = "INSERT INTO $expenseTableName (expense_date, the_expense, expense_category, expense_amount, expense_comment, expense_payment_method) 
 VALUES('$strExpenseDate', '$strItemName', '$strExpenseCategory', '$decExpenseAmount', '$strExpenseComment', '$expensePaymentMethod')";
 $res = mysqli_query($connection,$sql)
 or die("Didn't successfully insert".mysqli_connect_error());
 /////////////////////////////////////////////////////////////////////////
 //The following block of code prints the information in the expenses table, for testing at the moment.
-$sql = "SELECT * FROM $tableName";
+$sql = "SELECT * FROM $expenseTableName";
 $res = mysqli_query($connection,$sql);
 if(mysqli_num_rows($res)<1)
 {
@@ -119,7 +119,7 @@ print "</table></center>";
 }
 /////////////////////////////////////////////////////////////////////////
 //This successfully prints the most recent insertion into the table
-$sql = "SELECT * FROM $tableName ORDER BY expense_id DESC LIMIT 1";
+$sql = "SELECT * FROM $expenseTableName ORDER BY expense_id DESC LIMIT 1";
 $res = mysqli_query($connection,$sql);
 
 if(mysqli_num_rows($res)<1)
