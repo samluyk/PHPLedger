@@ -77,23 +77,25 @@ mysqli_query($connection, $sql);
 */
 /////////////////////////////////////////////////////////////////////////
 //Creates the table and the columns.
-$sql = "CREATE TABLE expenses (expenseid INT AUTO_INCREMENT PRIMARY KEY,
-    expenseItemName varchar(80),
-    expenseAmount decimal(8,2),
-    expenseDate date,
-    expenseCategory varchar(50),
-    paymentMethod varchar(20),
-    expenseComment varchar(300));";
+$sql = "CREATE TABLE `test_database`.`expenses2` 
+( `expense_id` SMALLINT NOT NULL AUTO_INCREMENT ,
+    `expense_date` DATE NOT NULL ,
+    `the_expense` VARCHAR(80) NOT NULL ,
+    `expense_category` VARCHAR(50) NOT NULL ,
+    `expense_amount` DECIMAL(8,2) NOT NULL ,
+    `expense_comment` VARCHAR(300) NOT NULL ,
+    `expense_payment_method` VARCHAR(15) NOT NULL ,
+    PRIMARY KEY (`expense_id`)) ENGINE = InnoDB;";
 $result = mysqli_query($connection, $sql);
 /////////////////////////////////////////////////////////////////////////
 //This inserts the data from the form into the database
-$sql = "INSERT INTO expenses (expenseItemName, expenseAmount, expenseDate, expenseCategory, paymentMethod, expenseComment) 
-VALUES('$strItemName', '$decExpenseAmount', '$strExpenseDate', '$strExpenseCategory', '$expensePaymentMethod', '$strExpenseComment')";
+$sql = "INSERT INTO expenses2 (expense_date, the_expense, expense_category, expense_amount, expense_comment, expense_payment_method) 
+VALUES('$strExpenseDate', '$strItemName', '$strExpenseCategory', '$decExpenseAmount', '$strExpenseComment', '$expensePaymentMethod')";
 $res = mysqli_query($connection,$sql)
 or die("Didn't successfully insert".mysqli_connect_error());
 /////////////////////////////////////////////////////////////////////////
 //The following block of code prints the information in the expenses table, for testing at the moment.
-$sql = "SELECT * FROM expenses";
+$sql = "SELECT * FROM expenses2";
 $res = mysqli_query($connection,$sql);
 if(mysqli_num_rows($res)<1)
 {
@@ -105,17 +107,17 @@ else
 echo "<br>";
 print "The complete expenses table looks like:";
 echo "<br>";
-print "<center><table border=3pt><tr> <td>Expense Item Name</td> <td>Expense Amount</td> <td>Expense Date</td> <td>Expense Category</td><td>Payment Method</td><td>Expense Comment</td> </tr>";
+print "<center><table border=3pt><tr> <td>Expense Date</td> <td>The Expense</td> <td>Expense Category</td> <td>Expense Amount</td><td>Expense Comment</td><td>Payment Method</td> </tr>";
 while($row = mysqli_fetch_array($res))
 {
-    print "<tr> <td>".$row['expenseItemName']."</td> <td>".$row['expenseAmount']."</td> <td>".$row['expenseDate']."</td>
-    <td>".$row['expenseCategory']."</td> <td>".$row['paymentMethod']."</td> <td>".$row['expenseComment']."</td> </tr>";
+    print "<tr> <td>".$row['expense_date']."</td> <td>".$row['the_expense']."</td> <td>".$row['expense_category']."</td>
+    <td>".$row['expense_amount']."</td> <td>".$row['expense_comment']."</td> <td>".$row['expense_payment_method']."</td> </tr>";
 }
 print "</table></center>";
 }
 /////////////////////////////////////////////////////////////////////////
 //This successfully prints the most recent insertion into the table
-$sql = "SELECT * FROM expenses ORDER BY expenseid DESC LIMIT 1";
+$sql = "SELECT * FROM expenses2 ORDER BY expense_id DESC LIMIT 1";
 $res = mysqli_query($connection,$sql);
 
 if(mysqli_num_rows($res)<1)
@@ -128,11 +130,11 @@ else
 echo "<br>";
 echo "The most recent database insert:";
 echo "<br>";
-print "<center><table border=3pt><tr> <td>Expense Item Name</td> <td>Expense Amount</td> <td>Expense Date</td> <td>Expense Category</td><td>Payment Method</td><td>Expense Comment</td> </tr>";
+print "<center><table border=3pt><tr> <td>Expense Date</td> <td>The Expense</td> <td>Expense Category</td> <td>Expense Amount</td><td>Expense Comment</td><td>Payment Method</td> </tr>";
 while($row = mysqli_fetch_array($res))
 {
-    print "<tr> <td>".$row['expenseItemName']."</td> <td>".$row['expenseAmount']."</td> <td>".$row['expenseDate']."</td>
-    <td>".$row['expenseCategory']."</td> <td>".$row['paymentMethod']."</td> <td>".$row['expenseComment']."</td> </tr>";
+    print "<tr> <td>".$row['expense_date']."</td> <td>".$row['the_expense']."</td> <td>".$row['expense_category']."</td>
+    <td>".$row['expense_amount']."</td> <td>".$row['expense_comment']."</td> <td>".$row['expense_payment_method']."</td> </tr>";
 }
 print "</table></center>";
 }

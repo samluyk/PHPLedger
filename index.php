@@ -41,11 +41,8 @@ Expense Input Work:
             <input type = "text" id="expenseAmount" name="expenseAmount" required value=""/><br><br>
             <label for="expenseCategory"> Category: </label>
             <select name="expenseCategory"  id="expenseCategory" required>
-
           <option selected="selected">CATEGORY</option>
-
           <?php
-
           $variableexpenses = array(
             "Business", 
             "Car Accessories", 
@@ -77,7 +74,6 @@ Expense Input Work:
           <?php
           }
           ?>
-
             </select>
             <br>
             <br>
@@ -121,14 +117,12 @@ Begin Income Input Work:
 
             <h2>Income Input Form</h2><br>
             <label for="incomeDescription"> Description: </label>
-            <input type = "text" id="incomeDescription" name="incomeDescription" required autofocus value=""/><br><br>
+            <input type = "text" id="incomeDescription" name="incomeDescription" required value=""/><br><br>
 
             <label for="incomeType"> Income Type: </label>
             <select name="incomeType"  id="incomeType" required>
             <option selected="selected">CATEGORY</option>
-
             <?php
-
             $fixedexpenses = array(
               "Paycheck", 
               "Freelance Tech", 
@@ -136,9 +130,7 @@ Begin Income Input Work:
               "Selling Something",
               "Other Income"
             );
-
             foreach($fixedexpenses as $item){
-
             ?>
             <option value="<?php echo strtolower($item); ?>"><?php echo $item; ?></option>
             <?php
@@ -148,7 +140,6 @@ Begin Income Input Work:
             
             <br>
             <br>
-
             <label for="incomeGrossAmount"> Gross Amount: </label>
             <input type = "text" id="incomeGrossAmount" name="incomeGrossAmount" value=""/><br><br>
             <label for="incomeNetAmount"> Net Amount: </label>
@@ -181,13 +172,16 @@ Start Query Stuffs
     <h2><legend>Database Functions</legend></h2>
     <br>
 
-    <td>Delete Latest Entry (Display & confirm this!)</td><br><br>
+    <td>Visit Query Page</td><br>
     <td><form>
-    <input type="button" value="Delete Latest Entry" onclick="window.location.href='http://google.com'" />
+    <input type="button" value="Visit Query Page" onclick="window.location.href='./query.php'" />
     </form></td>
     <br>
+    <td>Delete Latest Entry (Display & confirm this!)</td><br>
+    <td><form>
+    <input type="button" value="Delete Latest Entry" onclick="window.location.href='./query.php'" />
+    </form></td>
     <br>
-
 </center>
 <!--
 /////////////////////////////////////////////////////////////////////////

@@ -13,16 +13,16 @@ It's also my first "real" attempt at a progrma I'll use, git, and good documenta
 - ~~mysql backend to store the data~~
 - ~~fix date input issue~~
 - ~~add payment method feature~~
+- ~~finalize database scheme/datatypes~~
 - mysql skip-networking for local only use
 - input sanatization
-- define categories in database, and list these in dropdown instead of other way around?
 - define expenses as fixed or variable in code
-- finalize database scheme/datatypes
 - separate file for database connection information
 - success/failure messages on insert/delete
 - something to display database info graphically on separate page
 - documentation
-- automatic (encrypted?) database backups
+- table width size in css
+- database & table variables
 
 
 ### Windows Requirements:
@@ -51,3 +51,6 @@ It's also my first "real" attempt at a progrma I'll use, git, and good documenta
 ### Links I couldn't have done this without:
 - http://web.archive.org/web/20191128183219/https://stackoverflow.com/questions/30243775/get-date-from-input-form-within-php
 - 
+
+### Data import instructions:
+-
