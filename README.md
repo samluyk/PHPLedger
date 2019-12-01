@@ -14,16 +14,27 @@ It's also my first "real" attempt at a progrma I'll use, git, and good documenta
 - ~~fix date input issue~~
 - ~~add payment method feature~~
 - ~~finalize database scheme/datatypes~~
+- ~~database & table variables~~
 - mysql skip-networking for local only use
-- input sanatization
+- more input sanatization
 - define expenses as fixed or variable in code
 - separate file for database connection information
 - success/failure messages on insert/delete
 - something to display database info graphically on separate page
 - documentation
 - table width size in css
-- database & table variables
 
+
+### Windows Install Instructions:
+- Download and install wampserver version 3.1.9 http://www.wampserver.com/en/
+- Install Git for windows https://git-scm.com/download/win
+- 
+
+### Ubuntu Install Instructions:
+- Open the terminal and run "sudo apt update"
+- Run the command "sudo apt install git apache2 php7.2 php7.2-curl php7.2-mysqli php7.2-mbstring phpmyadmin"
+- cd to
+-
 
 ### Windows Requirements:
 - wampserver3.1.9
@@ -36,17 +47,6 @@ It's also my first "real" attempt at a progrma I'll use, git, and good documenta
 - mysqli 5.7.26
 - apache 2.4.39
 - phpmyadmin 4.8.5
-
-### Windows Install Instructions:
-- Download and install wampserver version 3.1.9 http://www.wampserver.com/en/
-- Install Git for windows https://git-scm.com/download/win
-- 
-
-### Ubuntu Install Instructions:
-- Open the terminal and run "sudo apt update"
-- Run the command "sudo apt install git apache2 php7.2 php7.2-curl php7.2-mysqli php7.2-mbstring phpmyadmin"
-- cd to
--
 
 ### Links I couldn't have done this without:
 - http://web.archive.org/web/20191128183219/https://stackoverflow.com/questions/30243775/get-date-from-input-form-within-php
