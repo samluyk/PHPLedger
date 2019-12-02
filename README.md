@@ -7,14 +7,7 @@ It's meant only to run locally to help compensate for my lack of proper code/bes
 It's also my first "real" attempt at a program I'll really use, git, and good documentation.
 
 ### To do:
-- ~~finalize categories~~
-- ~~use Ubuntu font locally~~
-- ~~mysql backend to store the data~~
-- ~~fix date input issue~~
-- ~~add payment method feature~~
-- ~~finalize database scheme/datatypes~~
-- ~~database & table variables~~
-- nicer text boxes
+
 - incomeinput page with database/table variables
 - mysql skip-networking for local only use
 - input sanatization
@@ -26,13 +19,19 @@ It's also my first "real" attempt at a program I'll really use, git, and good do
 - complete documentation
 - Do not just blindly use SELECT * in the code, explicitly type out the column names which are actually needed
 
+### To done:
+- ~~finalize categories~~
+- ~~use Ubuntu font locally~~
+- ~~mysql backend to store the data~~
+- ~~fix date input issue~~
+- ~~add payment method feature~~
+- ~~finalize database scheme/datatypes~~
+- ~~database & table variables~~
+- ~~nicer text boxes~~
 
 ### Windows Install Instructions:
 - Download and install wampserver version 3.1.9 http://www.wampserver.com/en/
 - Install Git for windows https://git-scm.com/download/win
-
-### Links I couldn't have done this without:
-- http://web.archive.org/web/20191128183219/https://stackoverflow.com/questions/30243775/get-date-from-input-form-within-php
 
 ### Ubuntu Install Instructions:
 - Open the terminal and run "sudo apt update"
@@ -52,4 +51,8 @@ It's also my first "real" attempt at a program I'll really use, git, and good do
 - phpmyadmin 4.8.5
 
 ### Data import instructions:
-- Can take CSV's from excel/google sheets. Instructions coming soon.
+- This puppy can take CSV's from excel/google sheets. Instructions coming soon.
+
+### Links I couldn't have done this without:
+- http://web.archive.org/web/20191128183219/https://stackoverflow.com/questions/30243775/get-date-from-input-form-within-php
+- https://www.w3schools.com/css/tryit.asp?filename=trycss_forms
