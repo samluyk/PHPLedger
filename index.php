@@ -7,13 +7,12 @@ Date: Q4 2019
 /////////////////////////////////////////////////////////////////////////
 -->
 <html>
-    <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
 <title>Financial Logger</title>
-<body>
 
+<body>
 <center>
 <h1>Financial Logger</h1>
 <hr class="new1">
@@ -172,7 +171,7 @@ Start Query Stuffs
     <input type="button" value="Visit Query Page" onclick="window.location.href='./query.php'" />
     </form></td>
     <br>
-    <td>Delete Latest Entry (Display & confirm this!)</td><br>
+    <td>Delete Latest Entry (Confirm this w/ popup!)</td><br>
     <td><form>
     <input type="button" value="Delete Latest Entry" onclick="window.location.href='./query.php'" />
     </form></td>
@@ -186,7 +185,7 @@ End Query Stuffs
 </body>
 <hr class="new1">
 <footer>
-<p>Hand written by Sam Luyk. Code at 
+<p>Hand written by Sam Luyk. Code here: 
 <a href="https://github.com/samluyk/PHPLedger">https://github.com/samluyk/PHPLedger</a></p>
 </footer> 
 </html>

@@ -94,7 +94,12 @@ echo "<br>";
 else
 {
 echo "<br>";
-print "<center><table border=3pt><tr> <td>Income Description</td> <td>Income Type</td> <td>Income Date</td> <td>Income Gross</td><td>Income Net</td> </tr>";
+print "<center><table border=3pt><tr> 
+<td>Income Description</td> 
+<td>Income Type</td> 
+<td>Income Date</td> 
+<td>Income Gross</td>
+<td>Income Net</td> </tr>";
 while($row = mysqli_fetch_array($res))
 {
     print "<tr> <td>".$row['incomeDescription']."</td> <td>".$row['incomeType']."</td> <td>".$row['incomeDate']."</td>
@@ -117,7 +122,12 @@ else
 echo "<br>";
 echo "You inserted the following information:";
 echo "<br>";
-print "<center><table border=3pt><tr> <td>Income Description</td> <td>Income Type</td> <td>Income Date</td> <td>Income Gross</td><td>Income Net</td> </tr>";
+print "<center><table border=3pt><tr> 
+<td>Income Description</td> 
+<td>Income Type</td> 
+<td>Income Date</td> 
+<td>Income Gross</td>
+<td>Income Net</td> </tr>";
 while($row = mysqli_fetch_array($res))
 {
     print "<tr> <td>".$row['incomeDescription']."</td> <td>".$row['incomeType']."</td> <td>".$row['incomeDate']."</td>

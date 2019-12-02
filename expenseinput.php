@@ -109,7 +109,14 @@ else
 echo "<br>";
 print "The complete expenses table looks like:";
 echo "<br>";
-print "<center><table border=3pt><tr> <td>Expense ID</td> <td>Expense Date</td> <td>The Expense</td> <td>Expense Category</td> <td>Expense Amount</td><td>Expense Comment</td><td>Payment Method</td> </tr>";
+print "<center><table border=3pt><tr> 
+<td>Expense ID</td> 
+<td>Expense Date</td> 
+<td>The Expense</td> 
+<td>Expense Category</td> 
+<td>Expense Amount</td>
+<td>Expense Comment</td>
+<td>Payment Method</td> </tr>";
 while($row = mysqli_fetch_array($res))
 {
     print "<tr> <td>".$row['expense_id']."</td> <td>".$row['expense_date']."</td> <td>".$row['the_expense']."</td> <td>".$row['expense_category']."</td>
@@ -132,7 +139,14 @@ else
 echo "<br>";
 echo "The most recent database insert:";
 echo "<br>";
-print "<center><table border=3pt><tr> <td>Expense ID</td> <td>Expense Date</td> <td>The Expense</td> <td>Expense Category</td> <td>Expense Amount</td><td>Expense Comment</td><td>Payment Method</td> </tr>";
+print "<center><table border=3pt><tr> 
+<td>Expense ID</td> 
+<td>Expense Date</td> 
+<td>The Expense</td> 
+<td>Expense Category</td> 
+<td>Expense Amount</td>
+<td>Expense Comment</td>
+<td>Payment Method</td> </tr>";
 while($row = mysqli_fetch_array($res))
 {
     print "<tr> <td>".$row['expense_id']."</td> <td>".$row['expense_date']."</td> <td>".$row['the_expense']."</td> <td>".$row['expense_category']."</td>
