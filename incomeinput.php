@@ -5,8 +5,12 @@ date_default_timezone_set("America/New_York");
 //links to the external css file
 echo "<link rel='stylesheet' type='text/css' href='style.css' />";
 /////////////////////////////////////////////////////////////////////////
+//Insert the name of your database and income table here
+$databaseName = "test_database";
+$incomeTableName = "income";
+/////////////////////////////////////////////////////////////////////////
 //Here we're connecting to the database (server/user/password/database)
-$connection = mysqli_connect("localhost", "root", "", "test_database");
+$connection = mysqli_connect("localhost", "root", "", "$databaseName");
 if($connection === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
@@ -64,12 +68,12 @@ print "<br>";
 /////////////////////////////////////////////////////////////////////////
 //This drops the table and all data in it. Very destructive.
 /*
-$sql = "DROP TABLE income";
+$sql = "DROP TABLE $incomeTableName";
 mysqli_query($connection, $sql);
 */
 /////////////////////////////////////////////////////////////////////////
 //Creates the table for income data
-$sql = "CREATE TABLE income (incomeid INT AUTO_INCREMENT PRIMARY KEY,
+$sql = "CREATE TABLE $incomeTableName (incomeid INT AUTO_INCREMENT PRIMARY KEY,
     incomeDescription varchar(200),
     incomeType varchar(30),
     incomeDate date,
@@ -78,13 +82,13 @@ $sql = "CREATE TABLE income (incomeid INT AUTO_INCREMENT PRIMARY KEY,
 $result = mysqli_query($connection, $sql);
 /////////////////////////////////////////////////////////////////////////
 //This is the inserts into the database with the data from the form
-$sql = "INSERT INTO income (incomeDescription, incomeType, incomeDate, incomeGrossAmount, incomeNetAmount) 
+$sql = "INSERT INTO $incomeTableName (incomeDescription, incomeType, incomeDate, incomeGrossAmount, incomeNetAmount) 
 VALUES('$strIncomeDescription', '$strIncomeType', '$strIncomeDate', '$decIncomeGrossAmount', '$decIncomeNetAmount')";
 $res = mysqli_query($connection,$sql)
 or die("Didn't successfully insert".mysqli_connect_error());
 /////////////////////////////////////////////////////////////////////////
 //The following block of code prints the income table
-$sql = "SELECT * FROM income";
+$sql = "SELECT * FROM $incomeTableName";
 $res = mysqli_query($connection,$sql);
 if(mysqli_num_rows($res)<1)
 {
@@ -109,7 +113,7 @@ print "</table></center>";
 }
 ////////////////////////////////////////////////////////////////////
 //This successfully prints the most recent insertion into the table
-$sql = "SELECT * FROM income ORDER BY incomeid DESC LIMIT 1";
+$sql = "SELECT * FROM $incomeTableName ORDER BY incomeid DESC LIMIT 1";
 $res = mysqli_query($connection,$sql);
 
 if(mysqli_num_rows($res)<1)

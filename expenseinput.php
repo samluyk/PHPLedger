@@ -159,7 +159,7 @@ print "</table></center>";
 ////////////////////////////////////////////////////////////////////
 //This drops the table and all data in it. Very destructive.
 /*
-$sql = "DROP TABLE expenses";
+$sql = "DROP TABLE $expenseTableName";
 mysqli_query($connection, $sql);
 */
 ////////////////////////////////////////////////////////////////////
