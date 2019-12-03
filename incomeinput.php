@@ -72,8 +72,8 @@ $sql = "DROP TABLE $incomeTableName";
 mysqli_query($connection, $sql);
 */
 /////////////////////////////////////////////////////////////////////////
-//Creates the table for income data
-$sql = "CREATE TABLE $incomeTableName (incomeid INT AUTO_INCREMENT PRIMARY KEY,
+//Creates the table for income data if it doesn't already exist
+$sql = "CREATE TABLE IF NOT EXISTS $incomeTableName (incomeid INT AUTO_INCREMENT PRIMARY KEY,
     incomeDescription varchar(200),
     incomeType varchar(30),
     incomeDate date,

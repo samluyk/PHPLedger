@@ -80,8 +80,8 @@ $sql = "DROP TABLE $expenseTableName";
 mysqli_query($connection, $sql);
 */
 /////////////////////////////////////////////////////////////////////////
-//Creates the table and the columns.
-$sql = "CREATE TABLE `test_database`.`$expenseTableName` 
+//Creates the table and the columns if they aren't there already
+$sql = "CREATE TABLE IF NOT EXISTS `$databaseName`.`$expenseTableName` 
 ( `expense_id` SMALLINT NOT NULL AUTO_INCREMENT ,
     `expense_date` DATE NOT NULL ,
     `the_expense` VARCHAR(80) NOT NULL ,
