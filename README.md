@@ -8,6 +8,7 @@ It's also my first "real" attempt at a program I'll really use, git, and good do
 
 ### To do:
 
+- if table exist, dont recreate it. if not, do.
 - incomeinput page with database/table variables
 - mysql skip-networking for local only use
 - input sanatization

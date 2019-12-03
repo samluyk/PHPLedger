@@ -96,14 +96,14 @@ $result = mysqli_query($connection, $sql);
 $sql = "INSERT INTO $expenseTableName (expense_date, the_expense, expense_category, expense_amount, expense_comment, expense_payment_method) 
 VALUES('$strExpenseDate', '$strItemName', '$strExpenseCategory', '$decExpenseAmount', '$strExpenseComment', '$expensePaymentMethod')";
 $res = mysqli_query($connection,$sql)
-or die("Didn't successfully insert".mysqli_connect_error());
+or die("Didn't successfully insert into the database".mysqli_connect_error());
 /////////////////////////////////////////////////////////////////////////
 //The following block of code prints the information in the expenses table, for testing at the moment.
 $sql = "SELECT * FROM $expenseTableName";
 $res = mysqli_query($connection,$sql);
 if(mysqli_num_rows($res)<1)
 {
-print "No rows, bro. Error!";
+print "There are no rows in the database.";
 echo "<br>";
 }
 else
@@ -127,19 +127,19 @@ while($row = mysqli_fetch_array($res))
 print "</table></center>";
 }
 /////////////////////////////////////////////////////////////////////////
-//This successfully prints the most recent insertion into the table
+//This code prints the most recent insertion into the table
 $sql = "SELECT * FROM $expenseTableName ORDER BY expense_id DESC LIMIT 1";
 $res = mysqli_query($connection,$sql);
 
 if(mysqli_num_rows($res)<1)
 {
-print "Error";
+print "Error, didn't successfully insert the record.";
 echo "<br>";
 }
 else
 {
 echo "<br>";
-echo "The most recent database insert:";
+echo "You just successfully inserted the following expense:";
 echo "<br>";
 print "<center><table border=3pt><tr> 
 <td>Expense ID</td> 

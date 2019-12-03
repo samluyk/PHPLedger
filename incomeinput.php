@@ -120,7 +120,7 @@ echo "<br>";
 else
 {
 echo "<br>";
-echo "You inserted the following information:";
+echo "You just successfully inserted the following income:";
 echo "<br>";
 print "<center><table border=3pt><tr> 
 <td>Income Description</td> 
@@ -136,7 +136,7 @@ while($row = mysqli_fetch_array($res))
 print "</table></center>";
 }
 ////////////////////////////////////////////////////////////////////
-//This drops the table and all data in it. Very destructive.
+//This drops the table and all data in it for debugging. Very destructive.
 /*
 $sql = "DROP TABLE income";
 mysqli_query($connection, $sql);
