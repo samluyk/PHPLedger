@@ -67,10 +67,10 @@ print "<br>";
 */
 /////////////////////////////////////////////////////////////////////////
 //This drops the table and all data in it. Very destructive.
-/*
+
 $sql = "DROP TABLE $incomeTableName";
 mysqli_query($connection, $sql);
-*/
+
 /////////////////////////////////////////////////////////////////////////
 //Creates the table for income data if it doesn't already exist
 $sql = "CREATE TABLE IF NOT EXISTS $incomeTableName (incomeid INT AUTO_INCREMENT PRIMARY KEY,
@@ -92,7 +92,7 @@ $sql = "SELECT * FROM $incomeTableName";
 $res = mysqli_query($connection,$sql);
 if(mysqli_num_rows($res)<1)
 {
-print "No rows, bro";
+print "Error1";
 echo "<br>";
 }
 else
@@ -118,15 +118,16 @@ $res = mysqli_query($connection,$sql);
 
 if(mysqli_num_rows($res)<1)
 {
-print "No Rows, Error!";
+print "Error2";
 echo "<br>";
 }
 else
 {
 echo "<br>";
-echo "You just successfully inserted the following income:";
+echo "This is the most recent income input:";
 echo "<br>";
 print "<center><table border=3pt><tr> 
+<td>Income ID</td> 
 <td>Income Description</td> 
 <td>Income Type</td> 
 <td>Income Date</td> 
@@ -134,7 +135,7 @@ print "<center><table border=3pt><tr>
 <td>Income Net</td> </tr>";
 while($row = mysqli_fetch_array($res))
 {
-    print "<tr> <td>".$row['incomeDescription']."</td> <td>".$row['incomeType']."</td> <td>".$row['incomeDate']."</td>
+    print "<tr> <td>".$row['incomeid']."</td><td>".$row['incomeDescription']."</td> <td>".$row['incomeType']."</td> <td>".$row['incomeDate']."</td>
     <td>".$row['incomeGrossAmount']."</td> <td>".$row['incomeNetAmount']."</td> </tr>";
 }
 print "</table></center>";

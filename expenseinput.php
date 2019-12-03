@@ -75,10 +75,10 @@ print "<br>";
 */
 /////////////////////////////////////////////////////////////////////////
 //This drops the table and all data in it. Very destructive.
-/*
+
 $sql = "DROP TABLE $expenseTableName";
 mysqli_query($connection, $sql);
-*/
+
 /////////////////////////////////////////////////////////////////////////
 //Creates the table and the columns if they aren't there already
 $sql = "CREATE TABLE IF NOT EXISTS `$databaseName`.`$expenseTableName` 

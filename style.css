@@ -18,11 +18,11 @@ hr.new1 {
 
 input[type=text], select {
   width: 20%;
-  padding: 6px 8px;
+  padding: 5px 6px;
   margin: 2px 0;
   display: inline-block;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 2px;
   box-sizing: border-box;
 }
 
@@ -38,6 +38,21 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+input[type=button] {
+  width: 15%;
+  background-color: #3b61f1;
+  color: white;
+  padding: 6px 8px;
+  margin: 2px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=button]:hover {
   background-color: #45a049;
 }
 

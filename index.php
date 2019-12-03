@@ -171,11 +171,22 @@ Start Query Stuffs
     <input type="button" value="Visit Query Page" onclick="window.location.href='./query.php'" />
     </form></td>
     <br>
-    <td>Delete Latest Entry (Confirm this w/ popup!)</td><br>
     <td><form>
-    <input type="button" value="Delete Latest Entry" onclick="window.location.href='./query.php'" />
+    <input type="button" value="Delete Latest Entry" onclick="window.location.href='./deletelatest.php'" />
     </form></td>
-    <br>
+<!---
+    <a href="./deletelatest.php" class="confirmation">Delete Latest Entry</a>
+    <script type="text/javascript">
+    var elems = document.getElementsByClassName('confirmation');
+    var confirmIt = function (e) {
+        if (!confirm('Are you sure?')) e.preventDefault();
+    };
+    for (var i = 0, l = elems.length; i < l; i++) {
+        elems[i].addEventListener('click', confirmIt, false);
+    }
+  </script>
+  -->
+<br>
 </center>
 <!--
 /////////////////////////////////////////////////////////////////////////
