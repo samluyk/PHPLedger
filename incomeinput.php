@@ -9,8 +9,8 @@ echo "<link rel='stylesheet' type='text/css' href='style.css' />";
 $databaseName = "test_database";
 $incomeTableName = "income";
 /////////////////////////////////////////////////////////////////////////
-//Here we're connecting to the database (server/user/password/database)
-$connection = mysqli_connect("localhost", "root", "", "$databaseName");
+//Here we're connecting to the database (server:port/user/password/database)
+$connection = mysqli_connect("localhost:3306", "root", "", "$databaseName");
 if($connection === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
@@ -67,10 +67,10 @@ print "<br>";
 */
 /////////////////////////////////////////////////////////////////////////
 //This drops the table and all data in it. Very destructive.
-
+/*
 $sql = "DROP TABLE $incomeTableName";
 mysqli_query($connection, $sql);
-
+*/
 /////////////////////////////////////////////////////////////////////////
 //Creates the table for income data if it doesn't already exist
 $sql = "CREATE TABLE IF NOT EXISTS $incomeTableName (incomeid INT AUTO_INCREMENT PRIMARY KEY,

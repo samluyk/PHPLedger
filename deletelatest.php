@@ -21,8 +21,8 @@ $databaseName = "test_database";
 $expenseTableName = "expenses";
 $incomeTableName = "income";
 /////////////////////////////////////////////////////////////////////////
-//Were connecting to the database (server/user/password/database)
-$connection = mysqli_connect("localhost", "root", "", "$databaseName");
+//Were connecting to the database (server:port/user/password/database)
+$connection = mysqli_connect("localhost:3306", "root", "", "$databaseName");
 if($connection === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }

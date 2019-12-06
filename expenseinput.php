@@ -9,8 +9,8 @@ echo "<link rel='stylesheet' type='text/css' href='style.css' />";
 $databaseName = "test_database";
 $expenseTableName = "expenses";
 /////////////////////////////////////////////////////////////////////////
-//Were connecting to the database (server/user/password/database)
-$connection = mysqli_connect("localhost", "root", "", "$databaseName");
+//Were connecting to the database (server:port/user/password/database)
+$connection = mysqli_connect("localhost:3306", "root", "", "$databaseName");
 if($connection === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
@@ -75,10 +75,10 @@ print "<br>";
 */
 /////////////////////////////////////////////////////////////////////////
 //This drops the table and all data in it. Very destructive.
-
+/*
 $sql = "DROP TABLE $expenseTableName";
 mysqli_query($connection, $sql);
-
+*/
 /////////////////////////////////////////////////////////////////////////
 //Creates the table and the columns if they aren't there already
 $sql = "CREATE TABLE IF NOT EXISTS `$databaseName`.`$expenseTableName` 
@@ -89,7 +89,7 @@ $sql = "CREATE TABLE IF NOT EXISTS `$databaseName`.`$expenseTableName`
     `expense_amount` DECIMAL(8,2) NOT NULL ,
     `expense_comment` VARCHAR(300) NOT NULL ,
     `expense_payment_method` VARCHAR(15) NOT NULL ,
-    PRIMARY KEY (`expense_id`)) ENGINE = InnoDB;";
+    PRIMARY KEY (`expense_id`));";
 $result = mysqli_query($connection, $sql);
 /////////////////////////////////////////////////////////////////////////
 //This inserts the data from the form into the database
