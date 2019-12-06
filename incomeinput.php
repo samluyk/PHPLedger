@@ -15,7 +15,7 @@ if($connection === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 /////////////////////////////////////////////////////////////////////////
-//Taking in the data from the HTML form
+//Taking in the submitted data from the HTML form
 $incomeDescription  = $_POST["incomeDescription"];
 $incomeType  = $_POST["incomeType"];
 $incomeGrossAmount  = $_POST["incomeGrossAmount"];

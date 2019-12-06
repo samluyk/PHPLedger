@@ -3,7 +3,6 @@
 /////////////////////////////////////////////////////////////////////////
 Author: Sam Luyk
 Project: PHPLedger
-Date: Q4 2019
 /////////////////////////////////////////////////////////////////////////
 -->
 <html>
@@ -44,6 +43,7 @@ Expense Input Work:
           $variableexpenses = array(
             "Business", 
             "Car Accessories", 
+            "Car Insurance",
             "Car Repair/Maintenance", 
             "Clothing", 
             "Dining out", 
@@ -54,6 +54,7 @@ Expense Input Work:
             "Gas", 
             "Gifts", 
             "Household", 
+            "Insurance",
             "Investments/Stocks", 
             "Material Items", 
             "Personal/Medical", 
@@ -80,6 +81,7 @@ Expense Input Work:
                         <option value="credit card">Credit Card</option>
                         <option value="cash">Cash</option>
                         <option value="debit card">Debit Card</option>
+                        <option value="privacy">Privacy Card</option>
                         <option value="other">Other</option>
             </select>
             <br>
