@@ -7,12 +7,14 @@ How to use this program.
 - php 7.4.0
 - php extensions: mysqli curl mbstring
 - mysqli 8.0.18
+- postgresql 12.1
 - apache 2.4.41
 - phpmyadmin 4.9.2
 
 ### Windows Install Instructions:
 - Download and install wampserver (Currently version 3.2.0) https://sourceforge.net/projects/wampserver/files/latest/download
 - Install Git for windows https://git-scm.com/download/win
+- https://bitnami.com/tag/postgresql
 
 ### Ubuntu Install Instructions:
 - sudo apt update
@@ -28,6 +30,7 @@ How to use this program.
 - sudo add-apt-repository ppa:phpmyadmin/ppa
 - sudo apt update
 - sudo apt upgrade
+- sudo apt install phpmyadmin
 - cd /tmp/ && wget https://dev.mysql.com/get/mysql-apt-config_0.8.14-1_all.deb
 - sudo dpkg -i mysql-apt-config_0.8.14-1_all.deb
 - sudo apt install mysql-server mysql-client
