@@ -1,6 +1,6 @@
 ### Installation
 
-This is currently being worked on.
+This is currently being developed.
 
 ### General Requirements:
 - git

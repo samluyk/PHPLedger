@@ -1,6 +1,6 @@
 # PHPLedger
 
-This program was created to be a ledger that allows me to store and categorize all the money I make and spend, and save it in a database for logging purposes and visualization. 
+This program was created to be a digital ledger that allows me to store and categorize all the money I make and spend, and save it in a database for logging purposes and visualization. 
 
 It's meant only to run locally to help compensate for my lack of proper code/best practice knowledge. 
 
