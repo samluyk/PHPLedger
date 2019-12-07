@@ -10,7 +10,6 @@ The idea for this was based off of this linked spreadsheet. I was hoping for sim
 https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with_google_form_for_tracking/
 
 ### To do:
-- decide on postgresql or mysql
 - more detailed error messages
 - better input sanitization - htmlspecialchar
 - create config.php for time zone and db connection - require_once('config.php');
