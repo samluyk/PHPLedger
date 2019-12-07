@@ -4,7 +4,7 @@
 date_default_timezone_set("America/New_York");
 
 /* Database connection settings */
-$host = 'localhost';
+$host = 'localhost:3306';
 $user = 'root';
 $pass = '';
 $db = 'test_database';
@@ -21,7 +21,7 @@ $result = mysqli_query($mysqli, $sql);
 while ($row = mysqli_fetch_array($result)) {
 
     $data1 = $data1 . '"'. $row['expense_id'].'",';
-    $data2 = $data2 . '"'. $row['the_expense'] .'",';
+    $data2 = $data2 . '"'. $row['expense_date'] .'",';
 }
 
 $data1 = trim($data1,",");
@@ -37,7 +37,7 @@ $data2 = trim($data2,",");
     </head>
         <title>Run a query</title>
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+		<script type="text/javascript" src=".\Chart.bundle.min.js"></script>
 
 
 		<style type="text/css">			
@@ -70,7 +70,7 @@ $data2 = trim($data2,",");
     			var myChart = new Chart(ctx, {
         		type: 'line',
 		        data: {
-		            labels: [1,2,3,4,5,6,7,8,9],
+		            labels: [1,2,3,4,5,6,7,8,9,10,11],
 		            datasets: 
 		            [{
 		                label: 'Data 1',
