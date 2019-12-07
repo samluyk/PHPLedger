@@ -12,16 +12,15 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 ### To do:
 - more detailed error messages
 - better input sanitization - htmlspecialchar
-- create config.php for time zone and db connection - require_once('config.php');
+- pretty html tables
 - better success/failure messages on insert/delete
 - add mobile device css
 - a working delete last entry button in case of incorrect input
 - define expenses as "fixed" or "variable" in code
-- something to display database info graphically on separate page - grafana?
+- something to display database info graphically on separate page 
 - Don't use SELECT * , explicitly type out the column names needed
 - complete documentation
 - data import guide
-- move chartjs directory
 
 ### To done:
 - ~~finalize categories~~
@@ -47,3 +46,4 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - https://dev.mysql.com/downloads/repo/apt/
 - https://www.youtube.com/watch?v=cREXtrFiJBc
 - https://www.madsycode.com/download/chartjs-mysql/
+- http://johnsardine.com/freebies/dl-html-css/simple-little-tab/
