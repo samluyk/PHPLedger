@@ -13,5 +13,7 @@ date_default_timezone_set("America/New_York");
     <h1>Database GUI</h1>
     <hr class="new1">
     <br>
-    <center>Something something grafana?</center>
+    <center>Nodejs/Chartjs</center>
+
+    
 </html>

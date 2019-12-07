@@ -4,19 +4,25 @@ This is currently being developed.
 
 ### General Requirements:
 - git
+- npm
 - php 7.4.0
 - php extensions: mysqli curl mbstring
 - mysqli 8.0.18
 - apache 2.4.41
 - phpmyadmin 4.9.2
+- nodejs 12.13.1
+- chartjs 2.9.3
 
 ### Windows Install Instructions:
 - Download and install wampserver (Currently version 3.2.0) https://sourceforge.net/projects/wampserver/files/latest/download
 - Install Git for windows https://git-scm.com/download/win
+- Download the LTS of nodejs https://nodejs.org/en/ 
 - Open git for windows
 - type `cd c:/wamp64/www`
 - type `git clone https://github.com/samluyk/phpledger`
+- open the command prompt and enter `npm install chart.js --save`
 - open a web browser and enter the following url: `localhost/phpledger`
+
 
 ### Ubuntu Install Instructions:
 - Open the terminal

@@ -21,6 +21,7 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - Don't use SELECT * , explicitly type out the column names needed
 - complete documentation
 - data import guide
+- move chartjs directory
 
 ### To done:
 - ~~finalize categories~~
@@ -44,3 +45,5 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - https://www.mysterydata.com/update-apache-2-4-to-latest-version-on-ubuntu-16-04-server-vestacp/
 - https://websiteforstudents.com/install-mysql-8-0-on-ubuntu-16-04-17-10-18-04/
 - https://dev.mysql.com/downloads/repo/apt/
+- https://www.youtube.com/watch?v=cREXtrFiJBc
+- https://www.madsycode.com/download/chartjs-mysql/
