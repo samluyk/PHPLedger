@@ -171,6 +171,10 @@ Start Query Stuffs
 /////////////////////////////////////////////////////////////////////////
 -->
   <center>
+
+    <td><form>
+    <input type="button" value="Visit Financial Summary Page" onclick="window.location.href='./summary.php'" />
+    </form></td>
     <br>
     <td><form>
     <input type="button" value="Visit Query Page" onclick="window.location.href='./query.php'" />
