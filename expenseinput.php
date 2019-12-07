@@ -98,7 +98,8 @@ VALUES('$strExpenseDate', '$strItemName', '$strExpenseCategory', '$decExpenseAmo
 $res = mysqli_query($connection,$sql)
 or die("Didn't successfully insert into the database".mysqli_connect_error());
 /////////////////////////////////////////////////////////////////////////
-//The following block of code prints the information in the expenses table, for testing at the moment.
+//The following block of code prints all the information in the expenses table, for testing at the moment.
+/*
 $sql = "SELECT * FROM $expenseTableName";
 $res = mysqli_query($connection,$sql);
 if(mysqli_num_rows($res)<1)
@@ -126,6 +127,7 @@ while($row = mysqli_fetch_array($res))
 }
 print "</table></center>";
 }
+*/
 /////////////////////////////////////////////////////////////////////////
 //This code prints the most recent insertion into the table
 $sql = "SELECT * FROM $expenseTableName ORDER BY expense_id DESC LIMIT 1";

@@ -4,7 +4,6 @@ This is currently being developed.
 
 ### General Requirements:
 - git
-- npm
 - php 7.4.0
 - php extensions: mysqli curl mbstring
 - mysqli 8.0.18
@@ -13,7 +12,7 @@ This is currently being developed.
 - chartjs 2.9.3
 
 ### Windows Install Instructions:
-- Download and install wampserver (Currently version 3.2.0) https://sourceforge.net/projects/wampserver/files/latest/download
+- Download and install wampserver https://sourceforge.net/projects/wampserver/files/WampServer%203/WampServer%203.0.0/
 - Install Git for windows https://git-scm.com/download/win
 - Open git for windows
 - type `cd c:/wamp64/www`

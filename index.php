@@ -44,7 +44,7 @@ Expense Input Work:
           <option selected="selected">CATEGORY</option>
           <?php
           $variableexpenses = array(
-            "Business", 
+
             "Car Accessories", 
             "Car Insurance",
             "Car Repair/Maintenance", 
@@ -62,10 +62,7 @@ Expense Input Work:
             "Material Items", 
             "Personal/Medical", 
             "Photography", 
-            "Social", 
-            "Taxes", 
             "Technology", 
-            "Transportation", 
             "Travel", 
             "Uncategorized"
           );

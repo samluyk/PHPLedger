@@ -87,7 +87,8 @@ VALUES('$strIncomeDescription', '$strIncomeType', '$strIncomeDate', '$decIncomeG
 $res = mysqli_query($connection,$sql)
 or die("Didn't successfully insert".mysqli_connect_error());
 /////////////////////////////////////////////////////////////////////////
-//The following block of code prints the income table
+//The following block of code prints all of the income table
+/*
 $sql = "SELECT * FROM $incomeTableName";
 $res = mysqli_query($connection,$sql);
 if(mysqli_num_rows($res)<1)
@@ -111,6 +112,7 @@ while($row = mysqli_fetch_array($res))
 }
 print "</table></center>";
 }
+*/
 ////////////////////////////////////////////////////////////////////
 //This successfully prints the most recent insertion into the table
 $sql = "SELECT * FROM $incomeTableName ORDER BY incomeid DESC LIMIT 1";

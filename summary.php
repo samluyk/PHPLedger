@@ -2,6 +2,18 @@
 
 <?php
 date_default_timezone_set("America/New_York");
+/////////////////////////////////////////////////////////////////////////
+//Insert the name of your database and expenses table here
+$databaseName = "test_database";
+$expenseTableName = "expenses";
+$incomeTableName = "income";
+/////////////////////////////////////////////////////////////////////////
+//Were connecting to the database (server:port/user/password/database)
+$connection = mysqli_connect("localhost:3306", "root", "", "$databaseName");
+if($connection === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
+/////////////////////////////////////////////////////////////////////////
 ?>
 
 <html>
@@ -15,14 +27,28 @@ date_default_timezone_set("America/New_York");
     <br>
     <center>Financial Overview</center>
 
+<center>
     <table cellspacing='0'> <!-- cellspacing='0' is important, must stay -->
 
 	<!-- Table Header -->
 	<thead>
 		<tr>
-			<th>Task Details</th>
-			<th>Progress</th>
-			<th>Vital Task</th>
+			<th>2019 Budget</th>
+			<th>January</th>
+            <th>February</th>
+            <th>March</th>
+            <th>April</th>
+            <th>May</th>
+            <th>June</th>
+            <th>July</th>
+            <th>August</th>
+            <th>September</th>
+            <th>October</th>
+            <th>November</th>
+            <th>December</th>
+            <th>Year Total</th>
+            <th>Monthly Averge</th>
+            
 		</tr>
 	</thead>
 	<!-- Table Header -->
@@ -72,14 +98,96 @@ date_default_timezone_set("America/New_York");
 			<td>No</td>
 		</tr>
 
-		<tr class="even">
-			<td><a href="#yep-iit-doesnt-exist">Hyperlink 	Example</a></td>
-			<td>80%</td>
-			<td><a href="#inexistent-id">Another</a></td>
-		</tr>
+        <tr class="even">
+			<td>Waste half the day on Twitter</td>
+			<td>20%</td>
+			<td>No</td>
+        </tr>
+        <tr>
+			<td>Waste half the day on Twitter</td>
+			<td>20%</td>
+			<td>No</td>
+        </tr>
+        <tr class="even">
+			<td>Waste half the day on Twitter</td>
+			<td>20%</td>
+			<td>No</td>
+        </tr>
+        <tr>
+			<td>Waste half the day on Twitter</td>
+			<td>20%</td>
+			<td>No</td>
+        </tr>
+        <tr class="even">
+			<td>Waste half the day on Twitter</td>
+			<td>20%</td>
+			<td>No</td>
+        </tr>
+        <tr>
+			<td>Waste half the day on Twitter</td>
+			<td>20%</td>
+			<td>No</td>
+        </tr>
+        <tr class="even">
+			<td>Waste half the day on Twitter</td>
+			<td>20%</td>
+			<td>No</td>
+        </tr>
+        <tr>
+			<td>Waste half the day on Twitter</td>
+			<td>20%</td>
+			<td>No</td>
+        </tr>
+        <tr class="even">
+			<td>Waste half the day on Twitter</td>
+			<td>20%</td>
+			<td>No</td>
+        </tr>
+        <tr>
+			<td>Waste half the day on Twitter</td>
+			<td>20%</td>
+			<td>No</td>
+        </tr>
+        <tr class="even">
+			<td>Waste half the day on Twitter</td>
+			<td>20%</td>
+			<td>No</td>
+        </tr>
+        <tr>
+			<td>Waste half the day on Twitter</td>
+			<td>20%</td>
+			<td>No</td>
+        </tr>
+        <tr class="even">
+			<td>Waste half the day on Twitter</td>
+			<td>20%</td>
+			<td>No</td>
+        </tr>
+        <tr>
+			<td>Waste half the day on Twitter</td>
+			<td>20%</td>
+			<td>No</td>
+        </tr>
+        <tr class="even">
+			<td>Waste half the day on Twitter</td>
+			<td>20%</td>
+			<td>No</td>
+        </tr>
+        <tr>
+			<td>Waste half the day on Twitter</td>
+			<td>20%</td>
+			<td>No</td>
+        </tr>
+        <tr class="even">
+			<td>Waste half the day on Twitter</td>
+			<td>20%</td>
+			<td>No</td>
+        </tr>
+        
 
 	</tbody>
-	<!-- Table Body -->
+	<!-- End Table Body -->
 
 </table>
+</center>
 </html>
