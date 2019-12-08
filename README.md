@@ -10,9 +10,9 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 ### To do:
 - more detailed error messages for users
 - better input sanitization - htmlspecialchar
-- users cant submit "CATEGORY" as category logic
 - better success/failure messages on insert/delete
 - mobile device css
+- prettier date box
 - user can add/remove categories
 - a working delete last entry button in case of incorrect input
 - define expenses as "fixed" or "variable" in code
@@ -20,6 +20,7 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - Don't use SELECT * , explicitly type out the column names needed
 - ability to track different investment account values (my financial overview spreadsheet)
 - one click export of database
+
 
 ### To done:
 - ~~finalize categories~~
@@ -30,8 +31,9 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - ~~finalize database scheme/datatypes~~
 - ~~database & table variables for both income & expenses~~
 - ~~nicer text boxes~~
-- ~~if table already exist, dont recreate it everytime~
+- ~~if table already exist, dont recreate it everytime~~
 - ~~income comments field~~
+- ~~users cant submit "CATEGORY" as category logic~~
 
 ### Links I couldn't have done this without:
 - https://stackoverflow.com/questions/30243775/get-date-from-input-form-within-php

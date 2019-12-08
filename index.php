@@ -41,7 +41,7 @@ Expense Input Work:
             <input type = "text" id="expenseAmount" name="expenseAmount" required value=""/><br><br>
             <label for="expenseCategory"> Category: </label>
             <select name="expenseCategory"  id="expenseCategory" required>
-          <option selected="selected">CATEGORY</option>
+          <option disabled selected="selected">CATEGORY</option>
           <?php
           $variableexpenses = array(
 
@@ -121,7 +121,7 @@ Begin Income Input Work:
 
             <label for="incomeType"> Income Type: </label>
             <select name="incomeType"  id="incomeType" required>
-            <option selected="selected">CATEGORY</option>
+            <option disabled selected="selected">CATEGORY</option>
             <?php
             $fixedexpenses = array(
               "Paycheck", 
