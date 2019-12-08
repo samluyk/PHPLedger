@@ -74,11 +74,11 @@ mysqli_query($connection, $sql);
 /////////////////////////////////////////////////////////////////////////
 //Creates the table for income data if it doesn't already exist
 $sql = "CREATE TABLE IF NOT EXISTS $incomeTableName (incomeid INT AUTO_INCREMENT PRIMARY KEY,
-    incomeDescription varchar(200),
-    incomeType varchar(30),
-    incomeDate date,
-    incomeGrossAmount decimal(8,2),
-    incomeNetAmount decimal(8,2));";
+incomeDescription varchar(200),
+incomeType varchar(30),
+incomeDate date,
+incomeGrossAmount decimal(8,2),
+incomeNetAmount decimal(8,2));";
 $result = mysqli_query($connection, $sql);
 /////////////////////////////////////////////////////////////////////////
 //This is the inserts into the database with the data from the form

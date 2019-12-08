@@ -5,6 +5,7 @@ This is currently being developed.
 ### General Requirements:
 - git
 - OpenJDK11.0.5+10 (for metabase)
+- Metabase v0.33.6
 - php 7.4.0
 - php extensions: mysqli curl mbstring
 - mysqli 8.0.18
@@ -18,11 +19,11 @@ This is currently being developed.
 - Open git for windows
 - type `cd c:/wamp64/www`
 - type `git clone https://github.com/samluyk/phpledger`
-- open a web browser and enter the following url: `localhost/phpledger`
 - Download Metabase https://www.metabase.com/start/jar.html
 - move metabase.jar to wherever you like 
 - Open powershell and navigate to the downloaded metabase.jar
 - run `java -jar metabase.jar`
+- open a web browser and enter the following url: `localhost/phpledger`
 
 
 ### Ubuntu Install Instructions:
@@ -33,9 +34,11 @@ This is currently being developed.
 - `sudo add-apt-repository ppa:ondrej/php`
 - `sudo apt update`
 - `sudo apt install php7.4`
-- `sudo apt install php7.4-common php7.4-mysql php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-mbstring php7.4-opcache php7.4-zip     php7.4-intl add-apt-repository ppa:ondrej/apache2`
+- `sudo apt install php7.4-common php7.4-mysql php7.4-curl php7.4-gd php7.4-imagick php7.4-cli php7.4-dev php7.4-mbstring php7.4-opcache php7.4-zip php7.4-intl`
+-  `add-apt-repository ppa:ondrej/apache2`
 - `sudo apt update`
 - `sudo apt upgrade`
+- `sudo apt install apache2`
 - `sudo add-apt-repository ppa:phpmyadmin/ppa`
 - `sudo apt update`
 - `sudo apt upgrade`

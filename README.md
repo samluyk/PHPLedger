@@ -2,24 +2,28 @@
 
 This program was created to be a digital ledger that allows me to store and categorize all the money I make and spend, and save it in a database for logging purposes and visualization. 
 
-It's meant only to run locally to help compensate for my lack of proper code/best practice knowledge. You shpuld probably do the same.
+Vistualization is done via the open source project Metabase.
 
-The idea for this was based off of this linked spreadsheet. I was hoping for similar functionality, just self-hostable.
+This is meant only to run locally to help compensate for my lack of proper code/best practice knowledge. You should probably do the same.
+
+The idea for this was based off of this linked spreadsheet. I was hoping for similar functionality, just fully self-hostable.
 https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with_google_form_for_tracking/
 
 ### To do:
-- more detailed error messages
+- more detailed error messages for users
 - better input sanitization - htmlspecialchar
+- users cant submit "CATEGORY" as category logic
 - pretty html tables
 - better success/failure messages on insert/delete
-- add mobile device css
+- mobile device css
+- user can add/remove categories
 - a working delete last entry button in case of incorrect input
 - define expenses as "fixed" or "variable" in code
-- array for categories in table
-- Don't use SELECT * , explicitly type out the column names needed
 - complete documentation
-- collapsable tables for different years
+- Don't use SELECT * , explicitly type out the column names needed
 - ability to track different account values (my financial overview spreadsheet)
+- one click export of database
+- income comments field
 
 ### To done:
 - ~~finalize categories~~
