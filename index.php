@@ -147,6 +147,9 @@ Begin Income Input Work:
             <label for="incomeDate"> Date: </label>
             <input type="date" name="incomeDate" value="<?php echo date('Y-m-d'); ?>"/>
             <br>
+            <br>
+            <label for="incomeComments">Comments: </label>
+            <input type = "text" id="incomeComments" name="incomeComments" value=""/><br><br>
             <br/>
             <input type="submit" value = "Submit">
             <br><br>
@@ -178,6 +181,10 @@ Start Query Stuffs
     <td><form>
     <input type="button" value="Delete Latest Entry" onclick="window.location.href='./deletelatest.php'" />
     </form></td>    
+    <br>
+    <td><form>
+    <input type="button" value="Edit Categories" onclick="window.location.href='./editcategory.php'" />
+    </form></td>  
     <br>
     <td><form>
     <input type="button" value="Visit Financial Summary Page" onclick="window.location.href='./summary.php'" />

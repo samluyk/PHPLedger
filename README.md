@@ -1,8 +1,6 @@
 # PHPLedger
 
-This program was created to be a digital ledger that allows me to store and categorize all the money I make and spend, and save it in a database for logging purposes and visualization. 
-
-Vistualization is done via the open source project Metabase.
+This program was created to be a digital ledger that allows me to store and categorize all the money I make and spend, and save it in a database for logging purposes and visualization via the open source project Metabase. 
 
 This is meant only to run locally to help compensate for my lack of proper code/best practice knowledge. You should probably do the same.
 
@@ -13,7 +11,6 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - more detailed error messages for users
 - better input sanitization - htmlspecialchar
 - users cant submit "CATEGORY" as category logic
-- pretty html tables
 - better success/failure messages on insert/delete
 - mobile device css
 - user can add/remove categories
@@ -21,9 +18,8 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - define expenses as "fixed" or "variable" in code
 - complete documentation
 - Don't use SELECT * , explicitly type out the column names needed
-- ability to track different account values (my financial overview spreadsheet)
+- ability to track different investment account values (my financial overview spreadsheet)
 - one click export of database
-- income comments field
 
 ### To done:
 - ~~finalize categories~~
@@ -34,7 +30,8 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - ~~finalize database scheme/datatypes~~
 - ~~database & table variables for both income & expenses~~
 - ~~nicer text boxes~~
-- ~~if table already exist, dont recreate it everytime~~
+- ~~if table already exist, dont recreate it everytime~
+- ~~income comments field~~
 
 ### Links I couldn't have done this without:
 - https://stackoverflow.com/questions/30243775/get-date-from-input-form-within-php

@@ -21,6 +21,7 @@ $incomeType  = $_POST["incomeType"];
 $incomeGrossAmount  = $_POST["incomeGrossAmount"];
 $incomeNetAmount  = $_POST["incomeNetAmount"];
 $incomeDate = date('Y-m-d', strtotime($_POST['incomeDate']));
+$incomeComments  = $_POST["incomeComments"];
 /////////////////////////////////////////////////////////////////////////
 //Prints the user input for debugging
 /*
@@ -44,12 +45,14 @@ $trimmedIncomeType = trim($incomeType);
 $trimmedIncomeGrossAmount = trim($incomeGrossAmount);
 $trimmedIncomeNetAmount = trim($incomeNetAmount);
 $trimmedIncomeDate = trim($incomeDate);
+$trimmedIncomeComments = trim($incomeComments);
 //
 $strIncomeDescription = strtolower($trimmedIncomeDescription);
 $strIncomeType = strtolower($trimmedIncomeType);
 $decIncomeGrossAmount = strtolower($trimmedIncomeGrossAmount);
 $decIncomeNetAmount = strtolower($trimmedIncomeNetAmount);
 $strIncomeDate = strtolower($trimmedIncomeDate);
+$strIncomeComments = strtolower($trimmedIncomeComments);
 /////////////////////////////////////////////////////////////////////////
 //Prints the trimmed and lowercased user input for debugging
 /*
@@ -78,12 +81,13 @@ incomeDescription varchar(200),
 incomeType varchar(30),
 incomeDate date,
 incomeGrossAmount decimal(8,2),
-incomeNetAmount decimal(8,2));";
+incomeNetAmount decimal(8,2)
+incomeComments varchar(200));";
 $result = mysqli_query($connection, $sql);
 /////////////////////////////////////////////////////////////////////////
 //This is the inserts into the database with the data from the form
-$sql = "INSERT INTO $incomeTableName (incomeDescription, incomeType, incomeDate, incomeGrossAmount, incomeNetAmount) 
-VALUES('$strIncomeDescription', '$strIncomeType', '$strIncomeDate', '$decIncomeGrossAmount', '$decIncomeNetAmount')";
+$sql = "INSERT INTO $incomeTableName (incomeDescription, incomeType, incomeDate, incomeGrossAmount, incomeNetAmount, incomeComments) 
+VALUES('$strIncomeDescription', '$strIncomeType', '$strIncomeDate', '$decIncomeGrossAmount', '$decIncomeNetAmount', '$strIncomeComments')";
 $res = mysqli_query($connection,$sql)
 or die("Didn't successfully insert".mysqli_connect_error());
 /////////////////////////////////////////////////////////////////////////
@@ -104,11 +108,12 @@ print "<center><table border=3pt><tr>
 <td>Income Type</td> 
 <td>Income Date</td> 
 <td>Income Gross</td>
-<td>Income Net</td> </tr>";
+<td>Income Net</td>
+<td>Income Comments</td></tr>";
 while($row = mysqli_fetch_array($res))
 {
-    print "<tr> <td>".$row['incomeDescription']."</td> <td>".$row['incomeType']."</td> <td>".$row['incomeDate']."</td>
-    <td>".$row['incomeGrossAmount']."</td> <td>".$row['incomeNetAmount']."</td> </tr>";
+    print "<tr> <td>".$row['incomeid']."</td><td>".$row['incomeDescription']."</td> <td>".$row['incomeType']."</td> <td>".$row['incomeDate']."</td>
+    <td>".$row['incomeGrossAmount']."</td> <td>".$row['incomeNetAmount']."</td> <td>".$row['incomeComments']."</td>  </tr>";
 }
 print "</table></center>";
 }
@@ -134,11 +139,12 @@ print "<center><table border=3pt><tr>
 <td>Income Type</td> 
 <td>Income Date</td> 
 <td>Income Gross</td>
-<td>Income Net</td> </tr>";
+<td>Income Net</td>
+<td>Income Comments</td> </tr>";
 while($row = mysqli_fetch_array($res))
 {
     print "<tr> <td>".$row['incomeid']."</td><td>".$row['incomeDescription']."</td> <td>".$row['incomeType']."</td> <td>".$row['incomeDate']."</td>
-    <td>".$row['incomeGrossAmount']."</td> <td>".$row['incomeNetAmount']."</td> </tr>";
+    <td>".$row['incomeGrossAmount']."</td> <td>".$row['incomeNetAmount']."</td> <td>".$row['incomeComments']."</td>  </tr>";
 }
 print "</table></center>";
 }
