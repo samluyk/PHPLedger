@@ -169,16 +169,18 @@ Start Query Stuffs
 -->
   <center>
 
+
+
     <td><form>
-    <input type="button" value="Visit Financial Summary Page" onclick="window.location.href='./summary.php'" />
-    </form></td>
-    <br>
-    <td><form>
-    <input type="button" value="Visit Query Page" onclick="window.location.href='./query.php'" />
+    <input type="button" value="Visit Query Page" onclick="window.location.href='http://localhost:3000'" />
     </form></td>
     <br>
     <td><form>
     <input type="button" value="Delete Latest Entry" onclick="window.location.href='./deletelatest.php'" />
+    </form></td>    
+    <br>
+    <td><form>
+    <input type="button" value="Visit Financial Summary Page" onclick="window.location.href='./summary.php'" />
     </form></td>
 <!---
     <a href="./deletelatest.php" class="confirmation">Delete Latest Entry</a>

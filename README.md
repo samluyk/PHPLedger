@@ -16,11 +16,10 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - a working delete last entry button in case of incorrect input
 - define expenses as "fixed" or "variable" in code
 - array for categories in table
-- something to display database info graphically on separate page 
 - Don't use SELECT * , explicitly type out the column names needed
 - complete documentation
-- data import guide
 - collapsable tables for different years
+- ability to track different account values (my financial overview spreadsheet)
 
 ### To done:
 - ~~finalize categories~~
@@ -48,3 +47,4 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - https://www.madsycode.com/download/chartjs-mysql/
 - http://johnsardine.com/freebies/dl-html-css/simple-little-tab/
 - https://stackoverflow.com/questions/129677/how-can-i-sanitize-user-input-with-php
+- https://www.metabase.com/

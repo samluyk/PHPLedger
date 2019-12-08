@@ -4,20 +4,25 @@ This is currently being developed.
 
 ### General Requirements:
 - git
+- OpenJDK11.0.5+10 (for metabase)
 - php 7.4.0
 - php extensions: mysqli curl mbstring
 - mysqli 8.0.18
 - apache 2.4.41
 - phpmyadmin 4.9.2
-- chartjs 2.9.3
 
 ### Windows Install Instructions:
 - Download and install wampserver https://sourceforge.net/projects/wampserver/files/WampServer%203/WampServer%203.0.0/
+- Download and install OpenJDK11 https://adoptopenjdk.net/index.html?variant=openjdk11&jvmVariant=hotspot
 - Install Git for windows https://git-scm.com/download/win
 - Open git for windows
 - type `cd c:/wamp64/www`
 - type `git clone https://github.com/samluyk/phpledger`
 - open a web browser and enter the following url: `localhost/phpledger`
+- Download Metabase https://www.metabase.com/start/jar.html
+- move metabase.jar to wherever you like 
+- Open powershell and navigate to the downloaded metabase.jar
+- run `java -jar metabase.jar`
 
 
 ### Ubuntu Install Instructions:
@@ -41,4 +46,4 @@ This is currently being developed.
 - `sudo apt autoremove`
 
 ### Data import instructions:
-- This puppy can take CSV's from excel/google sheets, like the one linked in the reddit thread above. Instructions coming soon.
+- This puppy can take CSV's from excel/google sheets, like the one linked in the reddit thread above. If you need help with this, contact me. 
