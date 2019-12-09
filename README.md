@@ -2,9 +2,9 @@
 
 This program was created to be a digital ledger that allows me to store and categorize all the money I make and spend, and save it in a database for logging purposes and visualization via the open source project Metabase. 
 
-This is meant only to run locally to help compensate for my lack of proper code/best practice knowledge. You should probably do the same.
+This is meant only to run locally to help compensate for my lack of proper code/best practice knowledge. You should do the same.
 
-The idea for this was based off of this linked spreadsheet. I was hoping for similar functionality, just fully self-hostable.
+The idea for this was based off of this linked google sheet/form. I was hoping for similar functionality, just fully self-hostable.
 https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with_google_form_for_tracking/
 
 ### To do:
@@ -13,14 +13,13 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - better success/failure messages on insert/delete
 - mobile device css
 - prettier date box
-- user can add/remove categories
+- user can add/remove categories/payment methods
 - a working delete last entry button in case of incorrect input
 - define expenses as "fixed" or "variable" in code
-- complete documentation
 - Don't use SELECT * , explicitly type out the column names needed
 - ability to track different investment account values (my financial overview spreadsheet)
 - one click export of database
-
+- complete documentation
 
 ### To done:
 - ~~finalize categories~~
@@ -46,8 +45,6 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - https://www.mysterydata.com/update-apache-2-4-to-latest-version-on-ubuntu-16-04-server-vestacp/
 - https://websiteforstudents.com/install-mysql-8-0-on-ubuntu-16-04-17-10-18-04/
 - https://dev.mysql.com/downloads/repo/apt/
-- https://www.youtube.com/watch?v=cREXtrFiJBc
-- https://www.madsycode.com/download/chartjs-mysql/
 - http://johnsardine.com/freebies/dl-html-css/simple-little-tab/
 - https://stackoverflow.com/questions/129677/how-can-i-sanitize-user-input-with-php
 - https://www.metabase.com/

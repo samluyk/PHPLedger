@@ -47,8 +47,15 @@ $sql = "CREATE TABLE IF NOT EXISTS `test_database`.`user_income_categories`
   PRIMARY KEY (`income_category_id`)) ENGINE = MyISAM; ";
 $result = mysqli_query($connection, $sql);
 ////////////////////////////////////////////////////////////////////
+//Creates the table and the columns for the user creatable payment methods
+$sql = "CREATE TABLE IF NOT EXISTS `test_database`.`user_payment_method` 
+( `user_payment_method_id` SMALLINT NOT NULL AUTO_INCREMENT ,
+ `user_payment_method` VARCHAR(60) NOT NULL ,
+  PRIMARY KEY (`user_payment_method_id`)) ENGINE = MyISAM; ";
+$result = mysqli_query($connection, $sql);
+////////////////////////////////////////////////////////////////////
 //Table views:
-//The following block of code prints all the information in the user_income_categories table, for testing at the moment.
+//The following block of code prints all the information in the user_income_categories table
 $sql = "SELECT * FROM user_income_categories";
 $res = mysqli_query($connection,$sql);
 if(mysqli_num_rows($res)<1)
@@ -71,7 +78,7 @@ while($row = mysqli_fetch_array($res))
 print "</table></center>";
 }
 ////////////////////////////////////////////////////////////////////
-//The following block of code prints all the information in the user_expense_categories table, for testing at the moment.
+//The following block of code prints all the information in the user_expense_categories table
 $sql = "SELECT * FROM user_expense_categories";
 $res = mysqli_query($connection,$sql);
 if(mysqli_num_rows($res)<1)
@@ -90,6 +97,29 @@ print "<center><table border=3pt><tr>
 while($row = mysqli_fetch_array($res))
 {
     print "<tr> <td>".$row['expense_category_id']."</td> <td>".$row['user_expense_category']."</td> </tr>";
+}
+print "</table></center>";
+}
+////////////////////////////////////////////////////////////////////
+//The following block of code prints all the information in the user_payment_methods table
+$sql = "SELECT * FROM user_payment_method";
+$res = mysqli_query($connection,$sql);
+if(mysqli_num_rows($res)<1)
+{
+print "There are no user payment methods in the database.";
+echo "<br>";
+}
+else
+{
+echo "<br>";
+print "The complete user payment methods table looks like:";
+echo "<br>";
+print "<center><table border=3pt><tr> 
+<td>User Payment ID</td> 
+<td>User Payment</td></tr>";
+while($row = mysqli_fetch_array($res))
+{
+    print "<tr> <td>".$row['user_payment_method_id']."</td> <td>".$row['user_payment_method']."</td> </tr>";
 }
 print "</table></center>";
 }
