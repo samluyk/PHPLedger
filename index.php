@@ -183,7 +183,7 @@ Start Query Stuffs
     </form></td>    
     <br>
     <td><form>
-    <input type="button" value="Edit Categories" onclick="window.location.href='./editcategory.php'" />
+    <input type="button" value="Edit Categories" onclick="window.location.href='./categories.php'" />
     </form></td>  
     <br>
     <td><form>
