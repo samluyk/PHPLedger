@@ -9,13 +9,12 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 
 ### To do:
 - more detailed error messages for users
-- better input sanitization - htmlspecialchar
 - better success/failure messages on insert/delete
 - mobile device css
-- prettier date box
-- user can add/remove categories/payment methods
-- a working delete last entry button in case of incorrect input
-- define expenses as "fixed" or "variable" in code
+- a prettier date box
+- a working "delete last entry" button in case of incorrect input
+- define expenses as "fixed" or "variable"
+- enable subcategories
 - Don't use SELECT * , explicitly type out the column names needed
 - ability to track different investment account values (my financial overview spreadsheet)
 - one click export of database
@@ -24,6 +23,8 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 ### To done:
 - ~~finalize categories~~
 - ~~use Ubuntu font locally~~
+- ~~better input sanitization~~
+- ~~user can add/remove categories/payment methods via array~~
 - ~~mysql backend to store the data~~
 - ~~fix date input issue~~
 - ~~add payment method feature~~
@@ -48,3 +49,6 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - http://johnsardine.com/freebies/dl-html-css/simple-little-tab/
 - https://stackoverflow.com/questions/129677/how-can-i-sanitize-user-input-with-php
 - https://www.metabase.com/
+- https://stackoverflow.com/questions/10009464/fetching-data-from-mysql-database-to-html-dropdown-list/10009791
+- https://www.sitepoint.com/community/t/populate-dropdown-menu-from-mysql-database/6481/2
+- https://www.reddit.com/r/personalfinance/comments/3qs1k9/budget_categories/
