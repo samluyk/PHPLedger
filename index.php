@@ -77,12 +77,22 @@ Expense Input Work:
             <br>
             <br>
             <label for="paymentMethod"> Payment method: </label>
-            <select name="paymentMethod"> 
-                        <option value="credit card">Credit Card</option>
-                        <option value="cash">Cash</option>
-                        <option value="debit card">Debit Card</option>
-                        <option value="privacy">Privacy Card</option>
-                        <option value="other">Other</option>
+            <select name="paymentMethod"  id="paymentMethod" required>
+            <option disabled selected="selected">PAYMENT METHOD</option>
+            <?php
+            $paymentmethod = array(
+              "Credit Card", 
+              "Cash", 
+              "Debit Card", 
+              "Privacy Card",
+              "Other"
+            );
+            foreach($paymentmethod as $item){
+            ?>
+            <option value="<?php echo strtolower($item); ?>"><?php echo $item; ?></option>
+            <?php
+            }
+            ?>
             </select>
             <br>
             <br>
