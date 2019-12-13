@@ -8,17 +8,17 @@ The idea for this was based off of this linked google sheet/form. I was hoping f
 https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with_google_form_for_tracking/
 
 ### To do:
-- more detailed error messages for users
-- better success/failure messages on insert/delete
+- more detailed success/failure messages
 - mobile device css
 - a prettier date box
 - a working "delete last entry" button in case of incorrect input
 - define expenses as "fixed" or "variable"
-- enable subcategories
+- enable primary/secondary categories
+- config.php file for easily editable arrays of categories
 - Don't use SELECT * , explicitly type out the column names needed
-- ability to track different investment account values (my financial overview spreadsheet)
 - one click export of database
 - complete documentation
+- ability to track different investment account values (my financial overview spreadsheet)
 
 ### To done:
 - ~~finalize categories~~
