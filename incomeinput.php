@@ -23,22 +23,6 @@ $incomeNetAmount  = $_POST["incomeNetAmount"];
 $incomeDate = date('Y-m-d', strtotime($_POST['incomeDate']));
 $incomeComments  = $_POST["incomeComments"];
 /////////////////////////////////////////////////////////////////////////
-//Prints the user input for debugging
-/*
-print "Prints the user input for debugging";
-print "<br>";
-print $incomeDescription;
-print "<br>";
-print $incomeType;
-print "<br>";
-print $incomeGrossAmount;
-print "<br>";
-print $incomeNetAmount;
-print "<br>";
-print $incomeDate;
-print "<br>";
-*/
-/////////////////////////////////////////////////////////////////////////
 //Here we're trimming whitespace and setting all inputs to lowercase
 $trimmedIncomeDescription = trim($incomeDescription);
 $trimmedIncomeType = trim($incomeType);
@@ -53,21 +37,6 @@ $decIncomeGrossAmount = strtolower($trimmedIncomeGrossAmount);
 $decIncomeNetAmount = strtolower($trimmedIncomeNetAmount);
 $strIncomeDate = strtolower($trimmedIncomeDate);
 $strIncomeComments = strtolower($trimmedIncomeComments);
-/////////////////////////////////////////////////////////////////////////
-//Prints the trimmed and lowercased user input for debugging
-/*
-print "Prints the trimmed and lowercased user input for debugging";
-print $strIncomeDescription;
-print "<br>";
-print $strIncomeType;
-print "<br>";
-print $decIncomeGrossAmount;
-print "<br>";
-print $decIncomeNetAmount;
-print "<br>";
-print $strIncomeDate;
-print "<br>";
-*/
 /////////////////////////////////////////////////////////////////////////
 //This drops the table and all data in it. Very destructive.
 /*
@@ -91,34 +60,6 @@ VALUES('$strIncomeDescription', '$strIncomeType', '$strIncomeDate', '$decIncomeG
 $res = mysqli_query($connection,$sql)
 or die("Didn't successfully insert".mysqli_connect_error());
 /////////////////////////////////////////////////////////////////////////
-//The following block of code prints all of the income table
-/*
-$sql = "SELECT * FROM $incomeTableName";
-$res = mysqli_query($connection,$sql);
-if(mysqli_num_rows($res)<1)
-{
-print "Error1";
-echo "<br>";
-}
-else
-{
-echo "<br>";
-print "<center><table border=3pt><tr> 
-<td>Income Description</td> 
-<td>Income Type</td> 
-<td>Income Date</td> 
-<td>Income Gross</td>
-<td>Income Net</td>
-<td>Income Comments</td></tr>";
-while($row = mysqli_fetch_array($res))
-{
-    print "<tr> <td>".$row['incomeid']."</td><td>".$row['incomeDescription']."</td> <td>".$row['incomeType']."</td> <td>".$row['incomeDate']."</td>
-    <td>".$row['incomeGrossAmount']."</td> <td>".$row['incomeNetAmount']."</td> <td>".$row['incomeComments']."</td>  </tr>";
-}
-print "</table></center>";
-}
-*/
-////////////////////////////////////////////////////////////////////
 //This successfully prints the most recent insertion into the table
 $sql = "SELECT * FROM $incomeTableName ORDER BY incomeid DESC LIMIT 1";
 $res = mysqli_query($connection,$sql);

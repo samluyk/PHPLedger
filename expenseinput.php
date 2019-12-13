@@ -23,25 +23,6 @@ $expenseComment  = $_POST["expenseComment"];
 $expensePaymentMethod  = $_POST["paymentMethod"];
 $expenseDate = date('Y-m-d', strtotime($_POST['expenseDate']));
 /////////////////////////////////////////////////////////////////////////
-//Prints the user input for debugging
-/*
-print "<br>";
-print "Direct user inputs for debugging:";
-print "<br>";
-print $itemName;
-print "<br>";
-print $expenseAmount;
-print "<br>";
-print $expenseCategory;
-print "<br>";
-print $expensePaymentMethod;
-print "<br>";
-print $expenseComment;
-print "<br>";
-print $expenseDate;
-print "<br>";
-*/
-/////////////////////////////////////////////////////////////////////////
 //Here we're trimming whitespace on inputs and setting all inputs to lowercase
 $trimmedItemName = trim($itemName);
 $trimmedExpenseAmount = trim($expenseAmount);
@@ -54,25 +35,6 @@ $decExpenseAmount = strtolower($trimmedExpenseAmount);
 $strExpenseCategory = strtolower($trimmedExpenseCategory);
 $strExpenseComment = strtolower($trimmedExpenseComment);
 $strExpenseDate = strtolower($trimmedExpenseDate);
-/////////////////////////////////////////////////////////////////////////
-//Prints the trimmed and lowercased user input for debugging
-/*
-print "<br>";
-print "Trimmed and lowercased user inputs for debugging:";
-print "<br>";
-print $strItemName;
-print "<br>";
-print $decExpenseAmount;
-print "<br>";
-print $strExpenseCategory;
-print "<br>";
-print $strExpenseComment;
-print "<br>";
-print $expensePaymentMethod;
-print "<br>";
-print $strExpenseDate;
-print "<br>";
-*/
 /////////////////////////////////////////////////////////////////////////
 //This drops the table and all data in it. Very destructive.
 /*
