@@ -26,18 +26,19 @@ $expenseDate = date('Y-m-d', strtotime($_POST['expenseDate']));
 /////////////////////////////////////////////////////////////////////////
 //Here we're trimming whitespace on inputs and setting all inputs to lowercase
 $trimmedItemName = trim($itemName);
-$trimmedExpenseAmount = trim($expenseAmount);
+$decTrimmedExpenseAmount = trim($expenseAmount);
 $trimmedExpensePrimaryCategory = trim($expensePrimaryCategory);
 $trimmedExpenseChildCategory = trim($expenseChildCategory);
 $trimmedExpenseComment = trim($expenseComment);
 $trimmedExpenseDate = trim($expenseDate);
-//
+$trimmedPaymentMethod = trim($expensePaymentMethod);
+// DECIMAL NOT STRING?!
 $strItemName = strtolower($trimmedItemName);
-$decExpenseAmount = strtolower($trimmedExpenseAmount);
 $strPrimaryExpenseCategory = strtolower($trimmedExpensePrimaryCategory);
-$strChildExpenseCategory = strtolower($trimmedChildPrimaryCategory);
+$strChildExpenseCategory = strtolower($trimmedExpenseChildCategory);
 $strExpenseComment = strtolower($trimmedExpenseComment);
 $strExpenseDate = strtolower($trimmedExpenseDate);
+$strExpensePaymentMethod = strtolower($trimmedPaymentMethod);
 /////////////////////////////////////////////////////////////////////////
 //This drops the table and all data in it. Very destructive.
 /*
@@ -60,40 +61,9 @@ $result = mysqli_query($connection, $sql);
 /////////////////////////////////////////////////////////////////////////
 //This inserts the data from the form into the database
 $sql = "INSERT INTO $expenseTableName (expense_date, the_expense, parent_category, child_category, expense_amount, expense_comment, expense_payment_method) 
-VALUES('$strExpenseDate', '$strItemName', '$strPrimaryExpenseCategory', '$strChildExpenseCategory''$decExpenseAmount', '$strExpenseComment', '$expensePaymentMethod')";
+VALUES('$strExpenseDate', '$strItemName', '$strPrimaryExpenseCategory', '$strChildExpenseCategory','$decTrimmedExpenseAmount', '$strExpenseComment', '$strExpensePaymentMethod')";
 $res = mysqli_query($connection,$sql)
-or die("Didn't successfully insert into the database".mysqli_connect_error());
-/////////////////////////////////////////////////////////////////////////
-//The following block of code prints all the information in the expenses table, for testing at the moment.
-/*
-$sql = "SELECT * FROM $expenseTableName";
-$res = mysqli_query($connection,$sql);
-if(mysqli_num_rows($res)<1)
-{
-print "There are no rows in the database.";
-echo "<br>";
-}
-else
-{
-echo "<br>";
-print "The complete expenses table looks like:";
-echo "<br>";
-print "<center><table border=3pt><tr> 
-<td>Expense ID</td> 
-<td>Expense Date</td> 
-<td>The Expense</td> 
-<td>Expense Category</td> 
-<td>Expense Amount</td>
-<td>Expense Comment</td>
-<td>Payment Method</td> </tr>";
-while($row = mysqli_fetch_array($res))
-{
-    print "<tr> <td>".$row['expense_id']."</td> <td>".$row['expense_date']."</td> <td>".$row['the_expense']."</td> <td>".$row['expense_category']."</td>
-    <td>".$row['expense_amount']."</td> <td>".$row['expense_comment']."</td> <td>".$row['expense_payment_method']."</td> </tr>";
-}
-print "</table></center>";
-}
-*/
+or die("Didn't successfully insert into the database ".mysqli_error($connection));
 /////////////////////////////////////////////////////////////////////////
 //This code prints the most recent insertion into the table
 $sql = "SELECT * FROM $expenseTableName ORDER BY expense_id DESC LIMIT 1";
@@ -113,13 +83,14 @@ print "<center><table border=3pt><tr>
 <td>Expense ID</td> 
 <td>Expense Date</td> 
 <td>The Expense</td> 
-<td>Expense Category</td> 
+<td>Parent Category</td> 
+<td>Child Category</td> 
 <td>Expense Amount</td>
 <td>Expense Comment</td>
 <td>Payment Method</td> </tr>";
 while($row = mysqli_fetch_array($res))
 {
-    print "<tr> <td>".$row['expense_id']."</td> <td>".$row['expense_date']."</td> <td>".$row['the_expense']."</td> <td>".$row['expense_category']."</td>
+    print "<tr> <td>".$row['expense_id']."</td> <td>".$row['expense_date']."</td> <td>".$row['the_expense']."</td> <td>".$row['parent_category']."</td> <td>".$row['child_category']."</td>
     <td>".$row['expense_amount']."</td> <td>".$row['expense_comment']."</td> <td>".$row['expense_payment_method']."</td> </tr>";
 }
 print "</table></center>";

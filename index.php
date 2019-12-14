@@ -40,8 +40,6 @@ Expense Input Work:
             <input type = "text" id="itemName" name="itemName" required autofocus value=""/><br><br>
             <label for="expenseAmount"> *Amount: </label>
             <input type = "text" id="expenseAmount" name="expenseAmount" required value=""/><br><br>
-
-
             <label for="expensePrimaryCategory"> *Parent Category: </label>
             <select name="expensePrimaryCategory"  id="expensePrimaryCategory" required onChange="changecat(this.value);">
             <option disabled selected="selected">CATEGORY</option>
@@ -61,26 +59,25 @@ Expense Input Work:
             <br>
             <br>
             *Child Category:
-            <select name="childCategory" id="childCategory">
+            <select required name="childCategory" id="childCategory">
             <option value="" disabled selected>CATEGORY</option>
             </select>
             <?php  
             echo '<script type="text/JavaScript">  
               var childcat = {
               Home: ["Rent", "Renters Insurance", "Repairs/Maintenance", "Household Items"],
-              Utilities: ["Water", "Electricity", "Gas/Heating", "Internet", "Cellphone"],
+              Utilities: ["Water", "Electricity", "Gas/Heating", "Internet", "Cell Phone"],
               Food: ["Groceries", "Fast Food", "Restaurant", "Snacks"],
               Car: ["Gas", "Car Insurance", "Upgrades", "Repairs/Maintenance", "Fees", "Purchase/Loan", "Other"],
-              Personal: ["Clothing", "Laundry", "Hygiene"],
-              Hobbies: ["Games", "Photography", "Technology"],
-              Medical: ["Health Care", "Dental Care", "Medication", "Medical Devices", "Insurance"],
-              Entertainment: ["Tickets", "Social", "Travel", "Other"],
+              Personal: ["Clothing", "Hygiene"],
+              Hobbies: ["Photography", "Technology"],
+              Medical: ["Health Care", "Dental Care", "Specialty Care", "Medication", "Medical Devices", "Insurance"],
+              Entertainment: ["Tickets", "Games", "Social", "Travel", "General"],
               Education: ["Programs", "Certifications", "Books"],
               Retirement: ["401k", "Roth IRA", "Stocks", "Investments"],
               Miscellaneous: ["Taxes", "Fees", "Pets", "Uncategorized"],
               Giving: ["Holiday Gifts", "Birthdays", "Donations", "Others"]
 }
-
               function changecat(value) {
               if (value.length == 0) document.getElementById("childCategory").innerHTML = "<option></option>";
               else {
@@ -94,10 +91,6 @@ Expense Input Work:
      </script>' 
 ; 
 ?> 
-
-
-
-
 
             <br>
             <br>
@@ -245,5 +238,6 @@ End Query Stuffs
 <footer>
 <p>Hand written by Sam Luyk. Code here: 
 <a href="https://github.com/samluyk/PHPLedger">https://github.com/samluyk/PHPLedger</a></p>
+</br>
 </footer> 
 </html>
