@@ -12,10 +12,7 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - mobile device css
 - a prettier date box
 - a working "delete last entry" button in case of incorrect input
-- define expenses as "fixed" or "variable"
-- enable primary/secondary categories
-- config.php file for easily editable arrays of categories
-- Don't use SELECT * , explicitly type out the column names needed
+- use of a global config.php file 
 - one click export of database
 - complete documentation
 - ability to track different investment account values (my financial overview spreadsheet)
@@ -24,7 +21,7 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - ~~finalize categories~~
 - ~~use Ubuntu font locally~~
 - ~~better input sanitization~~
-- ~~user can add/remove categories/payment methods via array~~
+- ~~enable parent/child categories~~
 - ~~mysql backend to store the data~~
 - ~~fix date input issue~~
 - ~~add payment method feature~~
@@ -52,3 +49,4 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - https://stackoverflow.com/questions/10009464/fetching-data-from-mysql-database-to-html-dropdown-list/10009791
 - https://www.sitepoint.com/community/t/populate-dropdown-menu-from-mysql-database/6481/2
 - https://www.reddit.com/r/personalfinance/comments/3qs1k9/budget_categories/
+- https://jsfiddle.net/k148pk76/1/

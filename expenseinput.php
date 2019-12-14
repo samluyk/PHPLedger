@@ -18,7 +18,8 @@ if($connection === false){
 //Recieving the data from the HTML form
 $itemName  = $_POST["itemName"];
 $expenseAmount  = $_POST["expenseAmount"];
-$expenseCategory = $_POST["expenseCategory"];
+$expensePrimaryCategory = $_POST["expensePrimaryCategory"];
+$expenseChildCategory = $_POST["childCategory"];
 $expenseComment  = $_POST["expenseComment"];
 $expensePaymentMethod  = $_POST["paymentMethod"];
 $expenseDate = date('Y-m-d', strtotime($_POST['expenseDate']));
@@ -26,13 +27,15 @@ $expenseDate = date('Y-m-d', strtotime($_POST['expenseDate']));
 //Here we're trimming whitespace on inputs and setting all inputs to lowercase
 $trimmedItemName = trim($itemName);
 $trimmedExpenseAmount = trim($expenseAmount);
-$trimmedExpenseCategory = trim($expenseCategory);
+$trimmedExpensePrimaryCategory = trim($expensePrimaryCategory);
+$trimmedExpenseChildCategory = trim($expenseChildCategory);
 $trimmedExpenseComment = trim($expenseComment);
 $trimmedExpenseDate = trim($expenseDate);
 //
 $strItemName = strtolower($trimmedItemName);
 $decExpenseAmount = strtolower($trimmedExpenseAmount);
-$strExpenseCategory = strtolower($trimmedExpenseCategory);
+$strPrimaryExpenseCategory = strtolower($trimmedExpensePrimaryCategory);
+$strChildExpenseCategory = strtolower($trimmedChildPrimaryCategory);
 $strExpenseComment = strtolower($trimmedExpenseComment);
 $strExpenseDate = strtolower($trimmedExpenseDate);
 /////////////////////////////////////////////////////////////////////////
@@ -47,16 +50,17 @@ $sql = "CREATE TABLE IF NOT EXISTS `$databaseName`.`$expenseTableName`
 ( `expense_id` SMALLINT NOT NULL AUTO_INCREMENT ,
     `expense_date` DATE NOT NULL ,
     `the_expense` VARCHAR(80) NOT NULL ,
-    `expense_category` VARCHAR(50) NOT NULL ,
+    `parent_category` VARCHAR(40) NOT NULL ,
+    `child_category` VARCHAR(40) NOT NULL ,
     `expense_amount` DECIMAL(8,2) NOT NULL ,
     `expense_comment` VARCHAR(300) NOT NULL ,
-    `expense_payment_method` VARCHAR(15) NOT NULL ,
+    `expense_payment_method` VARCHAR(40) NOT NULL ,
     PRIMARY KEY (`expense_id`));";
 $result = mysqli_query($connection, $sql);
 /////////////////////////////////////////////////////////////////////////
 //This inserts the data from the form into the database
-$sql = "INSERT INTO $expenseTableName (expense_date, the_expense, expense_category, expense_amount, expense_comment, expense_payment_method) 
-VALUES('$strExpenseDate', '$strItemName', '$strExpenseCategory', '$decExpenseAmount', '$strExpenseComment', '$expensePaymentMethod')";
+$sql = "INSERT INTO $expenseTableName (expense_date, the_expense, parent_category, child_category, expense_amount, expense_comment, expense_payment_method) 
+VALUES('$strExpenseDate', '$strItemName', '$strPrimaryExpenseCategory', '$strChildExpenseCategory''$decExpenseAmount', '$strExpenseComment', '$expensePaymentMethod')";
 $res = mysqli_query($connection,$sql)
 or die("Didn't successfully insert into the database".mysqli_connect_error());
 /////////////////////////////////////////////////////////////////////////

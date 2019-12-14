@@ -7,6 +7,7 @@ Project: PHPLedger
 -->
 <html>
 <head>
+<script src="jquery-3.4.1.min.js"></script>
 <meta charset='UTF-8'/>
 <meta name='viewport'
       content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
@@ -35,56 +36,81 @@ Expense Input Work:
   <form method = "post" action = "expenseinput.php">
     <table>
             <h2>Expense Input Form</h2><br>
-            <label for="expenseName"> Item Name: </label>
+            <label for="expenseName"> *Item Name: </label>
             <input type = "text" id="itemName" name="itemName" required autofocus value=""/><br><br>
-            <label for="expenseAmount"> Amount: </label>
+            <label for="expenseAmount"> *Amount: </label>
             <input type = "text" id="expenseAmount" name="expenseAmount" required value=""/><br><br>
-            <label for="expenseCategory"> Category: </label>
-            <select name="expenseCategory"  id="expenseCategory" required>
-          <option disabled selected="selected">CATEGORY</option>
-          <?php
-          $variableexpenses = array(
 
-            "Car Accessories", 
-            "Car Insurance",
-            "Car Repair/Maintenance", 
-            "Clothing", 
-            "Dining out", 
-            "Entertainment", 
-            "Fast Food", 
-            "Fees", 
-            "Groceries", 
-            "Gas", 
-            "Gifts", 
-            "Household", 
-            "Insurance",
-            "Investments/Stocks", 
-            "Material Items", 
-            "Personal/Medical", 
-            "Photography", 
-            "Technology", 
-            "Travel", 
-            "Uncategorized"
-          );
 
-          foreach($variableexpenses as $item){
-          ?>
-          <option value="<?php echo strtolower($item); ?>"><?php echo $item; ?></option>
-          <?php
-          }
-          ?>
+            <label for="expensePrimaryCategory"> *Parent Category: </label>
+            <select name="expensePrimaryCategory"  id="expensePrimaryCategory" required onChange="changecat(this.value);">
+            <option disabled selected="selected">CATEGORY</option>
+            <option value="Home">Home</option>
+            <option value="Utilities">Utilities</option>
+            <option value="Food">Food</option>
+            <option value="Car">Car</option>
+            <option value="Personal">Personal</option>
+            <option value="Hobbies">Hobbies</option>
+            <option value="Medical">Medical</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Education">Education</option>
+            <option value="Retirement">Retirement</option>
+            <option value="Miscellaneous">Miscellaneous</option>
+            <option value="Giving">Giving</option>
             </select>
             <br>
             <br>
-            <label for="paymentMethod"> Payment method: </label>
+            *Child Category:
+            <select name="childCategory" id="childCategory">
+            <option value="" disabled selected>CATEGORY</option>
+            </select>
+            <?php  
+            echo '<script type="text/JavaScript">  
+              var childcat = {
+              Home: ["Rent", "Renters Insurance", "Repairs/Maintenance", "Household Items"],
+              Utilities: ["Water", "Electricity", "Gas/Heating", "Internet", "Cellphone"],
+              Food: ["Groceries", "Fast Food", "Restaurant", "Snacks"],
+              Car: ["Gas", "Car Insurance", "Upgrades", "Repairs/Maintenance", "Fees", "Purchase/Loan", "Other"],
+              Personal: ["Clothing", "Laundry", "Hygiene"],
+              Hobbies: ["Games", "Photography", "Technology"],
+              Medical: ["Health Care", "Dental Care", "Medication", "Medical Devices", "Insurance"],
+              Entertainment: ["Tickets", "Social", "Travel", "Other"],
+              Education: ["Programs", "Certifications", "Books"],
+              Retirement: ["401k", "Roth IRA", "Stocks", "Investments"],
+              Miscellaneous: ["Taxes", "Fees", "Pets", "Uncategorized"],
+              Giving: ["Holiday Gifts", "Birthdays", "Donations", "Others"]
+}
+
+              function changecat(value) {
+              if (value.length == 0) document.getElementById("childCategory").innerHTML = "<option></option>";
+              else {
+               var catOptions = "";
+               for (categoryId in childcat[value]) {
+              catOptions += "<option>" + childcat[value][categoryId] + "</option>";
+          }
+          document.getElementById("childCategory").innerHTML = catOptions;
+      }
+  }
+     </script>' 
+; 
+?> 
+
+
+
+
+
+            <br>
+            <br>
+            <label for="paymentMethod"> *Payment method: </label>
             <select name="paymentMethod"  id="paymentMethod" required>
             <option disabled selected="selected">PAYMENT METHOD</option>
             <?php
             $paymentmethod = array(
-              "Credit Card", 
-              "Cash", 
-              "Debit Card", 
-              "Privacy Card",
+              "American Express", 
+              "Chase Visa", 
+              "NBT Visa", 
+              "Privacy.com",
+              "Cash",
               "Other"
             );
             foreach($paymentmethod as $item){
@@ -99,7 +125,7 @@ Expense Input Work:
             <label for="expenseComment"> Comments: </label>
             <input type = "text" id="expenseComment" name="expenseComment" value=""/><br><br>
             
-            <label for="expenseDate"> Date: </label>
+            <label for="expenseDate"> *Date: </label>
             <input type="date" name="expenseDate" id="expenseDate" value="<?php echo date('Y-m-d'); ?>"/>
             <br>
             <br/>
@@ -126,10 +152,10 @@ Begin Income Input Work:
     <table>
 
             <h2>Income Input Form</h2><br>
-            <label for="incomeDescription"> Description: </label>
+            <label for="incomeDescription"> *Description: </label>
             <input type = "text" id="incomeDescription" name="incomeDescription" required value=""/><br><br>
 
-            <label for="incomeType"> Income Type: </label>
+            <label for="incomeType"> *Income Type: </label>
             <select name="incomeType"  id="incomeType" required>
             <option disabled selected="selected">CATEGORY</option>
             <?php
@@ -152,9 +178,9 @@ Begin Income Input Work:
             <br>
             <label for="incomeGrossAmount"> Gross Amount: </label>
             <input type = "text" id="incomeGrossAmount" name="incomeGrossAmount" value=""/><br><br>
-            <label for="incomeNetAmount"> Net Amount: </label>
+            <label for="incomeNetAmount"> *Net Amount: </label>
             <input type = "text" id="incomeNetAmount" name="incomeNetAmount" required value=""/><br><br>
-            <label for="incomeDate"> Date: </label>
+            <label for="incomeDate"> *Date: </label>
             <input type="date" name="incomeDate" value="<?php echo date('Y-m-d'); ?>"/>
             <br>
             <br>
@@ -191,10 +217,6 @@ Start Query Stuffs
     <td><form>
     <input type="button" value="Delete Latest Entry" onclick="window.location.href='./deletelatest.php'" />
     </form></td>    
-    <br>
-    <td><form>
-    <input type="button" value="Edit Categories" onclick="window.location.href='./categories.php'" />
-    </form></td>  
     <br>
     <td><form>
     <input type="button" value="Visit Financial Summary Page" onclick="window.location.href='./summary.php'" />

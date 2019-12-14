@@ -49,20 +49,21 @@ print "<center><table border=3pt><tr>
 <td>Expense ID</td> 
 <td>Expense Date</td> 
 <td>The Expense</td> 
-<td>Expense Category</td> 
+<td>Expense Parent Category</td> 
+<td>Expense Child Category</td> 
 <td>Expense Amount</td>
 <td>Expense Comment</td>
 <td>Payment Method</td> </tr>";
 while($row = mysqli_fetch_array($res))
 {
-    print "<tr> <td>".$row['expense_id']."</td> <td>".$row['expense_date']."</td> <td>".$row['the_expense']."</td> <td>".$row['expense_category']."</td>
+    print "<tr> <td>".$row['expense_id']."</td> <td>".$row['expense_date']."</td> <td>".$row['the_expense']."</td> <td>".$row['parent_category']."</td> <td>".$row['child_category']."</td>
     <td>".$row['expense_amount']."</td> <td>".$row['expense_comment']."</td> <td>".$row['expense_payment_method']."</td> </tr>";
 }
 print "</table></center>";
 }
 //////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
-//This successfully prints the most recent insertion into the table
+//This successfully prints the most recent insertion into the income table
 $sql = "SELECT * FROM $incomeTableName ORDER BY incomeid DESC LIMIT 1";
 $res = mysqli_query($connection,$sql);
 
