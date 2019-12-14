@@ -26,7 +26,7 @@ if($connection === false){
     <hr class="new1">
     <br>
     <center>Financial Overview</center>
-
+	<br>
 <center>
     <table cellspacing='0'> <!-- cellspacing='0' is important, must stay -->
 
