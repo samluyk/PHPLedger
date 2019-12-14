@@ -83,20 +83,20 @@ td, th {
 }
 
 th {  
-    background: #DFDFDF;  /* Darken header a bit */
+    background: #b5c6ff;  /* Darken header a bit */
     font-weight: bold;
 }
 
 td {  
-    background: #FAFAFA;
+    background: #d8e0eb;
     text-align: center;
 }
 
 /* Cells in even rows are one color */        
-tr:nth-child(even) td { background: #F1F1F1; }   
+tr:nth-child(even) td { background: #ededed; }   
 
 /* Cells in odd rows are another (excludes header cells)  */        
-tr:nth-child(odd) td { background: #FEFEFE; }  
+tr:nth-child(odd) td { background: #bdbdbd; }  
 
 tr td:hover { background: #666; color: #FFF; }  
 /* Hover cell effect! */
