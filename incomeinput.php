@@ -30,7 +30,7 @@ $trimmedIncomeGrossAmount = trim($incomeGrossAmount);
 $trimmedIncomeNetAmount = trim($incomeNetAmount);
 $trimmedIncomeDate = trim($incomeDate);
 $trimmedIncomeComments = trim($incomeComments);
-//
+
 $strIncomeDescription = strtolower($trimmedIncomeDescription);
 $strIncomeType = strtolower($trimmedIncomeType);
 $decIncomeGrossAmount = strtolower($trimmedIncomeGrossAmount);
@@ -66,7 +66,7 @@ $res = mysqli_query($connection,$sql);
 
 if(mysqli_num_rows($res)<1)
 {
-print "Error2";
+print "Error, there are no rows in the income database.";
 echo "<br>";
 }
 else
@@ -89,12 +89,6 @@ while($row = mysqli_fetch_array($res))
 }
 print "</table></center>";
 }
-////////////////////////////////////////////////////////////////////
-//This drops the table and all data in it for debugging. Very destructive.
-/*
-$sql = "DROP TABLE $incomeTableName";
-mysqli_query($connection, $sql);
-*/
 ////////////////////////////////////////////////////////////////////
 //Close the database connection
 mysqli_close($connection);

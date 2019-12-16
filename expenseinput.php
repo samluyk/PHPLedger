@@ -24,7 +24,7 @@ $expenseComment  = $_POST["expenseComment"];
 $expensePaymentMethod  = $_POST["paymentMethod"];
 $expenseDate = date('Y-m-d', strtotime($_POST['expenseDate']));
 /////////////////////////////////////////////////////////////////////////
-//Here we're trimming whitespace on inputs and setting all inputs to lowercase
+//Here we're trimming whitespace on user inputs and setting them to lowercase
 $trimmedItemName = trim($itemName);
 $decTrimmedExpenseAmount = trim($expenseAmount);
 $trimmedExpensePrimaryCategory = trim($expensePrimaryCategory);
@@ -32,7 +32,7 @@ $trimmedExpenseChildCategory = trim($expenseChildCategory);
 $trimmedExpenseComment = trim($expenseComment);
 $trimmedExpenseDate = trim($expenseDate);
 $trimmedPaymentMethod = trim($expensePaymentMethod);
-// DECIMAL NOT STRING?!
+
 $strItemName = strtolower($trimmedItemName);
 $strPrimaryExpenseCategory = strtolower($trimmedExpensePrimaryCategory);
 $strChildExpenseCategory = strtolower($trimmedExpenseChildCategory);
@@ -95,12 +95,6 @@ while($row = mysqli_fetch_array($res))
 }
 print "</table></center>";
 }
-////////////////////////////////////////////////////////////////////
-//This drops the table and all data in it. Very destructive.
-/*
-$sql = "DROP TABLE $expenseTableName";
-mysqli_query($connection, $sql);
-*/
 ////////////////////////////////////////////////////////////////////
 //Close the database connection
 mysqli_close($connection);

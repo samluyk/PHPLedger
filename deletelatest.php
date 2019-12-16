@@ -30,19 +30,19 @@ if($connection === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 /////////////////////////////////////////////////////////////////////////
-//This code prints the most recent insertion into the table
-$sql = "SELECT * FROM $expenseTableName ORDER BY expense_id DESC LIMIT 1";
+//This code prints the 3 most recent insertion into the table
+$sql = "SELECT * FROM $expenseTableName ORDER BY expense_id DESC LIMIT 3";
 $res = mysqli_query($connection,$sql);
 
 if(mysqli_num_rows($res)<1)
 {
-print "Error, didn't successfully insert the record.";
+print "Error, there are no rows in the expenses database.";
 echo "<br>";
 }
 else
 {
 echo "<br>";
-echo "This is the most recent expense input:";
+echo "Here are the 3 most recent expense input:";
 echo "<br>";
 echo "<br>";
 print "<center><table border=3pt><tr> 
@@ -63,19 +63,19 @@ print "</table></center>";
 }
 //////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////
-//This successfully prints the most recent insertion into the income table
-$sql = "SELECT * FROM $incomeTableName ORDER BY incomeid DESC LIMIT 1";
+//This successfully prints the 3 most recent insertion into the income table
+$sql = "SELECT * FROM $incomeTableName ORDER BY incomeid DESC LIMIT 3";
 $res = mysqli_query($connection,$sql);
 
 if(mysqli_num_rows($res)<1)
 {
-print "Error2";
+print "Error, there are no rows in the income database.";
 echo "<br>";
 }
 else
 {
 echo "<br>";
-echo "This is the most recent income input:";
+echo "Here are the 3 most recent income input:";
 echo "<br>";
 echo "<br>";
 print "<center><table border=3pt><tr> 
@@ -84,11 +84,12 @@ print "<center><table border=3pt><tr>
 <td>Income Type</td> 
 <td>Income Date</td> 
 <td>Income Gross</td>
-<td>Income Net</td> </tr>";
+<td>Income Net</td>
+<td>Income Comments</td> </tr>";
 while($row = mysqli_fetch_array($res))
 {
     print "<tr> <td>".$row['incomeid']."</td><td>".$row['incomeDescription']."</td> <td>".$row['incomeType']."</td> <td>".$row['incomeDate']."</td>
-    <td>".$row['incomeGrossAmount']."</td> <td>".$row['incomeNetAmount']."</td> </tr>";
+    <td>".$row['incomeGrossAmount']."</td> <td>".$row['incomeNetAmount']."</td> <td>".$row['incomeComments']."</td></tr>";
 }
 print "</table></center>";
 }

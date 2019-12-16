@@ -13,6 +13,7 @@ This is currently being written.
 - mysqli 8.0.18
 - apache 2.4.41
 - phpmyadmin 4.9.2
+- jquery-3.4.1.min.js
 
 ### Windows Install Instructions:
 - Download and install wampserver https://sourceforge.net/projects/wampserver/files/WampServer%203/WampServer%203.0.0/
@@ -50,4 +51,4 @@ This is currently being written.
 - `sudo apt autoremove`
 
 ### Data import instructions:
-- This puppy can take CSV's from excel/google sheets, like the one linked in the reddit thread above. If you need help with this, contact me. 
+- This puppy can import CSV's from excel/google sheets, like the one linked in the reddit thread above. Directions eventually.

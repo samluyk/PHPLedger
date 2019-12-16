@@ -7,14 +7,16 @@ This is meant only to run locally to help compensate for my lack of proper code/
 The idea for this was based off of this linked google sheet/form. I was hoping for similar functionality, just fully self-hostable.
 https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with_google_form_for_tracking/
 
+
 ### To do:
-- more detailed success/failure messages
-- mobile device css
 - a prettier date box
-- a working "delete last entry" button in case of incorrect input
-- use of a global config.php file 
+- mobile device css
 - one click export of database
+- a working "delete last entry" button in case of incorrect input
+- use of a global config.php file - timezone/db connection
+- convert to PDO's
 - complete documentation
+- Better install guide with how to edit categories
 - ability to track different investment account values (my financial overview spreadsheet)
 
 ### To done:
@@ -31,6 +33,7 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - ~~if table already exist, dont recreate it everytime~~
 - ~~income comments field~~
 - ~~users cant submit "CATEGORY" as category logic~~
+- ~~more detailed success/failure messages~~
 
 ### Links I couldn't have done this without:
 - https://stackoverflow.com/questions/30243775/get-date-from-input-form-within-php

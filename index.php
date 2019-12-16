@@ -77,7 +77,7 @@ Expense Input Work:
               Retirement: ["401k", "Roth IRA", "Stocks", "Investments"],
               Miscellaneous: ["Taxes", "Fees", "Pets", "Uncategorized"],
               Giving: ["Holiday Gifts", "Special Events", "Donations", "Others"]
-}
+              }
               function changecat(value) {
               if (value.length == 0) document.getElementById("childCategory").innerHTML = "<option></option>";
               else {
@@ -131,13 +131,13 @@ Expense Input Work:
   </center>
 <!--
 /////////////////////////////////////////////////////////////////////////
-End Expense Input Work
+End Expense Code
 /////////////////////////////////////////////////////////////////////////
 -->
 
 <!--
 /////////////////////////////////////////////////////////////////////////
-Begin Income Input Work:
+Begin Income Code:
 /////////////////////////////////////////////////////////////////////////
 -->
   <center>
@@ -152,14 +152,14 @@ Begin Income Input Work:
             <select name="incomeType"  id="incomeType" required>
             <option disabled selected="selected">CATEGORY</option>
             <?php
-            $fixedexpenses = array(
+            $incometype = array(
               "Paycheck", 
               "Freelance Tech", 
               "Freelance Photo", 
               "Selling Something",
               "Other Income"
             );
-            foreach($fixedexpenses as $item){
+            foreach($incometype as $item){
             ?>
             <option value="<?php echo strtolower($item); ?>"><?php echo $item; ?></option>
             <?php
@@ -196,7 +196,7 @@ End Income Input Work
 
 <!--
 /////////////////////////////////////////////////////////////////////////
-Start Query Stuffs
+Start Query Stuff
 /////////////////////////////////////////////////////////////////////////
 -->
   <center>
@@ -214,18 +214,7 @@ Start Query Stuffs
     <td><form>
     <input type="button" value="Visit Financial Summary Page" onclick="window.location.href='./summary.php'" />
     </form></td>
-<!---
-    <a href="./deletelatest.php" class="confirmation">Delete Latest Entry</a>
-    <script type="text/javascript">
-    var elems = document.getElementsByClassName('confirmation');
-    var confirmIt = function (e) {
-        if (!confirm('Are you sure?')) e.preventDefault();
-    };
-    for (var i = 0, l = elems.length; i < l; i++) {
-        elems[i].addEventListener('click', confirmIt, false);
-    }
-  </script>
-  -->
+
 <br>
 </center>
 <!--
