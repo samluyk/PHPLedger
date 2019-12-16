@@ -25,6 +25,8 @@ input[type=text], select {
   margin: 2px 0;
   display: inline-block;
   border: 1px solid #ccc;
+  background-color: #222227;
+  color: white;
   border-radius: 2px;
   box-sizing: border-box;
 }

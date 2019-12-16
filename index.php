@@ -36,11 +36,11 @@ Expense Input Work:
   <form method = "post" action = "expenseinput.php">
     <table>
             <h2>Expense Input Form</h2><br>
-            <label for="expenseName"> *Item Name: </label>
+            <label for="expenseName"> Item Name: </label>
             <input type = "text" id="itemName" name="itemName" required autofocus value=""/><br><br>
-            <label for="expenseAmount"> *Amount: </label>
+            <label for="expenseAmount"> Amount: </label>
             <input type = "text" id="expenseAmount" name="expenseAmount" required value=""/><br><br>
-            <label for="expensePrimaryCategory"> *Parent Category: </label>
+            <label for="expensePrimaryCategory"> Parent Category: </label>
             <select name="expensePrimaryCategory"  id="expensePrimaryCategory" required onChange="changecat(this.value);">
             <option disabled selected="selected">CATEGORY</option>
             <option value="Home">Home</option>
@@ -58,7 +58,7 @@ Expense Input Work:
             </select>
             <br>
             <br>
-            *Child Category:
+            Child Category:
             <select required name="childCategory" id="childCategory">
             <option value="" disabled selected>CATEGORY</option>
             </select>
@@ -76,7 +76,7 @@ Expense Input Work:
               Education: ["Programs", "Certifications", "Books"],
               Retirement: ["401k", "Roth IRA", "Stocks", "Investments"],
               Miscellaneous: ["Taxes", "Fees", "Pets", "Uncategorized"],
-              Giving: ["Holiday Gifts", "Birthdays", "Donations", "Others"]
+              Giving: ["Holiday Gifts", "Special Events", "Donations", "Others"]
 }
               function changecat(value) {
               if (value.length == 0) document.getElementById("childCategory").innerHTML = "<option></option>";
@@ -94,7 +94,7 @@ Expense Input Work:
 
             <br>
             <br>
-            <label for="paymentMethod"> *Payment method: </label>
+            <label for="paymentMethod"> Payment method: </label>
             <select name="paymentMethod"  id="paymentMethod" required>
             <option disabled selected="selected">PAYMENT METHOD</option>
             <?php
@@ -118,7 +118,7 @@ Expense Input Work:
             <label for="expenseComment"> Comments: </label>
             <input type = "text" id="expenseComment" name="expenseComment" value=""/><br><br>
             
-            <label for="expenseDate"> *Date: </label>
+            <label for="expenseDate"> Date: </label>
             <input type="date" name="expenseDate" id="expenseDate" value="<?php echo date('Y-m-d'); ?>"/>
             <br>
             <br/>
@@ -145,10 +145,10 @@ Begin Income Input Work:
     <table>
 
             <h2>Income Input Form</h2><br>
-            <label for="incomeDescription"> *Description: </label>
+            <label for="incomeDescription"> Description: </label>
             <input type = "text" id="incomeDescription" name="incomeDescription" required value=""/><br><br>
 
-            <label for="incomeType"> *Income Type: </label>
+            <label for="incomeType"> Income Type: </label>
             <select name="incomeType"  id="incomeType" required>
             <option disabled selected="selected">CATEGORY</option>
             <?php
@@ -171,9 +171,9 @@ Begin Income Input Work:
             <br>
             <label for="incomeGrossAmount"> Gross Amount: </label>
             <input type = "text" id="incomeGrossAmount" name="incomeGrossAmount" value=""/><br><br>
-            <label for="incomeNetAmount"> *Net Amount: </label>
+            <label for="incomeNetAmount"> Net Amount: </label>
             <input type = "text" id="incomeNetAmount" name="incomeNetAmount" required value=""/><br><br>
-            <label for="incomeDate"> *Date: </label>
+            <label for="incomeDate"> Date: </label>
             <input type="date" name="incomeDate" value="<?php echo date('Y-m-d'); ?>"/>
             <br>
             <br>
