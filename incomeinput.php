@@ -38,12 +38,6 @@ $decIncomeNetAmount = strtolower($trimmedIncomeNetAmount);
 $strIncomeDate = strtolower($trimmedIncomeDate);
 $strIncomeComments = strtolower($trimmedIncomeComments);
 /////////////////////////////////////////////////////////////////////////
-//This drops the table and all data in it. Very destructive.
-/*
-$sql = "DROP TABLE $incomeTableName";
-mysqli_query($connection, $sql);
-*/
-/////////////////////////////////////////////////////////////////////////
 //Creates the table for income data if it doesn't already exist
 $sql = "CREATE TABLE IF NOT EXISTS $incomeTableName (incomeid INT AUTO_INCREMENT PRIMARY KEY,
 incomeDescription varchar(200),
@@ -60,7 +54,7 @@ VALUES('$strIncomeDescription', '$strIncomeType', '$strIncomeDate', '$decIncomeG
 $res = mysqli_query($connection,$sql)
 or die("Didn't successfully insert".mysqli_connect_error());
 /////////////////////////////////////////////////////////////////////////
-//This successfully prints the most recent insertion into the table
+//This prints the most recent insertion into the table
 $sql = "SELECT * FROM $incomeTableName ORDER BY incomeid DESC LIMIT 1";
 $res = mysqli_query($connection,$sql);
 

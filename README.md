@@ -1,6 +1,6 @@
 # PHPLedger
 
-This program was created to be a digital ledger that allows me to store and categorize all the money I make and spend, and save it in a database for logging purposes and visualization via the open source project Metabase. 
+This program was created to be a digital ledger that allows me to store and categorize all the money I make and spend, and save it in a database for logging purposes and visualization via the open source project Metabase.
 
 This is meant only to run locally to help compensate for my lack of proper code/best practice knowledge. You should do the same.
 
@@ -11,12 +11,10 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 ### To do:
 - a prettier date box
 - mobile device css
-- one click export of database
+- one click backup of database
 - a working "delete last entry" button in case of incorrect input
 - use of a global config.php file - timezone/db connection
-- convert to PDO's
-- complete documentation
-- Better install guide with how to edit categories
+- complete documentation & install/usage guide
 - ability to track different investment account values (my financial overview spreadsheet)
 
 ### To done:

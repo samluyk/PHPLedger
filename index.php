@@ -14,47 +14,44 @@ Project: PHPLedger
 <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <title>Financial Logger</title>
-
 <body>
 <center>
 <h1>Financial Logger</h1>
 <hr class="new1">
-<!--
-/////////////////////////////////////////////////////////////////////////
-Set time zone globally
-/////////////////////////////////////////////////////////////////////////
--->
 <?php
 date_default_timezone_set("America/New_York");
 ?>
 <!--
 /////////////////////////////////////////////////////////////////////////
-Expense Input Work:
+Expense Input Form:
 /////////////////////////////////////////////////////////////////////////
 -->
 <center>
   <form method = "post" action = "expenseinput.php">
     <table>
             <h2>Expense Input Form</h2><br>
+
             <label for="expenseName"> Item Name: </label>
             <input type = "text" id="itemName" name="itemName" required autofocus value=""/><br><br>
+
             <label for="expenseAmount"> Amount: </label>
             <input type = "text" id="expenseAmount" name="expenseAmount" required value=""/><br><br>
+
             <label for="expensePrimaryCategory"> Parent Category: </label>
             <select name="expensePrimaryCategory"  id="expensePrimaryCategory" required onChange="changecat(this.value);">
             <option disabled selected="selected">CATEGORY</option>
-            <option value="Home">Home</option>
-            <option value="Utilities">Utilities</option>
-            <option value="Food">Food</option>
             <option value="Car">Car</option>
-            <option value="Personal">Personal</option>
-            <option value="Hobbies">Hobbies</option>
-            <option value="Medical">Medical</option>
-            <option value="Entertainment">Entertainment</option>
             <option value="Education">Education</option>
-            <option value="Retirement">Retirement</option>
-            <option value="Miscellaneous">Miscellaneous</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Food">Food</option>
             <option value="Giving">Giving</option>
+            <option value="Hobbies">Hobbies</option>
+            <option value="Home">Home</option>
+            <option value="Medical">Medical</option>
+            <option value="Miscellaneous">Miscellaneous</option>
+            <option value="Personal">Personal</option>
+            <option value="Saving">Saving</option>
+            <option value="Utilities">Utilities</option>
             </select>
             <br>
             <br>
@@ -65,18 +62,18 @@ Expense Input Work:
             <?php  
             echo '<script type="text/JavaScript">  
               var childcat = {
-              Home: ["Rent", "Renters Insurance", "Repairs/Maintenance", "Household Items"],
-              Utilities: ["Water", "Electricity", "Gas/Heating", "Internet", "Cell Phone"],
-              Food: ["Groceries", "Fast Food", "Restaurant", "Snacks"],
               Car: ["Gas", "Car Insurance", "Upgrades", "Repairs/Maintenance", "Fees", "Purchase/Loan", "Other"],
-              Personal: ["Clothing", "Hygiene"],
-              Hobbies: ["Photography", "Technology"],
-              Medical: ["Health Care", "Dental Care", "Specialty Care", "Medication", "Medical Devices", "Insurance"],
-              Entertainment: ["Tickets", "Games", "Social", "Travel", "General"],
               Education: ["Programs", "Certifications", "Books"],
-              Retirement: ["401k", "Roth IRA", "Stocks", "Investments"],
+              Entertainment: ["Tickets", "Games", "Social", "Travel", "General"],
+              Food: ["Groceries", "Fast Food", "Restaurant", "Snacks"],
+              Giving: ["Holiday Gifts", "Special Events", "Donations", "Others"],
+              Hobbies: ["Photography", "Technology"],
+              Home: ["Rent", "Renters Insurance", "Repairs/Maintenance", "Household Items"],
+              Medical: ["Health Care", "Dental Care", "Specialty Care", "Medication", "Medical Devices", "Insurance"],
               Miscellaneous: ["Taxes", "Fees", "Pets", "Uncategorized"],
-              Giving: ["Holiday Gifts", "Special Events", "Donations", "Others"]
+              Personal: ["Clothing", "Hygiene"],
+              Saving: ["401k", "Roth IRA", "Stocks", "Investments"],
+              Utilities: ["Water", "Electricity", "Gas/Heating", "Internet", "Cell Phone"],
               }
               function changecat(value) {
               if (value.length == 0) document.getElementById("childCategory").innerHTML = "<option></option>";
@@ -91,7 +88,6 @@ Expense Input Work:
      </script>' 
 ; 
 ?> 
-
             <br>
             <br>
             <label for="paymentMethod"> Payment method: </label>
@@ -115,6 +111,7 @@ Expense Input Work:
             </select>
             <br>
             <br>
+
             <label for="expenseComment"> Comments: </label>
             <input type = "text" id="expenseComment" name="expenseComment" value=""/><br><br>
             
@@ -131,13 +128,13 @@ Expense Input Work:
   </center>
 <!--
 /////////////////////////////////////////////////////////////////////////
-End Expense Code
+End Expense Form Code
 /////////////////////////////////////////////////////////////////////////
 -->
 
 <!--
 /////////////////////////////////////////////////////////////////////////
-Begin Income Code:
+Begin Income Form:
 /////////////////////////////////////////////////////////////////////////
 -->
   <center>
@@ -150,6 +147,7 @@ Begin Income Code:
 
             <label for="incomeType"> Income Type: </label>
             <select name="incomeType"  id="incomeType" required>
+
             <option disabled selected="selected">CATEGORY</option>
             <?php
             $incometype = array(
@@ -171,15 +169,19 @@ Begin Income Code:
             <br>
             <label for="incomeGrossAmount"> Gross Amount: </label>
             <input type = "text" id="incomeGrossAmount" name="incomeGrossAmount" value=""/><br><br>
+
             <label for="incomeNetAmount"> Net Amount: </label>
             <input type = "text" id="incomeNetAmount" name="incomeNetAmount" required value=""/><br><br>
+
             <label for="incomeDate"> Date: </label>
             <input type="date" name="incomeDate" value="<?php echo date('Y-m-d'); ?>"/>
             <br>
+
             <br>
             <label for="incomeComments">Comments: </label>
             <input type = "text" id="incomeComments" name="incomeComments" value=""/><br><br>
             <br/>
+
             <input type="submit" value = "Submit">
             <br><br>
             <hr class="new1"> 
@@ -190,19 +192,14 @@ Begin Income Code:
 
 <!--
 /////////////////////////////////////////////////////////////////////////
-End Income Input Work
+End Income Input Form
 /////////////////////////////////////////////////////////////////////////
--->
 
-<!--
 /////////////////////////////////////////////////////////////////////////
-Start Query Stuff
+Buttons (links) at bottom of page
 /////////////////////////////////////////////////////////////////////////
 -->
   <center>
-
-
-
     <td><form>
     <input type="button" value="Visit Query Page" onclick="window.location.href='http://localhost:3000'" />
     </form></td>
@@ -214,12 +211,11 @@ Start Query Stuff
     <td><form>
     <input type="button" value="Visit Financial Summary Page" onclick="window.location.href='./summary.php'" />
     </form></td>
-
 <br>
 </center>
 <!--
 /////////////////////////////////////////////////////////////////////////
-End Query Stuffs
+End Button Stuff
 /////////////////////////////////////////////////////////////////////////
 -->
 </body>
