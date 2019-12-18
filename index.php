@@ -73,7 +73,7 @@ Expense Input Form:
               Miscellaneous: ["Taxes", "Fees", "Pets", "Uncategorized"],
               Personal: ["Clothing", "Hygiene"],
               Saving: ["401k", "Roth IRA", "Stocks", "Investments"],
-              Utilities: ["Water", "Electricity", "Gas/Heating", "Internet", "Cell Phone"],
+              Utilities: ["Water", "Electricity", "Gas/Heating", "Internet", "Cell Phone"]
               }
               function changecat(value) {
               if (value.length == 0) document.getElementById("childCategory").innerHTML = "<option></option>";
