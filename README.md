@@ -15,7 +15,8 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - a working "delete last entry" button in case of incorrect input
 - use of a global config.php file - timezone/db connection
 - complete documentation & install/usage guide
-- ability to track different investment account values (my financial overview spreadsheet)
+- ability to track different investment account values to see change over time
+- squash javascript child category bug
 
 ### To done:
 - ~~finalize categories~~

@@ -10,7 +10,7 @@ $databaseName = "test_database";
 $expenseTableName = "expenses";
 /////////////////////////////////////////////////////////////////////////
 //Were connecting to the database (server:port/user/password/database)
-$connection = mysqli_connect("localhost:3306", "root", "", "$databaseName");
+$connection = mysqli_connect("localhost:3308", "root", "", "$databaseName");
 if($connection === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }

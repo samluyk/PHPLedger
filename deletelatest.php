@@ -1,9 +1,7 @@
 <!doctype html>
-
 <?php
 date_default_timezone_set("America/New_York");
 ?>
-
 <html>
     <head>
     <meta charset='UTF-8'/>
@@ -12,11 +10,9 @@ date_default_timezone_set("America/New_York");
       content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
     </head>
     <title>Delete Latest</title>
-
     <h1>Delete Most Recent Entry</h1>
     <hr class="new1">
     <br>
-
 <?php
 /////////////////////////////////////////////////////////////////////////
 //Insert the name of your database and expenses table here
@@ -25,7 +21,7 @@ $expenseTableName = "expenses";
 $incomeTableName = "income";
 /////////////////////////////////////////////////////////////////////////
 //Were connecting to the database (server:port/user/password/database)
-$connection = mysqli_connect("localhost:3306", "root", "", "$databaseName");
+$connection = mysqli_connect("localhost:3308", "root", "", "$databaseName");
 if($connection === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }

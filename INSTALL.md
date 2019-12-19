@@ -23,10 +23,10 @@ This is currently being written.
 - type `cd c:/wamp64/www`
 - type `git clone https://github.com/samluyk/phpledger`
 - Download Metabase https://www.metabase.com/start/jar.html
-- move metabase.jar to `c:/wamp64`
+- move the downloaded metabase.jar to `c:/wamp64`
 - Open powershell and type `c:/wamp64`
-- run `java -jar metabase.jar`
-- open a web browser and enter the following url: `localhost/phpledger`
+- Run `java -jar metabase.jar`
+- Open a web browser and enter the following url: `localhost/phpledger`
 
 ### Ubuntu Install Instructions:
 - Open the terminal
