@@ -4,8 +4,8 @@ This is currently being written.
 
 ### General Requirements:
 - git
-- OpenJDK11.0.5+10 (for metabase)
-- 1GB availible storage space
+- OpenJDK11.0.5+10
+- 2GB availible storage space
 - 2GB availible RAM
 - Metabase v0.33.6
 - php 7.4.0
