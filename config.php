@@ -2,6 +2,8 @@
 <!--
 /////////////////////////////////////////////////////////////////////////
 This page allows us to globally create variables and information
+
+It is not currently used
 /////////////////////////////////////////////////////////////////////////
 -->
 <html>
@@ -19,14 +21,22 @@ This page allows us to globally create variables and information
 <hr class="new1">
 </html>
 <?php
+
+$sqlhost = "localhost";
+$sqlport = "3308";
+$sqluser = "root";
+$sqlpass = "";
+$databaseName = "test_database";
+$expenseTableName = "expenses";
+$incomeTableName = "income";
 /////////////////////////////////////////////////////////////////////////
 //Were connecting to the database (server:port/user/password/database)
-$connection = mysqli_connect("localhost:3306", "root", "", "test_database");
+$connection = mysqli_connect("localhost:3308", "root", "", "test_database");
 if($connection === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 /////////////////////////////////////////////////////////////////////////
-
+//test backup
 //Close the database connection
 mysqli_close($connection);
 ?>
