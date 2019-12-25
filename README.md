@@ -11,11 +11,10 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 ### To do:
 - a prettier date box
 - mobile device css
-- one click backup of database
+- Easy database backups -mysqldump or php script w/ cron job
 - a working "delete last entry" button in case of incorrect input
-- use of a global config.php file - timezone/db connection
+- use of a global config.php file for table names and database connection
 - complete documentation & install/usage guide
-- ability to track different investment account values to see change over time
 - squash javascript child category bug
 
 ### To done:
@@ -50,3 +49,5 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - https://www.sitepoint.com/community/t/populate-dropdown-menu-from-mysql-database/6481/2
 - https://www.reddit.com/r/personalfinance/comments/3qs1k9/budget_categories/
 - https://jsfiddle.net/k148pk76/1/
+- https://stackoverflow.com/questions/2170182/how-to-backup-mysql-database-in-php
+- https://stackoverflow.com/questions/11524296/can-i-create-a-button-on-my-site-to-back-up-my-database
