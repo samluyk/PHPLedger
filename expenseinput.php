@@ -40,6 +40,11 @@ $strExpenseComment = strtolower($trimmedExpenseComment);
 $strExpenseDate = strtolower($trimmedExpenseDate);
 $strExpensePaymentMethod = strtolower($trimmedPaymentMethod);
 /////////////////////////////////////////////////////////////////////////
+//Create the database if it doesn't exist already
+$sql = "CREATE DATABASE IF NOT EXISTS `$databaseName`
+    DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci";
+$result = mysqli_query($connection, $sql);
+/////////////////////////////////////////////////////////////////////////
 //Creates the table and the columns if they aren't there already
 $sql = "CREATE TABLE IF NOT EXISTS `$databaseName`.`$expenseTableName` 
 ( `expense_id` SMALLINT NOT NULL AUTO_INCREMENT ,

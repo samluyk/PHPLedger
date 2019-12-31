@@ -15,6 +15,7 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - use of a global config.php file for table names and database connection
 - complete documentation & install/usage guide
 - squash javascript child category bug
+- create database if doesn't exist
 - move to UTF8MB4
 
 ### To done:

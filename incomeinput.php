@@ -38,6 +38,11 @@ $decIncomeNetAmount = strtolower($trimmedIncomeNetAmount);
 $strIncomeDate = strtolower($trimmedIncomeDate);
 $strIncomeComments = strtolower($trimmedIncomeComments);
 /////////////////////////////////////////////////////////////////////////
+//Create the database if it doesn't exist already
+$sql = "CREATE DATABASE IF NOT EXISTS `$databaseName`
+    DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci";
+$result = mysqli_query($connection, $sql);
+/////////////////////////////////////////////////////////////////////////
 //Creates the table for income data if it doesn't already exist
 $sql = "CREATE TABLE IF NOT EXISTS $incomeTableName (incomeid INT AUTO_INCREMENT PRIMARY KEY,
 incomeDescription varchar(200),
