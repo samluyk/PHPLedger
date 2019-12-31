@@ -15,6 +15,7 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - use of a global config.php file for table names and database connection
 - complete documentation & install/usage guide
 - squash javascript child category bug
+- move to UTF8MB4
 
 ### To done:
 - ~~finalize categories~~
@@ -52,3 +53,4 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - https://stackoverflow.com/questions/2170182/how-to-backup-mysql-database-in-php
 - https://github.com/ttodua/useful-php-scripts/blob/master/my-sql-export%20(backup)%20database.php
 - https://stackoverflow.com/questions/4701861/how-do-i-run-a-php-script-using-windows-schedule-task
+- https://github.com/daniloaz/myphp-backup/blob/master/myphp-backup.php

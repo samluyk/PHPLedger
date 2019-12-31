@@ -6,11 +6,9 @@ Code author: https://github.com/ttodua/
 Code source here: 
 https://github.com/ttodua/useful-php-scripts/blob/master/my-sql-export%20(backup)%20database.php
 https://github.com/ttodua/useful-php-scripts/blob/master/my-sql-import%20(restore)%20database.php
-
 Archived URLS:
 http://web.archive.org/web/20191231160327/https://github.com/ttodua/useful-php-scripts/blob/master/my-sql-export%20(backup)%20database.php 
 http://web.archive.org/web/20191231160505/https://github.com/ttodua/useful-php-scripts/blob/master/my-sql-import%20(restore)%20database.php
-
 ##### Notes #####
      * (optional) 5th parameter: to backup specific tables only,like: array("mytable1","mytable2",...)   
      * (optional) 6th parameter: backup filename (otherwise, it creates random name)
