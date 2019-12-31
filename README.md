@@ -11,7 +11,6 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 ### To do:
 - a prettier date box
 - mobile device css
-- Easy database backups -mysqldump or php script w/ cron job
 - a working "delete last entry" button in case of incorrect input
 - use of a global config.php file for table names and database connection
 - complete documentation & install/usage guide
@@ -32,6 +31,7 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - ~~income comments field~~
 - ~~users cant submit "CATEGORY" as category logic~~
 - ~~more detailed success/failure messages~~
+- ~~automatic database backups~~
 
 ### Links I couldn't have done this without:
 - https://stackoverflow.com/questions/30243775/get-date-from-input-form-within-php
@@ -50,4 +50,5 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - https://www.reddit.com/r/personalfinance/comments/3qs1k9/budget_categories/
 - https://jsfiddle.net/k148pk76/1/
 - https://stackoverflow.com/questions/2170182/how-to-backup-mysql-database-in-php
-- https://stackoverflow.com/questions/11524296/can-i-create-a-button-on-my-site-to-back-up-my-database
+- https://github.com/ttodua/useful-php-scripts/blob/master/my-sql-export%20(backup)%20database.php
+- https://stackoverflow.com/questions/4701861/how-do-i-run-a-php-script-using-windows-schedule-task

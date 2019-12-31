@@ -27,6 +27,7 @@ This is currently being written.
 - Open powershell and type `c:/wamp64`
 - Run `java -jar metabase.jar`
 - Open a web browser and enter the following url: `localhost/phpledger`
+- Open Task Scheduler
 
 ### Ubuntu Install Instructions:
 - Open the terminal
