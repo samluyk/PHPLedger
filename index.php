@@ -53,34 +53,33 @@ Expense Input Form:
             <select required name="childCategory" id="childCategory">
             <option value="" disabled selected>CATEGORY</option>
             </select>
-            <?php  
+<?php  
             echo '<script type="text/JavaScript">  
               var childcat = {
-              "Car": ["Gas", "Car Insurance", "Upgrades", "Repairs/Maintenance", "Fees", "Purchase/Loan", "Other"],
-              "Education": ["Programs", "Certifications", "Books"],
-              "Entertainment": ["Tickets", "Games", "Social", "Travel", "General"],
-              "Food": ["Groceries", "Fast Food", "Restaurant", "Snacks"],
-              "Giving": ["Holiday Gifts", "Special Events", "Donations", "Others"],
-              "Hobbies": ["Photography", "Technology"],
-              "Home": ["Rent", "Renters Insurance", "Repairs/Maintenance", "Household Items"],
-              "Medical": ["Health Care", "Dental Care", "Specialty Care", "Medication", "Medical Devices", "Insurance"],
-              "Miscellaneous": ["Taxes", "Fees", "Pets", "Uncategorized"],
-              "Personal": ["Clothing", "Hygiene"],
-              "Saving": ["401k", "Roth IRA", "Stocks", "Investments"],
-              "Utilities": ["Water", "Electricity", "Gas/Heating", "Internet", "Cell Phone"]
-              }
+                "Car": ["Gas", "Car Insurance", "Upgrades", "Repairs/Maintenance", "Fees", "Purchase/Loan", "Other"],
+                "Education": ["Programs", "Certifications", "Books"],
+                "Entertainment": ["Tickets", "Games", "Social", "Travel", "General"],
+                "Food": ["Groceries", "Fast Food", "Restaurant", "Snacks"],
+                "Giving": ["Holiday Gifts", "Special Events", "Donations", "Others"],
+                "Hobbies": ["Photography", "Technology"],
+                "Home": ["Rent", "Renters Insurance", "Repairs/Maintenance", "Household Items"],
+                "Medical": ["Health Care", "Dental Care", "Specialty Care", "Medication", "Medical Devices", "Insurance"],
+                "Miscellaneous": ["Taxes", "Fees", "Pets", "Uncategorized"],
+                "Personal": ["Clothing", "Hygiene"],
+                "Saving": ["401k", "Roth IRA", "Stocks", "Investments"],
+                "Utilities": ["Water", "Electricity", "Gas/Heating", "Internet", "Cell Phone"]
+                }
               function changecat(value) {
-              if (value.length == 0) document.getElementById("childCategory").innerHTML = "<option></option>";
-              else {
-               var catOptions = "";
-               for (categoryId in childcat[value]) {
-              catOptions += "<option>" + childcat[value][categoryId] + "</option>";
-          }
-          document.getElementById("childCategory").innerHTML = catOptions;
-      }
-  }
-     </script>' 
-; 
+                if (value.length == 0) document.getElementById("childCategory").innerHTML = "<option></option>";
+                else {
+                  var catOptions = "";
+                  for (categoryId in childcat[value]) {
+                    catOptions += "<option>" + childcat[value][categoryId] + "</option>";
+                  }
+                  document.getElementById("childCategory").innerHTML = catOptions;
+                  }
+                }
+                </script>';
 ?> 
             <br>
             <br>
