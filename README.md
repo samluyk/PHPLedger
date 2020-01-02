@@ -14,6 +14,8 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - a working "delete last entry" button in case of incorrect input
 - use of a global config.php file for table names and database connection
 - complete documentation & install/usage guide
+- finalize automatic database backup
+- logic to check for accidental duplicated inserts
 - squash javascript child category bug
 - create database if doesn't exist
 - move to UTF8MB4
@@ -33,7 +35,6 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - ~~income comments field~~
 - ~~users cant submit "CATEGORY" as category logic~~
 - ~~more detailed success/failure messages~~
-- ~~automatic database backups~~
 
 ### Links I couldn't have done this without:
 - https://stackoverflow.com/questions/30243775/get-date-from-input-form-within-php
@@ -46,9 +47,7 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - https://www.mysterydata.com/update-apache-2-4-to-latest-version-on-ubuntu-16-04-server-vestacp/
 - https://websiteforstudents.com/install-mysql-8-0-on-ubuntu-16-04-17-10-18-04/
 - https://dev.mysql.com/downloads/repo/apt/
-- https://stackoverflow.com/questions/129677/how-can-i-sanitize-user-input-with-php
 - https://www.metabase.com/
-- https://www.sitepoint.com/community/t/populate-dropdown-menu-from-mysql-database/6481/2
 - https://www.reddit.com/r/personalfinance/comments/3qs1k9/budget_categories/
 - https://jsfiddle.net/k148pk76/1/
 - https://stackoverflow.com/questions/2170182/how-to-backup-mysql-database-in-php
