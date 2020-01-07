@@ -14,7 +14,7 @@
 
 <body>
 <center>
-<h1>😻 Financial Logger 😻</h1>
+<h1>Financial Logger</h1>
 <hr class="new1">
 <?php
 date_default_timezone_set("America/New_York");
@@ -32,7 +32,7 @@ Expense Input Form:
     <input type="text" id="itemName" name="itemName" class="form-control" placeholder="Item Name" autofocus required>
   </div>
   <div class="form-group">
-    <label for="expenseAmount">Item Amount:</label>
+    <label for="expenseAmount">Item Cost:</label>
     <input type="text" class="form-control" placeholder="Amount" id="expenseAmount" name="expenseAmount" required>
   </div>
   <div class="form-group">
@@ -105,8 +105,8 @@ Expense Input Form:
   <label for="expenseDate"> Date: </label>
             <input type="date" name="expenseDate" id="expenseDate" value="<?php echo date('Y-m-d'); ?>"/>
             <br>
-  <br>🦆
-  <button type="submit" class="btn btn-primary btn-lg">Submit</button> 🦆
+  <br>
+  <button type="submit" class="btn btn-primary btn-lg">Submit Expense</button>
   </div>
 </form> 
 <hr class="new1">
@@ -121,72 +121,59 @@ End Expense Form Code
 Begin Income Form:
 /////////////////////////////////////////////////////////////////////////
 -->
-  <center>
-  <form method = "post" action = "incomeinput.php">
-    <table>
-
-            <h2>💵 Income Input Form 💵</h2><br>
-            <label for="incomeDescription"> Description: </label>
-            <input type = "text" id="incomeDescription" name="incomeDescription" required value=""/><br><br>
-
-            <label for="incomeType"> Income Type: </label>
-            <select name="incomeType"  id="incomeType" required>
-
-            <option disabled selected="selected">CATEGORY</option>
-            <?php
-            $incometype = array(
-              "Paycheck", 
-              "Freelance Tech", 
-              "Freelance Photo", 
-              "Selling Something",
-              "Other Income"
-            );
-            foreach($incometype as $item){
-            ?>
-            <option value="<?php echo strtolower($item); ?>"><?php echo $item; ?></option>
-            <?php
-            }
-            ?>
-            </select>
-            
-            <br>
-            <br>
-            <label for="incomeGrossAmount"> Gross Amount: </label>
-            <input type = "text" id="incomeGrossAmount" name="incomeGrossAmount" value=""/><br><br>
-
-            <label for="incomeNetAmount"> Net Amount: </label>
-            <input type = "text" id="incomeNetAmount" name="incomeNetAmount" required value=""/><br><br>
-
-            <label for="incomeDate"> Date: </label>
-            <input type="date" name="incomeDate" value="<?php echo date('Y-m-d'); ?>"/>
-            <br>
-
-            <br>
-            <label for="incomeComments">Comments: </label>
-            <input type = "text" id="incomeComments" name="incomeComments" value=""/><br><br>
-            <br/>
-
-            <input type="submit" value = "Submit">
-            <br><br>
-            <hr class="new1"> 
-    </table>
-    
-  </form>
-  </center>
 
 <!--
 /////////////////////////////////////////////////////////////////////////
 End Income Input Form
 /////////////////////////////////////////////////////////////////////////
+-->
+<form method = "post" action="incomeinput.php">
+<div class="container">
+<h2>💵 Income Input Form 💵</h2><br>
 
+<div class="form-group">
+    <label for="incomeDescription">Description:</label>
+    <input type="text" id="incomeDescription" name="incomeDescription" class="form-control" placeholder="Description" required>
+  </div>
+  <div class="form-group">
+    <label for="incomeType">Income Type:</label>
+    <select required class="form-control" name="incomeType" id="incomeType">
+            <option value="paycheck">Paycheck</option>
+            <option value="freelance tech">Freelance Tech</option>
+            <option value="freelance phoeo">Freelance Photo</option>
+            <option value="selling something">Selling Something</option>
+            <option value="other income">Other Income</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="incomeGrossAmount">Gross Income:</label>
+    <input type="text" id="incomeGrossAmount" name="incomeGrossAmount" class="form-control" placeholder="Gross Income" required>
+  </div>
+  <div class="form-group">
+    <label for="incomeNetAmount">Net Income:</label>
+    <input type="text" id="incomeNetAmount" name="incomeNetAmount" class="form-control" placeholder="Net Income" required>
+  </div>
+  <div class="form-group">
+    <label for="incomeComments">Additional Comments:</label>
+    <input type="text" id="incomeComments" name="incomeComments" class="form-control" placeholder="Income Comments">
+  </div>
+
+  <label for="incomeDate"> Date: </label>
+            <input type="date" name="incomeDate" value="<?php echo date('Y-m-d'); ?>"/>
+            <br>
+            <br>
+  <button type="submit" class="btn btn-primary btn-lg">Submit Income</button>
+</div>
+<!--
 /////////////////////////////////////////////////////////////////////////
 Buttons (links) at bottom of page
 /////////////////////////////////////////////////////////////////////////
 -->
+<hr class="new1">
   <center>
     <td><form>
     <input type="button" value="Visit Query Page" onclick="window.location.href='http://localhost:3000'" />
-    </form></td>
+    </form></td><br>
     <br>
     <td><form>
     <input type="button" value="Delete Latest Entry" onclick="window.location.href='./deletelatest.php'" />
@@ -195,7 +182,6 @@ Buttons (links) at bottom of page
     <td><form>
     <input type="button" value="Visit Financial Summary Page" onclick="window.location.href='./summary.php'" />
     </form></td>
-<br>
 </center>
 <!--
 /////////////////////////////////////////////////////////////////////////

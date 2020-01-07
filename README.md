@@ -9,7 +9,7 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 
 
 ### ⭕ To do:
-- impliment bootstrap 
+- finalize bootstrap 
 - a working "delete last entry" button in case of incorrect input
 - use of a global config.php file for table names and database connection
 - complete documentation & install/usage guide
@@ -17,6 +17,7 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - logic to check for accidental duplicated inserts
 - squash javascript child category bug
 - users cant submit "CATEGORY" as category logic
+- parent/child income categories
 - create database if doesn't exist (test this Sam!)
 - move to UTF8MB4
 

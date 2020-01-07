@@ -14,10 +14,10 @@ body {
   font-family: 'Ubuntu', sans-serif;
 }
 hr.new1 {
- border-top: 3px solid white;
+ border-top: 5px solid white;
 } 
 
-/* Button Related Stuff */
+/* CSS Button Related Stuff */
 
 input[type=text], select {
   width: 20%;

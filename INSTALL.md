@@ -14,6 +14,7 @@ This is currently being written.
 - apache 2.4.41
 - phpmyadmin 4.9.2
 - jquery-3.4.1.min.js
+- bootstrap
 
 ### Windows Install Instructions:
 - Download and install wampserver https://sourceforge.net/projects/wampserver/files/WampServer%203/WampServer%203.0.0/
