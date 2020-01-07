@@ -15,6 +15,11 @@ if($connection === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 /////////////////////////////////////////////////////////////////////////
+//Create the database if it doesn't exist already
+$sql = "CREATE DATABASE IF NOT EXISTS `$databaseName`
+    DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci";
+$result = mysqli_query($connection, $sql);
+/////////////////////////////////////////////////////////////////////////
 //Recieving the data from the HTML form
 $itemName  = $_POST["itemName"];
 $expenseAmount  = $_POST["expenseAmount"];
@@ -39,11 +44,6 @@ $strChildExpenseCategory = strtolower($trimmedExpenseChildCategory);
 $strExpenseComment = strtolower($trimmedExpenseComment);
 $strExpenseDate = strtolower($trimmedExpenseDate);
 $strExpensePaymentMethod = strtolower($trimmedPaymentMethod);
-/////////////////////////////////////////////////////////////////////////
-//Create the database if it doesn't exist already
-$sql = "CREATE DATABASE IF NOT EXISTS `$databaseName`
-    DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci";
-$result = mysqli_query($connection, $sql);
 /////////////////////////////////////////////////////////////////////////
 //Creates the table and the columns if they aren't there already
 $sql = "CREATE TABLE IF NOT EXISTS `$databaseName`.`$expenseTableName` 

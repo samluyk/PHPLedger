@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="bootstrap.css">
 <meta charset='UTF-8'/>
 <meta name='viewport'
-      content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+      content='width=device-width, initial-scale=1.0, shrink-to-fit=no'>
 <link rel="stylesheet" type="text/css" href="style.css">
 <html lang="en">
 </head>
@@ -38,6 +38,7 @@ Expense Input Form:
   <div class="form-group">
     <label for="expensePrimaryCategory">Primary Category:</label>
     <select class="form-control" name="expensePrimaryCategory" id="expensePrimaryCategory" required onChange="changecat(this.value);">
+            <option value="" disabled selected>CATEGORY</option>
             <option value="Car">Car</option>
             <option value="Education">Education</option>
             <option value="Entertainment">Entertainment</option>
@@ -100,7 +101,7 @@ Expense Input Form:
 
   <div class="form-group">
     <label for="expenseComment">Comments:</label>
-    <textarea class="form-control" name="expenseComment" id="expenseComment" rows="2"></textarea>
+    <textarea class="form-control" name="expenseComment" id="expenseComment" rows="1"></textarea>
   </div>
   <label for="expenseDate"> Date: </label>
             <input type="date" name="expenseDate" id="expenseDate" value="<?php echo date('Y-m-d'); ?>"/>
@@ -121,12 +122,6 @@ End Expense Form Code
 Begin Income Form:
 /////////////////////////////////////////////////////////////////////////
 -->
-
-<!--
-/////////////////////////////////////////////////////////////////////////
-End Income Input Form
-/////////////////////////////////////////////////////////////////////////
--->
 <form method = "post" action="incomeinput.php">
 <div class="container">
 <h2>💵 Income Input Form 💵</h2><br>
@@ -140,11 +135,12 @@ End Income Input Form
     <select required class="form-control" name="incomeType" id="incomeType">
             <option value="paycheck">Paycheck</option>
             <option value="freelance tech">Freelance Tech</option>
-            <option value="freelance phoeo">Freelance Photo</option>
+            <option value="freelance photo">Freelance Photo</option>
             <option value="selling something">Selling Something</option>
             <option value="other income">Other Income</option>
     </select>
   </div>
+  
   <div class="form-group">
     <label for="incomeGrossAmount">Gross Income:</label>
     <input type="text" id="incomeGrossAmount" name="incomeGrossAmount" class="form-control" placeholder="Gross Income" required>
@@ -164,6 +160,12 @@ End Income Input Form
             <br>
   <button type="submit" class="btn btn-primary btn-lg">Submit Income</button>
 </div>
+<!--
+/////////////////////////////////////////////////////////////////////////
+End Income Input Form
+/////////////////////////////////////////////////////////////////////////
+-->
+
 <!--
 /////////////////////////////////////////////////////////////////////////
 Buttons (links) at bottom of page
