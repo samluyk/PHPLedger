@@ -26,6 +26,7 @@ Expense Input Form:
 -->
 <h2>⛔ Expense Input Form ⛔</h2><br>
 <form method = "post" action="expenseinput.php">
+<div class="container">
   <div class="form-group">
     <label for="itemName">Item Name:</label>
     <input type="text" id="itemName" name="itemName" class="form-control" placeholder="Item Name" autofocus required>
@@ -51,7 +52,6 @@ Expense Input Form:
             <option value="Utilities">Utilities</option>
     </select>
   </div>
-  <br>
   <div class="form-group">
             Child Category:
             <select class="form-control" required name="childCategory" id="childCategory">
@@ -86,7 +86,6 @@ Expense Input Form:
                 </script>';
 ?> 
 </div>
-            <br><br>
             <div class="form-group">
     <label for="paymentMethod">Payment Method:</label>
     <select required class="form-control" name="paymentMethod" id="paymentMethod">
@@ -108,6 +107,7 @@ Expense Input Form:
             <br>
   <br>🦆
   <button type="submit" class="btn btn-primary btn-lg">Submit</button> 🦆
+  </div>
 </form> 
 <hr class="new1">
 <!--

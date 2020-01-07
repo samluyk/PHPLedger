@@ -16,6 +16,7 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - finalize automatic database backup
 - logic to check for accidental duplicated inserts
 - squash javascript child category bug
+- users cant submit "CATEGORY" as category logic
 - create database if doesn't exist (test this Sam!)
 - move to UTF8MB4
 
@@ -32,7 +33,6 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - ~~nicer text boxes~~
 - ~~if table already exist, dont recreate it everytime~~
 - ~~income comments field~~
-- ~~users cant submit "CATEGORY" as category logic~~
 - ~~more detailed success/failure messages~~
 - ~~add emoji~~
 
