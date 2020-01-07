@@ -2,12 +2,16 @@
 <html>
 <head>
 <script src="jquery-3.4.1.min.js"></script>
+<link rel="stylesheet" href="bootstrap.css">
 <meta charset='UTF-8'/>
 <meta name='viewport'
       content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 <link rel="stylesheet" type="text/css" href="style.css">
+<html lang="en">
 </head>
+
 <title>Financial Logger</title>
+
 <body>
 <center>
 <h1>Financial Logger</h1>
@@ -104,7 +108,7 @@ Expense Input Form:
             </select>
             <br>
             <br>
-
+            <button type="button" class="btn btn-primary btn-lg">Large</button>
             <label for="expenseComment"> Comments: </label>
             <input type = "text" id="expenseComment" name="expenseComment" value=""/><br><br>
             
