@@ -14,7 +14,7 @@
 
 <body>
 <center>
-<h1>Financial Logger</h1>
+<h1>😻 Financial Logger 😻</h1>
 <hr class="new1">
 <?php
 date_default_timezone_set("America/New_York");
@@ -24,20 +24,19 @@ date_default_timezone_set("America/New_York");
 Expense Input Form:
 /////////////////////////////////////////////////////////////////////////
 -->
-<center>
-  <form method = "post" action = "expenseinput.php">
-    <table>
-            <h2>Expense Input Form</h2><br>
-
-            <label for="expenseName"> Item Name: </label>
-            <input type = "text" id="itemName" name="itemName" required autofocus value=""/><br><br>
-
-            <label for="expenseAmount"> Amount: </label>
-            <input type = "text" id="expenseAmount" name="expenseAmount" required value=""/><br><br>
-
-            <label for="expensePrimaryCategory"> Parent Category: </label>
-            <select name="expensePrimaryCategory"  id="expensePrimaryCategory" required onChange="changecat(this.value);">
-            <option disabled selected="selected">CATEGORY</option>
+<h2>⛔ Expense Input Form ⛔</h2><br>
+<form method = "post" action="expenseinput.php">
+  <div class="form-group">
+    <label for="itemName">Item Name:</label>
+    <input type="text" id="itemName" name="itemName" class="form-control" placeholder="Item Name" autofocus required>
+  </div>
+  <div class="form-group">
+    <label for="expenseAmount">Item Amount:</label>
+    <input type="text" class="form-control" placeholder="Amount" id="expenseAmount" name="expenseAmount" required>
+  </div>
+  <div class="form-group">
+    <label for="expensePrimaryCategory">Primary Category:</label>
+    <select class="form-control" name="expensePrimaryCategory" id="expensePrimaryCategory" required onChange="changecat(this.value);">
             <option value="Car">Car</option>
             <option value="Education">Education</option>
             <option value="Entertainment">Entertainment</option>
@@ -50,11 +49,12 @@ Expense Input Form:
             <option value="Personal">Personal</option>
             <option value="Saving">Saving</option>
             <option value="Utilities">Utilities</option>
-            </select>
-            <br>
-            <br>
+    </select>
+  </div>
+  <br>
+  <div class="form-group">
             Child Category:
-            <select required name="childCategory" id="childCategory">
+            <select class="form-control" required name="childCategory" id="childCategory">
             <option value="" disabled selected>CATEGORY</option>
             </select>
 <?php  
@@ -85,44 +85,31 @@ Expense Input Form:
                 }
                 </script>';
 ?> 
-            <br>
-            <br>
-            <label for="paymentMethod"> Payment method: </label>
-            <select name="paymentMethod"  id="paymentMethod" required>
-            <option disabled selected="selected">PAYMENT METHOD</option>
-            <?php
-            $paymentmethod = array(
-              "American Express", 
-              "Chase Visa", 
-              "NBT Visa", 
-              "Privacy.com",
-              "Cash",
-              "Other"
-            );
-            foreach($paymentmethod as $item){
-            ?>
-            <option value="<?php echo strtolower($item); ?>"><?php echo $item; ?></option>
-            <?php
-            }
-            ?>
-            </select>
-            <br>
-            <br>
-            <button type="button" class="btn btn-primary btn-lg">Large</button>
-            <label for="expenseComment"> Comments: </label>
-            <input type = "text" id="expenseComment" name="expenseComment" value=""/><br><br>
-            
-            <label for="expenseDate"> Date: </label>
+</div>
+            <br><br>
+            <div class="form-group">
+    <label for="paymentMethod">Payment Method:</label>
+    <select required class="form-control" name="paymentMethod" id="paymentMethod">
+            <option value="american express">American Express</option>
+            <option value="chase visa">Chase Visa</option>
+            <option value="nbt visa">NBT Visa</option>
+            <option value="privacy.com">Privacy.com</option>
+            <option value="cash">Cash</option>
+            <option value="other">Other</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="expenseComment">Comments:</label>
+    <textarea class="form-control" name="expenseComment" id="expenseComment" rows="2"></textarea>
+  </div>
+  <label for="expenseDate"> Date: </label>
             <input type="date" name="expenseDate" id="expenseDate" value="<?php echo date('Y-m-d'); ?>"/>
             <br>
-            <br/>
-            <input type="submit" value = "Submit">
-            <br><br>
-            <hr class="new1">
-    </table>
-
-  </form>
-  </center>
+  <br>🦆
+  <button type="submit" class="btn btn-primary btn-lg">Submit</button> 🦆
+</form> 
+<hr class="new1">
 <!--
 /////////////////////////////////////////////////////////////////////////
 End Expense Form Code
@@ -138,7 +125,7 @@ Begin Income Form:
   <form method = "post" action = "incomeinput.php">
     <table>
 
-            <h2>Income Input Form</h2><br>
+            <h2>💵 Income Input Form 💵</h2><br>
             <label for="incomeDescription"> Description: </label>
             <input type = "text" id="incomeDescription" name="incomeDescription" required value=""/><br><br>
 
@@ -218,8 +205,8 @@ End Button Stuff
 </body>
 <hr class="new1">
 <footer>
-<p>Hand written by Sam Luyk. Code here: 
-<a href="https://github.com/samluyk/PHPLedger">https://github.com/samluyk/PHPLedger</a></p>
+<p>🔥 Hand written by Sam Luyk. Code here: 
+<a href="https://github.com/samluyk/PHPLedger">https://github.com/samluyk/PHPLedger</a> 🔥 </p>
 </br>
 </footer> 
 </html>
