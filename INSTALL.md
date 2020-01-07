@@ -5,7 +5,7 @@ This is currently being written.
 ### General Requirements:
 - git
 - OpenJDK11.0.5+10
-- 2GB availible storage space
+- 2GB drive space
 - 2GB availible RAM
 - Metabase v0.33.6
 - php 7.4.0
@@ -14,11 +14,11 @@ This is currently being written.
 - apache 2.4.41
 - phpmyadmin 4.9.2
 - jquery-3.4.1.min.js
-- bootstrap
+- bootstrap 4.3.1
 
 ### Windows Install Instructions:
-- Download and install wampserver https://sourceforge.net/projects/wampserver/files/WampServer%203/WampServer%203.0.0/
-- Download and install OpenJDK11 https://adoptopenjdk.net/index.html?variant=openjdk11&jvmVariant=hotspot
+- Download and install the latest wampserver https://sourceforge.net/projects/wampserver/files/WampServer%203/WampServer%203.0.0/
+- Download and install OpenJDK11 LTS https://adoptopenjdk.net/index.html?variant=openjdk11&jvmVariant=hotspot
 - Install Git for windows https://git-scm.com/download/win
 - Open git for windows
 - type `cd c:/wamp64/www`
@@ -27,10 +27,17 @@ This is currently being written.
 - move the downloaded metabase.jar to `c:/wamp64`
 - Open powershell and type `c:/wamp64`
 - Run `java -jar metabase.jar`
-- Open a web browser and enter the following url: `localhost/phpledger`
+- Open a web browser and enter the following url: `localhost/phpledger` (Consider bookmarking this or setting it as your home page)
 - Open Task Scheduler
+- On the right side of the screen, click "Create Basic Task" 
+- Name the task something like "Ledger Backup"
+- Leave the trigger on "Daily"
+- Leave the settings to recur every 1 days
+- Select "Start a Program"
+- Under "Program/script" click browse and navigate to `C:\wamp64\www\phpledger` then click on `autobackup.php` and click "Next >"
+- Click Finish
 
-### Ubuntu Install Instructions:
+### Ubuntu Install Instructions (Under Construction):
 - Open the terminal
 - `sudo apt update`
 - `sudo apt upgrade`

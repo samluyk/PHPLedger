@@ -9,17 +9,17 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 
 
 ### ⭕ To do:
-- finalize bootstrap 
+- finalize bootstrap forms
 - a working "delete last entry" button in case of incorrect input
 - use of a global config.php file for table names and database connection
 - complete documentation & install/usage guide
 - finalize automatic database backup
 - logic to check for accidental duplicated inserts
 - squash javascript child category bug
-- users cant submit "CATEGORY" as category logic
 - parent/child income categories
-- create database if doesn't exist (test this Sam!)
+- create database if doesn't exist (not currently working)
 - move to UTF8MB4
+- start metabase as a service
 
 ### ✔️ To done:
 - ~~finalize categories~~
@@ -36,6 +36,7 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - ~~income comments field~~
 - ~~more detailed success/failure messages~~
 - ~~add emoji~~
+- ~~users cant submit "CATEGORY" as category logic~~
 
 ### 🔥 Links I couldn't have done this without: 
 - https://stackoverflow.com/questions/30243775/get-date-from-input-form-within-php
@@ -53,3 +54,5 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - https://github.com/daniloaz/myphp-backup/blob/master/myphp-backup.php
 - https://getbootstrap.com/docs/4.0/components/forms/
 - https://emojipedia.org/
+- https://stackoverflow.com/questions/39443875/how-can-i-define-a-variable-available-to-all-php-fileslike-superglobals
+- https://discourse.metabase.com/t/run-metabase-as-a-windows-service/1173/5
