@@ -17,8 +17,6 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - logic to check for accidental duplicated inserts
 - squash javascript child category bug
 - parent/child income categories
-- create database if doesn't exist (not currently working)
-- move to UTF8MB4
 - start metabase as a service
 
 ### ✔️ To done:
@@ -37,6 +35,8 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - ~~more detailed success/failure messages~~
 - ~~add emoji~~
 - ~~users cant submit "CATEGORY" as category logic~~
+- ~~move to UTF8MB4~~
+- ~~create database if doesn't exist~~
 
 ### 🔥 Links I couldn't have done this without: 
 - https://stackoverflow.com/questions/30243775/get-date-from-input-form-within-php

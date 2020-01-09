@@ -9,8 +9,8 @@ echo "<link rel='stylesheet' type='text/css' href='style.css' />";
 $databaseName = "test_database";
 $incomeTableName = "income";
 /////////////////////////////////////////////////////////////////////////
-//Here we're connecting to the database (server:port/user/password/database)
-$connection = mysqli_connect("localhost:3308", "root", "", "$databaseName");
+//Here we're connecting to the sql server (server:port/user/password)
+$connection = mysqli_connect("localhost:3308", "root", "");
 if($connection === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
@@ -19,6 +19,12 @@ if($connection === false){
 $sql = "CREATE DATABASE IF NOT EXISTS `$databaseName`
     DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci";
 $result = mysqli_query($connection, $sql);
+/////////////////////////////////////////////////////////////////////////
+//Here we're connecting to the database (server:port/user/password/database)
+$connection = mysqli_connect("localhost:3308", "root", "", "$databaseName");
+if($connection === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
 /////////////////////////////////////////////////////////////////////////
 //Taking in the submitted data from the HTML form
 $incomeDescription  = $_POST["incomeDescription"];
@@ -44,13 +50,14 @@ $strIncomeDate = strtolower($trimmedIncomeDate);
 $strIncomeComments = strtolower($trimmedIncomeComments);
 /////////////////////////////////////////////////////////////////////////
 //Creates the table for income data if it doesn't already exist
-$sql = "CREATE TABLE IF NOT EXISTS $incomeTableName (incomeid INT AUTO_INCREMENT PRIMARY KEY,
-incomeDescription varchar(200),
-incomeType varchar(30),
-incomeDate date,
-incomeGrossAmount decimal(8,2),
-incomeNetAmount decimal(8,2)
-incomeComments varchar(200));";
+$sql = "CREATE TABLE `$databaseName`.`$incomeTableName` ( `incomeid` INT NOT NULL AUTO_INCREMENT ,
+`incomeDescription` VARCHAR(200) NOT NULL ,
+`incomeType` VARCHAR(30) NOT NULL ,
+`incomeDate` DATE NOT NULL ,
+`incomeGrossAmount` DECIMAL(8,2) NOT NULL ,
+`incomeNetAmount` DECIMAL(8,2) NOT NULL ,
+`incomeComments` VARCHAR(200) NOT NULL ,
+PRIMARY KEY (`incomeid`)) ENGINE = MyISAM; ";
 $result = mysqli_query($connection, $sql);
 /////////////////////////////////////////////////////////////////////////
 //This is the inserts into the database with the data from the form

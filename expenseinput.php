@@ -2,15 +2,15 @@
 /////////////////////////////////////////////////////////////////////////
 //Sets timezone to EST
 date_default_timezone_set("America/New_York");
-//Links to the external css
+//Links to the external css file
 echo "<link rel='stylesheet' type='text/css' href='style.css' />";
 /////////////////////////////////////////////////////////////////////////
 //Insert the name of your database and expenses table here
 $databaseName = "test_database";
 $expenseTableName = "expenses";
 /////////////////////////////////////////////////////////////////////////
-//Were connecting to the database (server:port/user/password/database)
-$connection = mysqli_connect("localhost:3308", "root", "", "$databaseName");
+//Here we're connecting to the sql server (server:port/user/password)
+$connection = mysqli_connect("localhost:3308", "root", "");
 if($connection === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
@@ -19,6 +19,12 @@ if($connection === false){
 $sql = "CREATE DATABASE IF NOT EXISTS `$databaseName`
     DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci";
 $result = mysqli_query($connection, $sql);
+/////////////////////////////////////////////////////////////////////////
+//Here we're connecting to the database (server:port/user/password/database)
+$connection = mysqli_connect("localhost:3308", "root", "", "$databaseName");
+if($connection === false){
+    die("ERROR: Could not connect. " . mysqli_connect_error());
+}
 /////////////////////////////////////////////////////////////////////////
 //Recieving the data from the HTML form
 $itemName  = $_POST["itemName"];
