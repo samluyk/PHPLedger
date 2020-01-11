@@ -1,7 +1,4 @@
 <!doctype html>
-<?php
-date_default_timezone_set("America/New_York");
-?>
 <html>
     <head>
     <meta charset='UTF-8'/>

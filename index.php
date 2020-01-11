@@ -16,9 +16,7 @@
 <center>
 <h1>Financial Logger</h1>
 <hr class="new1">
-<?php
-date_default_timezone_set("America/New_York");
-?>
+
 <!--
 /////////////////////////////////////////////////////////////////////////
 Expense Input Form:
@@ -33,7 +31,7 @@ Expense Input Form:
   </div>
   <div class="form-group">
     <label for="expenseAmount">Item Cost:</label>
-    <input type="text" class="form-control" placeholder="Amount" id="expenseAmount" name="expenseAmount" required>
+    <input type="number" class="form-control" placeholder="Amount" id="expenseAmount" name="expenseAmount" required>
   </div>
   <div class="form-group">
     <label for="expensePrimaryCategory">Primary Category:</label>

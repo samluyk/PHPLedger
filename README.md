@@ -11,13 +11,12 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 ### ⭕ To do:
 - finalize bootstrap forms
 - a working "delete last entry" button in case of incorrect input
-- use of a global config.php file for table names and database connection
+- use of a global config.php file for global variables and database connection
 - complete documentation & install/usage guide
 - finalize automatic database backup
 - logic to check for accidental duplicated inserts
 - squash javascript child category bug
 - parent/child income categories
-- start metabase as a service
 
 ### ✔️ To done:
 - ~~finalize categories~~

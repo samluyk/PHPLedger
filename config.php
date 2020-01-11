@@ -21,7 +21,7 @@ It is not currently used
 <hr class="new1">
 </html>
 <?php
-
+date_default_timezone_set("America/New_York");
 $sqlhost = "localhost";
 $sqlport = "3308";
 $sqluser = "root";

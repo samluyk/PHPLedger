@@ -1,7 +1,6 @@
 <!doctype html>
 
 <?php
-date_default_timezone_set("America/New_York");
 /////////////////////////////////////////////////////////////////////////
 //Insert the name of your database and expenses table here
 $databaseName = "test_database";
