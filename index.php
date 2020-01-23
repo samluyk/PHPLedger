@@ -9,14 +9,10 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <html lang="en">
 </head>
-
 <title>Financial Logger</title>
-
 <body>
+<br>
 <center>
-<h1>Financial Logger</h1>
-<hr class="new1">
-
 <!--
 /////////////////////////////////////////////////////////////////////////
 Expense Input Form:
