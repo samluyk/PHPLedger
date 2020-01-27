@@ -27,7 +27,7 @@ Expense Input Form:
   </div>
   <div class="form-group">
     <label for="expenseAmount">Item Cost:</label>
-    <input type="number" class="form-control" placeholder="Amount" id="expenseAmount" name="expenseAmount" required>
+    <input type="text" class="form-control" placeholder="Amount" id="expenseAmount" name="expenseAmount" required>
   </div>
   <div class="form-group">
     <label for="expensePrimaryCategory">Primary Category:</label>
@@ -55,14 +55,14 @@ Expense Input Form:
 <?php  
             echo '<script type="text/JavaScript">  
               var childcat = {
-                "Car": ["Gas", "Car Insurance", "Upgrades", "Repairs/Maintenance", "Fees", "Purchase/Loan", "Other"],
+                "Car": ["Gas", "Insurance", "Upgrades", "Repairs/Maintenance", "Fees", "Purchase/Loan", "Other"],
                 "Education": ["Programs", "Certifications", "Books"],
                 "Entertainment": ["Tickets", "Games", "Social", "Travel", "General"],
-                "Food": ["Groceries", "Fast Food", "Restaurant", "Snacks"],
+                "Food": ["Groceries", "Fast Food", "Restaurant"],
                 "Giving": ["Holiday Gifts", "Special Events", "Donations", "Others"],
                 "Hobbies": ["Photography", "Technology"],
                 "Home": ["Rent", "Renters Insurance", "Repairs/Maintenance", "Household Items"],
-                "Medical": ["Health Care", "Dental Care", "Specialty Care", "Medication", "Medical Devices", "Insurance"],
+                "Medical": ["Health Care", "Dental Care", "Specialty Care", "Medication", "Vision", "Insurance"],
                 "Miscellaneous": ["Taxes", "Fees", "Pets", "Uncategorized"],
                 "Personal": ["Clothing", "Hygiene"],
                 "Saving": ["401k", "Roth IRA", "Stocks", "Investments"],

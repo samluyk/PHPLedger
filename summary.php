@@ -30,7 +30,7 @@ if($connection === false){
 	<!-- Table Header -->
 	<thead>
 		<tr>
-			<th>2019 Budget</th>
+			<th>2020 Budget</th>
 			<th>January</th>
             <th>February</th>
             <th>March</th>
@@ -127,7 +127,7 @@ if($connection === false){
 <hr class="new1">
 </center>
 
-<!-- 2020 -->
+<!-- 2019 -->
 
 <center>
     <table cellspacing='0'> <!-- cellspacing='0' is important, must stay -->
@@ -135,7 +135,7 @@ if($connection === false){
 	<!-- Table Header -->
 	<thead>
 		<tr>
-			<th>2020 Budget</th>
+			<th>2019 Budget</th>
 			<th>January</th>
             <th>February</th>
             <th>March</th>
