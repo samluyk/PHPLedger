@@ -55,18 +55,18 @@ Expense Input Form:
 <?php  
             echo '<script type="text/JavaScript">  
               var childcat = {
-                "Car": ["Gas", "Insurance", "Upgrades", "Repairs/Maintenance", "Fees", "Purchase/Loan", "Other"],
+                "Car": ["Gas", "Insurance", "Repairs/Maintenance", "Fees", "Purchase/Loan", "Other"],
                 "Education": ["Programs", "Certifications", "Books"],
                 "Entertainment": ["Tickets", "Games", "Social", "Travel", "General"],
                 "Food": ["Groceries", "Fast Food", "Restaurant"],
                 "Giving": ["Holiday Gifts", "Special Events", "Donations", "Others"],
                 "Hobbies": ["Photography", "Technology"],
-                "Home": ["Rent", "Renters Insurance", "Repairs/Maintenance", "Household Items"],
-                "Medical": ["Health Care", "Dental Care", "Specialty Care", "Medication", "Vision", "Insurance"],
+                "Home": ["Rent", "Insurance", "Repairs/Maintenance", "Household Items"],
+                "Medical": ["Medical", "Dental", "Other", "Vision", "Insurance"],
                 "Miscellaneous": ["Taxes", "Fees", "Pets", "Uncategorized"],
                 "Personal": ["Clothing", "Hygiene"],
                 "Saving": ["401k", "Roth IRA", "Stocks", "Investments"],
-                "Utilities": ["Water", "Electricity", "Gas/Heating", "Internet", "Cell Phone"]
+                "Utilities": ["Water", "Electricity", "Gas/Heating", "Internet", "Cell Phone", "Sewer"]
                 }
               function changecat(value) {
                 if (value.length == 0) document.getElementById("childCategory").innerHTML = "<option></option>";
