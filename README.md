@@ -9,33 +9,14 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 
 
 ### ⭕ To do:
+- squash javascript child category bug
 - finalize bootstrap forms
 - a working "delete last entry" button in case of incorrect input
 - use of a global config.php file for global variables and database connection
 - complete documentation & install/usage guide
 - finalize automatic database backup
-- logic to check for accidental duplicated inserts
-- squash javascript child category bug
 - parent/child income categories
 
-### ✔️ To done:
-- ~~finalize categories~~
-- ~~use Ubuntu font locally~~
-- ~~better input sanitization~~
-- ~~enable parent/child categories~~
-- ~~mysql backend to store the data~~
-- ~~fix date input issue~~
-- ~~add payment method feature~~
-- ~~finalize database scheme/datatypes~~
-- ~~database & table variables for both income & expenses~~
-- ~~nicer text boxes~~
-- ~~if table already exist, dont recreate it everytime~~
-- ~~income comments field~~
-- ~~more detailed success/failure messages~~
-- ~~add emoji~~
-- ~~users cant submit "CATEGORY" as category logic~~
-- ~~move to UTF8MB4~~
-- ~~create database if doesn't exist~~
 
 ### 🔥 Links I couldn't have done this without: 
 - https://stackoverflow.com/questions/30243775/get-date-from-input-form-within-php
@@ -55,3 +36,4 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - https://emojipedia.org/
 - https://stackoverflow.com/questions/39443875/how-can-i-define-a-variable-available-to-all-php-fileslike-superglobals
 - https://discourse.metabase.com/t/run-metabase-as-a-windows-service/1173/5
+- https://jquery.com/

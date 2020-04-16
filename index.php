@@ -140,6 +140,14 @@ Begin Income Form:
     <input type="text" id="incomeGrossAmount" name="incomeGrossAmount" class="form-control" placeholder="Gross Income" required>
   </div>
   <div class="form-group">
+    <label for="incomeTaxAmount">Taxes:</label>
+    <input type="text" id="incomeTaxAmount" name="incomeTaxAmount" class="form-control" placeholder="Taxed Amount" required>
+  </div>
+  <div class="form-group">
+    <label for="incomeAutomaticSavingAmount">Automatic Saving:</label>
+    <input type="text" id="incomeAutomaticSavingAmount" name="incomeAutomaticSavingAmount" class="form-control" placeholder="Roth 401k Contribuion" required>
+  </div>
+  <div class="form-group">
     <label for="incomeNetAmount">Net Income:</label>
     <input type="text" id="incomeNetAmount" name="incomeNetAmount" class="form-control" placeholder="Net Income" required>
   </div>

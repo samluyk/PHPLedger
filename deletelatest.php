@@ -77,12 +77,14 @@ print "<center><table border=3pt><tr>
 <td>Income Type</td> 
 <td>Income Date</td> 
 <td>Income Gross</td>
+<td>Taxed Amount</td>
+<td>Automatic Saving</td>
 <td>Income Net</td>
 <td>Income Comments</td> </tr>";
 while($row = mysqli_fetch_array($res))
 {
     print "<tr> <td>".$row['incomeid']."</td><td>".$row['incomeDescription']."</td> <td>".$row['incomeType']."</td> <td>".$row['incomeDate']."</td>
-    <td>".$row['incomeGrossAmount']."</td> <td>".$row['incomeNetAmount']."</td> <td>".$row['incomeComments']."</td></tr>";
+    <td>".$row['incomeGrossAmount']."</td> <td>".$row['incomeTaxAmount']."</td> <td>".$row['incomeSavingAmount']."</td> <td>".$row['incomeNetAmount']."</td> <td>".$row['incomeComments']."</td>  </tr>";
 }
 print "</table></center>";
 }
