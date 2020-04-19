@@ -22,12 +22,12 @@ Expense Input Form:
 <form method = "post" action="expenseinput.php">
 <div class="container">
   <div class="form-group">
-    <label for="itemName">Item Name:</label>
-    <input type="text" id="itemName" name="itemName" class="form-control" placeholder="Item Name" autofocus required>
+    <label for="itemName">The Expense:</label>
+    <input type="text" id="itemName" name="itemName" class="form-control" placeholder="Expense" autofocus required>
   </div>
   <div class="form-group">
     <label for="expenseAmount">Item Cost:</label>
-    <input type="text" class="form-control" placeholder="Amount" id="expenseAmount" name="expenseAmount" required>
+    <input type="number" class="form-control" min="0.01" step="0.01" max="1000000" placeholder="Amount" id="expenseAmount" name="expenseAmount" required>
   </div>
   <div class="form-group">
     <label for="expensePrimaryCategory">Primary Category:</label>
@@ -55,18 +55,18 @@ Expense Input Form:
 <?php  
             echo '<script type="text/JavaScript">  
               var childcat = {
-                "Car": ["Gas", "Insurance", "Repairs/Maintenance", "Fees", "Purchase/Loan", "Other"],
-                "Education": ["Programs", "Certifications", "Books"],
-                "Entertainment": ["Tickets", "Games", "Social", "Travel", "General"],
-                "Food": ["Groceries", "Fast Food", "Restaurant"],
-                "Giving": ["Holiday Gifts", "Special Events", "Donations", "Others"],
-                "Hobbies": ["Photography", "Technology"],
-                "Home": ["Rent", "Insurance", "Repairs/Maintenance", "Household Items"],
-                "Medical": ["Medical", "Dental", "Other", "Vision", "Insurance"],
-                "Miscellaneous": ["Taxes", "Fees", "Pets", "Uncategorized"],
-                "Personal": ["Clothing", "Hygiene"],
-                "Saving": ["401k", "Roth IRA", "Stocks", "Investments"],
-                "Utilities": ["Water", "Electricity", "Gas/Heating", "Internet", "Cell Phone", "Sewer"]
+                "Car": ["xxxxx", "Gas", "Insurance", "Repairs/Maintenance", "Fees", "Purchase/Loan", "Other"],
+                "Education": ["xxxxx", "Programs", "Certifications", "Books"],
+                "Entertainment": ["xxxxx", "Tickets", "Games", "Social", "Travel", "General"],
+                "Food": ["xxxxx", "Groceries", "Fast Food", "Restaurant"],
+                "Giving": ["xxxxx", "Holiday Gifts", "Special Events", "Donations", "Others"],
+                "Hobbies": ["xxxxx", "Photography", "Technology"],
+                "Home": ["xxxxx", "Rent", "Insurance", "Repairs/Maintenance", "Household Items"],
+                "Medical": ["xxxxx", "Medical", "Dental", "Other", "Vision", "Insurance"],
+                "Miscellaneous": ["xxxxx", "Taxes", "Fees", "Pets", "Uncategorized"],
+                "Personal": ["xxxxx", "Clothing", "Hygiene"],
+                "Saving": ["xxxxx", "Roth 401k", "Roth IRA", "Stocks", "Investments"],
+                "Utilities": ["xxxxx", "Water", "Electricity", "Gas/Heating", "Internet", "Cell Phone", "Sewer"]
                 }
               function changecat(value) {
                 if (value.length == 0) document.getElementById("childCategory").innerHTML = "<option></option>";
@@ -137,19 +137,19 @@ Begin Income Form:
   
   <div class="form-group">
     <label for="incomeGrossAmount">Gross Income:</label>
-    <input type="text" id="incomeGrossAmount" name="incomeGrossAmount" class="form-control" placeholder="Gross Income" required>
+    <input type="number" id="incomeGrossAmount" name="incomeGrossAmount" class="form-control" min="0.01" step="0.01" max="1000000" placeholder="Gross Income" required>
   </div>
   <div class="form-group">
     <label for="incomeTaxAmount">Taxes:</label>
-    <input type="text" id="incomeTaxAmount" name="incomeTaxAmount" class="form-control" placeholder="Taxed Amount" required>
+    <input type="number" id="incomeTaxAmount" name="incomeTaxAmount" class="form-control" min="0.01" step="0.01" max="1000000" placeholder="Taxed Amount" required>
   </div>
   <div class="form-group">
     <label for="incomeAutomaticSavingAmount">Automatic Saving:</label>
-    <input type="text" id="incomeAutomaticSavingAmount" name="incomeAutomaticSavingAmount" class="form-control" placeholder="Roth 401k Contribuion" required>
+    <input type="number" id="incomeAutomaticSavingAmount" name="incomeAutomaticSavingAmount" class="form-control" min="0.01" step="0.01" max="1000000" placeholder="Roth 401k Contribuion" required>
   </div>
   <div class="form-group">
     <label for="incomeNetAmount">Net Income:</label>
-    <input type="text" id="incomeNetAmount" name="incomeNetAmount" class="form-control" placeholder="Net Income" required>
+    <input type="number" id="incomeNetAmount" name="incomeNetAmount" class="form-control" min="0.01" step="0.01" max="1000000" placeholder="Net Income" required>
   </div>
   <div class="form-group">
     <label for="incomeComments">Additional Comments:</label>
@@ -197,6 +197,7 @@ End Button Stuff
 <footer>
 <p>🔥 Hand written by Sam Luyk. Code here: 
 <a href="https://github.com/samluyk/PHPLedger">https://github.com/samluyk/PHPLedger</a> 🔥 </p>
+<h4> v1.1 </h4>
 </br>
 </footer> 
 </html>

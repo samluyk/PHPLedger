@@ -15,7 +15,7 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - use of a global config.php file for global variables and database connection
 - complete documentation & install/usage guide
 - finalize automatic database backup
-- parent/child income categories
+- automatic 401k contrib counted as expense
 
 
 ### 🔥 Links I couldn't have done this without: 
@@ -37,3 +37,4 @@ https://www.reddit.com/r/personalfinance/comments/53ktyv/budget_spreadsheet_with
 - https://stackoverflow.com/questions/39443875/how-can-i-define-a-variable-available-to-all-php-fileslike-superglobals
 - https://discourse.metabase.com/t/run-metabase-as-a-windows-service/1173/5
 - https://jquery.com/
+- https://stackoverflow.com/questions/14650932/set-value-to-currency-in-input-type-number
